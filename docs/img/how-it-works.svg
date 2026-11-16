@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 330" width="960" height="330" role="img" aria-labelledby="t d" font-family="'Segoe UI', Helvetica, Arial, sans-serif">
+  <title id="t">How RETRACE works</title>
+  <desc id="d">Source passages go to a language model, which writes a declaration. A validator admits or refuses the declaration and repairs nothing. A refused declaration gives no answer. An admitted declaration goes to a symbolic engine, which gives the state of every decision under every reading, the smallest evidence change that separates two readings, and the cheapest question that settles the decision.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#6f6e69"/>
+    </marker>
+  </defs>
+  <rect x="0.5" y="0.5" width="959" height="329" rx="10" fill="#fcfcfb" stroke="#e1e0d9"/>
+
+  <!-- stage labels -->
+  <g font-size="11" fill="#6f6e69" letter-spacing="0.6" text-anchor="middle">
+    <text x="82" y="96">SOURCE</text>
+    <text x="246" y="96">PROPOSES</text>
+    <text x="425" y="96">CHECKS</text>
+    <text x="647" y="96">COMPUTES</text>
+    <text x="848" y="22">ANSWERS</text>
+  </g>
+
+  <!-- arrows -->
+  <g stroke="#6f6e69" stroke-width="1.6" fill="none" marker-end="url(#arrow)">
+    <path d="M140 150 H168"/>
+    <path d="M322 150 H348"/>
+    <path d="M500 150 H570"/>
+    <path d="M425 192 V236"/>
+    <path d="M722 150 H742 V66 H758"/>
+    <path d="M722 150 H758"/>
+    <path d="M722 150 H742 V234 H758"/>
+  </g>
+  <g font-size="11.5" fill="#52514e">
+    <text x="535" y="141" text-anchor="middle">admitted</text>
+    <text x="434" y="219">refused</text>
+  </g>
+
+  <!-- boxes -->
+  <rect x="24" y="108" width="116" height="84" rx="8" fill="#ffffff" stroke="#c3c2b7" stroke-width="1.4"/>
+  <rect x="170" y="108" width="152" height="84" rx="8" fill="#fdeee7" stroke="#eb6834" stroke-width="1.6"/>
+  <rect x="350" y="108" width="150" height="84" rx="8" fill="#ffffff" stroke="#0b0b0b" stroke-width="1.8"/>
+  <rect x="572" y="108" width="150" height="84" rx="8" fill="#e3f5ee" stroke="#1baf7a" stroke-width="1.6"/>
+  <rect x="350" y="238" width="150" height="60" rx="8" fill="#f1f0ec" stroke="#c3c2b7" stroke-width="1.4"/>
+  <rect x="760" y="34" width="176" height="64" rx="8" fill="#ffffff" stroke="#1baf7a" stroke-width="1.4"/>
+  <rect x="760" y="118" width="176" height="64" rx="8" fill="#ffffff" stroke="#1baf7a" stroke-width="1.4"/>
+  <rect x="760" y="202" width="176" height="64" rx="8" fill="#ffffff" stroke="#1baf7a" stroke-width="1.4"/>
+
+  <g fill="#0b0b0b" text-anchor="middle">
+    <text x="82" y="147" font-size="14" font-weight="600">Source</text>
+    <text x="82" y="166" font-size="14" font-weight="600">passages</text>
+
+    <text x="246" y="140" font-size="14" font-weight="600">Language model</text>
+    <text x="246" y="160" font-size="12.5" fill="#52514e">writes a declaration:</text>
+    <text x="246" y="177" font-size="12.5" fill="#52514e">records, copies, readings</text>
+
+    <text x="425" y="140" font-size="14" font-weight="600">Validator</text>
+    <text x="425" y="160" font-size="12.5" fill="#52514e">admits or refuses,</text>
+    <text x="425" y="177" font-size="12.5" fill="#52514e">repairs nothing</text>
+
+    <text x="647" y="140" font-size="14" font-weight="600">Symbolic engine</text>
+    <text x="647" y="160" font-size="12.5" fill="#52514e">exact and deterministic,</text>
+    <text x="647" y="177" font-size="12.5" fill="#52514e">no model call</text>
+
+    <text x="425" y="264" font-size="13.5" font-weight="600">No answer</text>
+    <text x="425" y="283" font-size="12.5" fill="#52514e">the check fails closed</text>
+
+    <text x="848" y="61" font-size="13" font-weight="600">State of every decision</text>
+    <text x="848" y="80" font-size="12.5" fill="#52514e">under every reading</text>
+
+    <text x="848" y="145" font-size="13" font-weight="600">Smallest evidence change</text>
+    <text x="848" y="164" font-size="12.5" fill="#52514e">that separates two readings</text>
+
+    <text x="848" y="229" font-size="13" font-weight="600">Cheapest question</text>
+    <text x="848" y="248" font-size="12.5" fill="#52514e">that settles the decision</text>
+  </g>
+</svg>

@@ -37,16 +37,9 @@ Agreement today says nothing about agreement after the evidence changes. RETRACE
 
 ## How it works
 
-```mermaid
-flowchart LR
-    S["Source passages"] --> M["Language model<br/>writes a declaration"]
-    M --> V{"Validator<br/>admits or refuses<br/>repairs nothing"}
-    V -- "refused" --> X["No answer<br/>(fails closed)"]
-    V -- "admitted" --> E["Symbolic engine<br/>exact, no model"]
-    E --> D["State of every decision<br/>under every reading"]
-    E --> W["Smallest evidence change<br/>that separates two readings"]
-    E --> Q["Cheapest question<br/>that settles the decision"]
-```
+<p align="center">
+  <img src="docs/img/how-it-works.svg" alt="Flow from left to right: source passages; a language model writes a declaration of records, copies and readings; a validator admits or refuses it and repairs nothing; a refused declaration gives no answer; an admitted one goes to a symbolic engine that returns the state of every decision under every reading, the smallest evidence change that separates two readings, and the cheapest question that settles the decision." width="900">
+</p>
 
 1. **A model only proposes.** It writes a typed declaration: the records, which records are copies of which, what each claim needs, and where the source can be read in more than one way.
 2. **A validator admits or refuses the declaration whole.** Nothing is repaired and nothing is applied automatically.
