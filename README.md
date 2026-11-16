@@ -143,4 +143,6 @@ The frozen corpus of the 1,800-slot study, its raw model outputs and the capture
 
 No project source file existed before the sprint began on 13 November 2026. The code, cases, interface and experiments were produced during the sprint with AI assistance, which Appendix F of the paper describes in detail.
 
-No license has been chosen yet. Until one is added, the code is published for reading and review. Third-party material keeps its own terms, as listed in the source notices.
+## License
+
+The project's own code and files are released under the [MIT License](LICENSE). Third-party material keeps its own terms, as listed in the [source notices](SOURCE-NOTICES-V6.md). Those notices were written for the archived release, before a license was chosen; their sentence that the software carries no open-source license is replaced by this one.
