@@ -1,0 +1,177 @@
+{
+ "friday": {
+  "cases": 24,
+  "accepted_extractions": 42,
+  "accepted_and_wrong": 0,
+  "cases_with_an_accepted_extraction": 24,
+  "cases_accepted_for_both_models": 18
+ },
+ "strict_ir": {
+  "primary_slots": 300,
+  "primary_admitted_bare": 139,
+  "primary_admitted_exact": 181,
+  "primary_missing": 86,
+  "primary_rejected": 33,
+  "primary_rejected_invalid_JSONDecodeError": 16,
+  "primary_admitted_fenced": 42,
+  "primary_rejected_invalid_ValueError": 13,
+  "primary_rejected_truncated_max_output_tokens": 4,
+  "diagnostic_slots": 12,
+  "diagnostic_admitted_bare": 10,
+  "diagnostic_admitted_exact": 10,
+  "diagnostic_missing": 2,
+  "distinct_cases_with_an_admitted_compilation": 60,
+  "cases_admitted_by_all_five_primary_models": 10
+ },
+ "compiled_but_not_exact": [
+  {
+   "model": "gemma-4-31b-it",
+   "case": "V6H-frontier-v6c-03-01",
+   "arm": "long_source_ir",
+   "bare_json": false,
+   "family": {
+    "expected_distinct": 8,
+    "predicted_distinct": 4,
+    "correct_distinct": 4,
+    "missing_distinct": 4,
+    "spurious_distinct": 0
+   },
+   "registry_gaps": [],
+   "pairs_at_the_three_states": {
+    "agree": 15
+   },
+   "differences_first_graph": [
+    "claim SV2CJDZC positive: {\"any\": [{\"all\": [{\"ref\": \"4PJVD88E\"}, {\"ref\": \"QKWLQ8GB\"}]}, {\"any\": [{\"ref\": \"4PJVD88E\"}, {\"ref\": \"QKWLQ8GB\"}]}]} vs authored {\"all\": [{\"ref\": \"4PJVD88E\"}, {\"ref\": \"QKWLQ8GB\"}]}"
+   ]
+  },
+  {
+   "model": "qwen3.8-27b",
+   "case": "V6H-frontier-v6c-04-01",
+   "arm": "nl_projection",
+   "bare_json": true,
+   "family": {
+    "expected_distinct": 1,
+    "predicted_distinct": 4,
+    "correct_distinct": 0,
+    "missing_distinct": 1,
+    "spurious_distinct": 4
+   },
+   "registry_gaps": [],
+   "pairs_at_the_three_states": {
+    "agree": 11,
+    "over_cautious": 4
+   },
+   "differences_first_graph": [
+    "claim GLABWDNA positive: {\"ref\": \"L984N7CM\"} vs authored {\"any\": [{\"ref\": \"L984N7CM\"}, {\"ref\": \"88TWL6RX\"}]}",
+    "claim L984N7CM positive: {\"ref\": \"MJT83NNF\"} vs authored {\"any\": [{\"ref\": \"MJT83NNF\"}, {\"all\": [{\"ref\": \"Q6G7CGXX\"}, {\"ref\": \"B5BKVCV7\"}]}]}"
+   ]
+  }
+ ],
+ "compiled_totals": {
+  "strict_source_ir": 191,
+  "nl_projection": 72,
+  "long_source_ir": 7
+ },
+ "direct_answers_six_phases": {
+  "deepseek-v4-flash": {
+   "slots": 72,
+   "usable_answers": 58,
+   "exactly_right": 58,
+   "error_None": 0,
+   "pairs": 348,
+   "authored_assert_pairs": 201,
+   "answered_pairs": 279,
+   "answered_agree": 279,
+   "answered_authored_assert": 166,
+   "answered_authored_not_assert": 113,
+   "authored_not_assert_pairs": 147,
+   "error_truncated_max_output_tokens": 9,
+   "error_http_504": 3,
+   "error_missing_record": 2
+  },
+  "gemma-4-31b-it": {
+   "slots": 72,
+   "usable_answers": 69,
+   "exactly_right": 46,
+   "error_None": 0,
+   "pairs": 348,
+   "authored_assert_pairs": 201,
+   "answered_pairs": 334,
+   "answered_agree": 304,
+   "answered_authored_assert": 192,
+   "answered_authored_not_assert": 142,
+   "authored_not_assert_pairs": 147,
+   "answered_over_cautious": 26,
+   "error_invalid_ValueError": 2,
+   "answered_unsafe": 1,
+   "answered_other_difference": 3,
+   "error_http_502": 1
+  },
+  "glm-5.2": {
+   "slots": 72,
+   "usable_answers": 8,
+   "exactly_right": 8,
+   "error_truncated_max_output_tokens": 23,
+   "pairs": 348,
+   "authored_assert_pairs": 201,
+   "authored_not_assert_pairs": 147,
+   "error_missing_record": 20,
+   "error_None": 0,
+   "answered_pairs": 39,
+   "answered_agree": 39,
+   "answered_authored_assert": 23,
+   "answered_authored_not_assert": 16,
+   "error_post_headers_transport_read_failure": 1,
+   "error_http_502": 3,
+   "error_invalid_JSONDecodeError": 11,
+   "error_http_504": 6
+  },
+  "glm-5.3-flash": {
+   "slots": 72,
+   "usable_answers": 46,
+   "exactly_right": 45,
+   "error_None": 0,
+   "pairs": 348,
+   "authored_assert_pairs": 201,
+   "answered_pairs": 225,
+   "answered_agree": 225,
+   "answered_authored_assert": 131,
+   "answered_authored_not_assert": 94,
+   "authored_not_assert_pairs": 147,
+   "error_truncated_max_output_tokens": 7,
+   "error_http_504": 15,
+   "error_missing_record": 4
+  },
+  "qwen3.8-27b": {
+   "slots": 72,
+   "usable_answers": 17,
+   "exactly_right": 16,
+   "error_truncated_max_output_tokens": 38,
+   "pairs": 348,
+   "authored_assert_pairs": 201,
+   "authored_not_assert_pairs": 147,
+   "error_missing_record": 17,
+   "error_None": 0,
+   "answered_pairs": 79,
+   "answered_agree": 79,
+   "answered_authored_assert": 48,
+   "answered_authored_not_assert": 31
+  },
+  "qwen3.5-397b": {
+   "slots": 72,
+   "usable_answers": 69,
+   "exactly_right": 65,
+   "error_None": 0,
+   "pairs": 348,
+   "authored_assert_pairs": 201,
+   "answered_pairs": 333,
+   "answered_agree": 332,
+   "answered_authored_assert": 192,
+   "answered_authored_not_assert": 141,
+   "authored_not_assert_pairs": 147,
+   "answered_other_difference": 1,
+   "error_response_model_mismatch": 1,
+   "error_missing_record": 2
+  }
+ }
+}

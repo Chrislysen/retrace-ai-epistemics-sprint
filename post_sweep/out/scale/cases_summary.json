@@ -1,0 +1,99 @@
+{
+ "seed": 20261116,
+ "cases": 36,
+ "by_size": {
+  "S": {
+   "cases": 12,
+   "copies": 48,
+   "two_parent_copies": 16,
+   "copy_of_copy": 25,
+   "claims_using_a_claim": 25,
+   "decisions": 72,
+   "supported_after": 30,
+   "lost": 24,
+   "protected": 22,
+   "never_supported": 18,
+   "words_min_max": [
+    656,
+    724
+   ]
+  },
+  "M": {
+   "cases": 12,
+   "copies": 96,
+   "two_parent_copies": 33,
+   "copy_of_copy": 51,
+   "claims_using_a_claim": 55,
+   "decisions": 96,
+   "supported_after": 38,
+   "lost": 36,
+   "protected": 23,
+   "never_supported": 22,
+   "words_min_max": [
+    1131,
+    1207
+   ]
+  },
+  "L": {
+   "cases": 12,
+   "copies": 192,
+   "two_parent_copies": 64,
+   "copy_of_copy": 119,
+   "claims_using_a_claim": 108,
+   "decisions": 120,
+   "supported_after": 60,
+   "lost": 33,
+   "protected": 32,
+   "never_supported": 27,
+   "words_min_max": [
+    2023,
+    2144
+   ]
+  }
+ },
+ "generation_attempts": {
+  "scale-S-01": 32,
+  "scale-S-02": 55,
+  "scale-S-03": 2,
+  "scale-S-04": 9,
+  "scale-S-05": 14,
+  "scale-S-06": 23,
+  "scale-S-07": 106,
+  "scale-S-08": 46,
+  "scale-S-09": 45,
+  "scale-S-10": 80,
+  "scale-S-11": 17,
+  "scale-S-12": 2,
+  "scale-M-01": 18,
+  "scale-M-02": 5,
+  "scale-M-03": 15,
+  "scale-M-04": 13,
+  "scale-M-05": 11,
+  "scale-M-06": 6,
+  "scale-M-07": 13,
+  "scale-M-08": 18,
+  "scale-M-09": 31,
+  "scale-M-10": 17,
+  "scale-M-11": 5,
+  "scale-M-12": 6,
+  "scale-L-01": 3,
+  "scale-L-02": 9,
+  "scale-L-03": 2,
+  "scale-L-04": 5,
+  "scale-L-05": 3,
+  "scale-L-06": 1,
+  "scale-L-07": 1,
+  "scale-L-08": 3,
+  "scale-L-09": 2,
+  "scale-L-10": 8,
+  "scale-L-11": 2,
+  "scale-L-12": 3
+ },
+ "evaluator_disagreements": 0,
+ "prose_structure_problems": [],
+ "corpus.json_sha256": "3f9b89d811d6e4826a49510e63ad85c132c9086208ca89748287a575805f95e2",
+ "sessions.json_sha256": "07c56c777e73e9a2defbb864297a6072dba8cf18c88cbb6e77f35c7c5d61969e",
+ "sessions": 108,
+ "requests_per_model": 108,
+ "longest_prompt_chars": 14845
+}

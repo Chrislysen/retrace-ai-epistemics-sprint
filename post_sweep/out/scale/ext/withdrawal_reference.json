@@ -1,0 +1,1542 @@
+{
+ "limit": 5,
+ "by_size": {
+  "S": {
+   "decisions": 72,
+   "supported_now": 30,
+   "by_smallest_size": {
+    "0": 42,
+    "1": 27,
+    "2": 3
+   }
+  },
+  "M": {
+   "decisions": 96,
+   "supported_now": 38,
+   "by_smallest_size": {
+    "0": 58,
+    "1": 34,
+    "2": 4
+   }
+  },
+  "L": {
+   "decisions": 120,
+   "supported_now": 60,
+   "by_smallest_size": {
+    "0": 60,
+    "1": 42,
+    "2": 16,
+    "3": 2
+   }
+  }
+ },
+ "cases": {
+  "scale-S-01": {
+   "FDEUL9": {
+    "k": 0,
+    "example": []
+   },
+   "M9W7SA": {
+    "k": 0,
+    "example": []
+   },
+   "QLPECC": {
+    "k": 0,
+    "example": []
+   },
+   "BZNU2Q": {
+    "k": 0,
+    "example": []
+   },
+   "4VUCD9": {
+    "k": 1,
+    "example": [
+     "CBX8B2"
+    ]
+   },
+   "ANCACP": {
+    "k": 1,
+    "example": [
+     "CBX8B2"
+    ]
+   }
+  },
+  "scale-S-02": {
+   "KR68AE": {
+    "k": 0,
+    "example": []
+   },
+   "REUBX5": {
+    "k": 0,
+    "example": []
+   },
+   "MBPKXB": {
+    "k": 0,
+    "example": []
+   },
+   "2493BB": {
+    "k": 0,
+    "example": []
+   },
+   "WSWD2U": {
+    "k": 1,
+    "example": [
+     "LK6EFS"
+    ]
+   },
+   "9PMZWH": {
+    "k": 1,
+    "example": [
+     "LK6EFS"
+    ]
+   }
+  },
+  "scale-S-03": {
+   "S2HE4Q": {
+    "k": 0,
+    "example": []
+   },
+   "7ZHJ9F": {
+    "k": 0,
+    "example": []
+   },
+   "P9GA9U": {
+    "k": 1,
+    "example": [
+     "SNJG3M"
+    ]
+   },
+   "D7TV2Q": {
+    "k": 1,
+    "example": [
+     "SNJG3M"
+    ]
+   },
+   "CNGC3P": {
+    "k": 1,
+    "example": [
+     "HASW3X"
+    ]
+   },
+   "5X3WEW": {
+    "k": 1,
+    "example": [
+     "HASW3X"
+    ]
+   }
+  },
+  "scale-S-04": {
+   "7LEDHE": {
+    "k": 0,
+    "example": []
+   },
+   "3Z8B6F": {
+    "k": 0,
+    "example": []
+   },
+   "YKRVQG": {
+    "k": 0,
+    "example": []
+   },
+   "RUSQXZ": {
+    "k": 0,
+    "example": []
+   },
+   "MZK6P2": {
+    "k": 1,
+    "example": [
+     "GS8SDP"
+    ]
+   },
+   "N4LAAP": {
+    "k": 1,
+    "example": [
+     "ZF2Y6E"
+    ]
+   }
+  },
+  "scale-S-05": {
+   "2H86WQ": {
+    "k": 0,
+    "example": []
+   },
+   "QA43MR": {
+    "k": 0,
+    "example": []
+   },
+   "SMVBJ4": {
+    "k": 0,
+    "example": []
+   },
+   "9Q4ST9": {
+    "k": 0,
+    "example": []
+   },
+   "7Z8F65": {
+    "k": 1,
+    "example": [
+     "5QUYT9"
+    ]
+   },
+   "94L62V": {
+    "k": 2,
+    "example": [
+     "5QUYT9",
+     "M748BB"
+    ]
+   }
+  },
+  "scale-S-06": {
+   "HURJ59": {
+    "k": 0,
+    "example": []
+   },
+   "TLD5NB": {
+    "k": 0,
+    "example": []
+   },
+   "GNC8S8": {
+    "k": 0,
+    "example": []
+   },
+   "EK8RHF": {
+    "k": 0,
+    "example": []
+   },
+   "YLW4LL": {
+    "k": 1,
+    "example": [
+     "2W7B7X"
+    ]
+   },
+   "5SEJFK": {
+    "k": 1,
+    "example": [
+     "3V977V"
+    ]
+   }
+  },
+  "scale-S-07": {
+   "C3M4QY": {
+    "k": 0,
+    "example": []
+   },
+   "UNGGWV": {
+    "k": 0,
+    "example": []
+   },
+   "Y6PAAJ": {
+    "k": 0,
+    "example": []
+   },
+   "6EVR9T": {
+    "k": 0,
+    "example": []
+   },
+   "8AEESM": {
+    "k": 1,
+    "example": [
+     "PFQ4TF"
+    ]
+   },
+   "J5P2FW": {
+    "k": 1,
+    "example": [
+     "PFQ4TF"
+    ]
+   }
+  },
+  "scale-S-08": {
+   "KU78YY": {
+    "k": 0,
+    "example": []
+   },
+   "S66EUT": {
+    "k": 0,
+    "example": []
+   },
+   "53PP8P": {
+    "k": 0,
+    "example": []
+   },
+   "KWYQ55": {
+    "k": 1,
+    "example": [
+     "8LZYPW"
+    ]
+   },
+   "4CL6QT": {
+    "k": 1,
+    "example": [
+     "P6RVUY"
+    ]
+   },
+   "ZYDJTS": {
+    "k": 1,
+    "example": [
+     "P6RVUY"
+    ]
+   }
+  },
+  "scale-S-09": {
+   "3PBKGR": {
+    "k": 0,
+    "example": []
+   },
+   "CZWR68": {
+    "k": 0,
+    "example": []
+   },
+   "2LL9XR": {
+    "k": 1,
+    "example": [
+     "3FXF2M"
+    ]
+   },
+   "NCY6GL": {
+    "k": 1,
+    "example": [
+     "3FXF2M"
+    ]
+   },
+   "YK74X4": {
+    "k": 1,
+    "example": [
+     "W9LYD7"
+    ]
+   },
+   "XMEPLZ": {
+    "k": 1,
+    "example": [
+     "W9LYD7"
+    ]
+   }
+  },
+  "scale-S-10": {
+   "D6MZP3": {
+    "k": 0,
+    "example": []
+   },
+   "KYBEBK": {
+    "k": 0,
+    "example": []
+   },
+   "3CKKNX": {
+    "k": 0,
+    "example": []
+   },
+   "4JUTRA": {
+    "k": 1,
+    "example": [
+     "Q8L8JW"
+    ]
+   },
+   "D3B93W": {
+    "k": 2,
+    "example": [
+     "K3NS9W",
+     "XKHKRM"
+    ]
+   },
+   "JSWMGM": {
+    "k": 2,
+    "example": [
+     "K3NS9W",
+     "XKHKRM"
+    ]
+   }
+  },
+  "scale-S-11": {
+   "7Z9M4L": {
+    "k": 0,
+    "example": []
+   },
+   "KSH97P": {
+    "k": 0,
+    "example": []
+   },
+   "DGAELA": {
+    "k": 0,
+    "example": []
+   },
+   "8FM2TD": {
+    "k": 0,
+    "example": []
+   },
+   "FBLWJW": {
+    "k": 1,
+    "example": [
+     "JEJ927"
+    ]
+   },
+   "EE4XUY": {
+    "k": 1,
+    "example": [
+     "JEJ927"
+    ]
+   }
+  },
+  "scale-S-12": {
+   "4XVTSL": {
+    "k": 0,
+    "example": []
+   },
+   "2H8E9F": {
+    "k": 0,
+    "example": []
+   },
+   "9WTRPT": {
+    "k": 0,
+    "example": []
+   },
+   "QEPCRX": {
+    "k": 0,
+    "example": []
+   },
+   "WQGCTL": {
+    "k": 1,
+    "example": [
+     "KWNMT7"
+    ]
+   },
+   "8VL284": {
+    "k": 1,
+    "example": [
+     "WBSTEF"
+    ]
+   }
+  },
+  "scale-M-01": {
+   "CTFTYS": {
+    "k": 0,
+    "example": []
+   },
+   "8Q6B9Q": {
+    "k": 0,
+    "example": []
+   },
+   "95TLZL": {
+    "k": 0,
+    "example": []
+   },
+   "WY5WV3": {
+    "k": 1,
+    "example": [
+     "6Y5V2K"
+    ]
+   },
+   "PF8Q5H": {
+    "k": 1,
+    "example": [
+     "6Y5V2K"
+    ]
+   },
+   "FQMUG2": {
+    "k": 1,
+    "example": [
+     "PFA3WY"
+    ]
+   },
+   "PJLTSD": {
+    "k": 1,
+    "example": [
+     "PFA3WY"
+    ]
+   },
+   "NBN8G8": {
+    "k": 1,
+    "example": [
+     "PFA3WY"
+    ]
+   }
+  },
+  "scale-M-02": {
+   "E8NSYU": {
+    "k": 0,
+    "example": []
+   },
+   "H8F2GF": {
+    "k": 0,
+    "example": []
+   },
+   "QCH4QK": {
+    "k": 0,
+    "example": []
+   },
+   "JG96AJ": {
+    "k": 0,
+    "example": []
+   },
+   "SH7DRC": {
+    "k": 0,
+    "example": []
+   },
+   "PFFPN7": {
+    "k": 0,
+    "example": []
+   },
+   "KJFBUG": {
+    "k": 1,
+    "example": [
+     "2LYH3V"
+    ]
+   },
+   "BHPSCQ": {
+    "k": 1,
+    "example": [
+     "2LYH3V"
+    ]
+   }
+  },
+  "scale-M-03": {
+   "RYVLLK": {
+    "k": 0,
+    "example": []
+   },
+   "7XAQ5C": {
+    "k": 0,
+    "example": []
+   },
+   "Z7L3CA": {
+    "k": 0,
+    "example": []
+   },
+   "3AYBQF": {
+    "k": 0,
+    "example": []
+   },
+   "XXNYSF": {
+    "k": 0,
+    "example": []
+   },
+   "ZSNAPR": {
+    "k": 1,
+    "example": [
+     "ZQXDSB"
+    ]
+   },
+   "GQUBP6": {
+    "k": 1,
+    "example": [
+     "ZQXDSB"
+    ]
+   },
+   "UCD2LX": {
+    "k": 2,
+    "example": [
+     "4E5FPW",
+     "PC5WGS"
+    ]
+   }
+  },
+  "scale-M-04": {
+   "JVZ2WK": {
+    "k": 0,
+    "example": []
+   },
+   "LF966Q": {
+    "k": 0,
+    "example": []
+   },
+   "3BJDTY": {
+    "k": 0,
+    "example": []
+   },
+   "DRLVKM": {
+    "k": 0,
+    "example": []
+   },
+   "5CY4WU": {
+    "k": 0,
+    "example": []
+   },
+   "FEGHTF": {
+    "k": 1,
+    "example": [
+     "Y2TWEH"
+    ]
+   },
+   "YZ95P7": {
+    "k": 1,
+    "example": [
+     "6YTJE2"
+    ]
+   },
+   "TYWZSX": {
+    "k": 1,
+    "example": [
+     "FRR2W8"
+    ]
+   }
+  },
+  "scale-M-05": {
+   "4A2HHS": {
+    "k": 0,
+    "example": []
+   },
+   "F8J7GH": {
+    "k": 0,
+    "example": []
+   },
+   "8PJM2Q": {
+    "k": 0,
+    "example": []
+   },
+   "D2STD6": {
+    "k": 0,
+    "example": []
+   },
+   "TP79A3": {
+    "k": 1,
+    "example": [
+     "PFFD5W"
+    ]
+   },
+   "S8BGKJ": {
+    "k": 1,
+    "example": [
+     "SAKFES"
+    ]
+   },
+   "2J99CH": {
+    "k": 1,
+    "example": [
+     "SAKFES"
+    ]
+   },
+   "UV9G93": {
+    "k": 2,
+    "example": [
+     "SAKFES",
+     "PKJRT8"
+    ]
+   }
+  },
+  "scale-M-06": {
+   "9GCXSS": {
+    "k": 0,
+    "example": []
+   },
+   "H8RXYA": {
+    "k": 0,
+    "example": []
+   },
+   "G9Q7T6": {
+    "k": 0,
+    "example": []
+   },
+   "RYCC8G": {
+    "k": 0,
+    "example": []
+   },
+   "VR2RLR": {
+    "k": 0,
+    "example": []
+   },
+   "QAST4V": {
+    "k": 0,
+    "example": []
+   },
+   "N2B4NZ": {
+    "k": 1,
+    "example": [
+     "TMXR47"
+    ]
+   },
+   "HX6Y7W": {
+    "k": 1,
+    "example": [
+     "TMXR47"
+    ]
+   }
+  },
+  "scale-M-07": {
+   "28CUSZ": {
+    "k": 0,
+    "example": []
+   },
+   "RRV4TW": {
+    "k": 0,
+    "example": []
+   },
+   "SZK8ZA": {
+    "k": 0,
+    "example": []
+   },
+   "PYE6SE": {
+    "k": 0,
+    "example": []
+   },
+   "3GLBTG": {
+    "k": 0,
+    "example": []
+   },
+   "WFN64R": {
+    "k": 1,
+    "example": [
+     "N3L2DY"
+    ]
+   },
+   "Z9VSJX": {
+    "k": 1,
+    "example": [
+     "N3L2DY"
+    ]
+   },
+   "UM66KC": {
+    "k": 1,
+    "example": [
+     "N3L2DY"
+    ]
+   }
+  },
+  "scale-M-08": {
+   "4AKEZL": {
+    "k": 0,
+    "example": []
+   },
+   "K5ZEGS": {
+    "k": 0,
+    "example": []
+   },
+   "4HHHLG": {
+    "k": 0,
+    "example": []
+   },
+   "5FPL6X": {
+    "k": 0,
+    "example": []
+   },
+   "QCXCZ9": {
+    "k": 0,
+    "example": []
+   },
+   "M2L3DN": {
+    "k": 1,
+    "example": [
+     "G3NNQU"
+    ]
+   },
+   "V8W3DT": {
+    "k": 1,
+    "example": [
+     "M7HNS8"
+    ]
+   },
+   "4NDXUA": {
+    "k": 1,
+    "example": [
+     "M7HNS8"
+    ]
+   }
+  },
+  "scale-M-09": {
+   "76C2MA": {
+    "k": 0,
+    "example": []
+   },
+   "2RHH9H": {
+    "k": 0,
+    "example": []
+   },
+   "WNHEVA": {
+    "k": 0,
+    "example": []
+   },
+   "9CSQHR": {
+    "k": 0,
+    "example": []
+   },
+   "XDJZUN": {
+    "k": 0,
+    "example": []
+   },
+   "6VAHCX": {
+    "k": 0,
+    "example": []
+   },
+   "WUL72P": {
+    "k": 1,
+    "example": [
+     "5ES492"
+    ]
+   },
+   "2MPYUK": {
+    "k": 2,
+    "example": [
+     "DZG9YV",
+     "Q39ANG"
+    ]
+   }
+  },
+  "scale-M-10": {
+   "7GM8TC": {
+    "k": 0,
+    "example": []
+   },
+   "N3WAAF": {
+    "k": 0,
+    "example": []
+   },
+   "7WKF3F": {
+    "k": 0,
+    "example": []
+   },
+   "D33WZ8": {
+    "k": 0,
+    "example": []
+   },
+   "CVFBQ9": {
+    "k": 1,
+    "example": [
+     "64SU3Q"
+    ]
+   },
+   "GSS7XY": {
+    "k": 1,
+    "example": [
+     "64SU3Q"
+    ]
+   },
+   "A59XR3": {
+    "k": 1,
+    "example": [
+     "BK5W6Q"
+    ]
+   },
+   "3L6FAR": {
+    "k": 2,
+    "example": [
+     "64SU3Q",
+     "UZYYSH"
+    ]
+   }
+  },
+  "scale-M-11": {
+   "FZ884X": {
+    "k": 0,
+    "example": []
+   },
+   "TEFELL": {
+    "k": 0,
+    "example": []
+   },
+   "32JJPV": {
+    "k": 0,
+    "example": []
+   },
+   "UB6DX2": {
+    "k": 1,
+    "example": [
+     "RMTFXN"
+    ]
+   },
+   "YCQNKX": {
+    "k": 1,
+    "example": [
+     "RMTFXN"
+    ]
+   },
+   "K63T2C": {
+    "k": 1,
+    "example": [
+     "UFCY64"
+    ]
+   },
+   "7K8HFB": {
+    "k": 1,
+    "example": [
+     "UFCY64"
+    ]
+   },
+   "47ZPEE": {
+    "k": 1,
+    "example": [
+     "M5Z4V7"
+    ]
+   }
+  },
+  "scale-M-12": {
+   "HUGNMS": {
+    "k": 0,
+    "example": []
+   },
+   "R45R4N": {
+    "k": 0,
+    "example": []
+   },
+   "A6DUX3": {
+    "k": 0,
+    "example": []
+   },
+   "DB4MYG": {
+    "k": 0,
+    "example": []
+   },
+   "LB95Z7": {
+    "k": 0,
+    "example": []
+   },
+   "2C2LHJ": {
+    "k": 0,
+    "example": []
+   },
+   "6ET9B9": {
+    "k": 1,
+    "example": [
+     "FJW979"
+    ]
+   },
+   "8FH8V2": {
+    "k": 1,
+    "example": [
+     "KWV62Z"
+    ]
+   }
+  },
+  "scale-L-01": {
+   "ANXH5R": {
+    "k": 0,
+    "example": []
+   },
+   "ZHHRRG": {
+    "k": 0,
+    "example": []
+   },
+   "98VEA5": {
+    "k": 0,
+    "example": []
+   },
+   "4JKC6M": {
+    "k": 0,
+    "example": []
+   },
+   "YWQRCX": {
+    "k": 0,
+    "example": []
+   },
+   "TMPG98": {
+    "k": 1,
+    "example": [
+     "4PNL4T"
+    ]
+   },
+   "34DWU2": {
+    "k": 1,
+    "example": [
+     "4PNL4T"
+    ]
+   },
+   "UCLUWW": {
+    "k": 1,
+    "example": [
+     "EX7VJB"
+    ]
+   },
+   "KBRFH3": {
+    "k": 1,
+    "example": [
+     "L7R57Z"
+    ]
+   },
+   "PUWW8U": {
+    "k": 2,
+    "example": [
+     "QM5MUD",
+     "ACXZYY"
+    ]
+   }
+  },
+  "scale-L-02": {
+   "8JG65U": {
+    "k": 0,
+    "example": []
+   },
+   "779RGY": {
+    "k": 0,
+    "example": []
+   },
+   "Y66EXL": {
+    "k": 0,
+    "example": []
+   },
+   "8JSDP7": {
+    "k": 0,
+    "example": []
+   },
+   "4HQCAZ": {
+    "k": 0,
+    "example": []
+   },
+   "GRM22A": {
+    "k": 0,
+    "example": []
+   },
+   "RABW3N": {
+    "k": 1,
+    "example": [
+     "JNC929"
+    ]
+   },
+   "BVY6M8": {
+    "k": 1,
+    "example": [
+     "CMWD3Y"
+    ]
+   },
+   "Z57K69": {
+    "k": 1,
+    "example": [
+     "UX4KK3"
+    ]
+   },
+   "W9QKPE": {
+    "k": 1,
+    "example": [
+     "UX4KK3"
+    ]
+   }
+  },
+  "scale-L-03": {
+   "PP8JWN": {
+    "k": 0,
+    "example": []
+   },
+   "WH9794": {
+    "k": 0,
+    "example": []
+   },
+   "DL4ZTW": {
+    "k": 0,
+    "example": []
+   },
+   "TQ3F99": {
+    "k": 0,
+    "example": []
+   },
+   "5CL5G6": {
+    "k": 0,
+    "example": []
+   },
+   "MMNPUZ": {
+    "k": 0,
+    "example": []
+   },
+   "98QA97": {
+    "k": 1,
+    "example": [
+     "ZYM4NJ"
+    ]
+   },
+   "N7TGRP": {
+    "k": 1,
+    "example": [
+     "ZYM4NJ"
+    ]
+   },
+   "MZANEC": {
+    "k": 1,
+    "example": [
+     "DFEV8H"
+    ]
+   },
+   "CYGEA8": {
+    "k": 1,
+    "example": [
+     "DS59EZ"
+    ]
+   }
+  },
+  "scale-L-04": {
+   "Y7E8GD": {
+    "k": 0,
+    "example": []
+   },
+   "XQ8KMT": {
+    "k": 0,
+    "example": []
+   },
+   "BFY4PH": {
+    "k": 0,
+    "example": []
+   },
+   "FXEA7B": {
+    "k": 0,
+    "example": []
+   },
+   "TEMDEC": {
+    "k": 0,
+    "example": []
+   },
+   "AUJV55": {
+    "k": 0,
+    "example": []
+   },
+   "JU7MAH": {
+    "k": 0,
+    "example": []
+   },
+   "4KXJFR": {
+    "k": 1,
+    "example": [
+     "Z3M6FC"
+    ]
+   },
+   "PBY7HU": {
+    "k": 1,
+    "example": [
+     "Z3M6FC"
+    ]
+   },
+   "6S6LB6": {
+    "k": 2,
+    "example": [
+     "JVCN9H",
+     "RTPDQY"
+    ]
+   }
+  },
+  "scale-L-05": {
+   "CM4LAH": {
+    "k": 0,
+    "example": []
+   },
+   "9LCX3K": {
+    "k": 0,
+    "example": []
+   },
+   "6RQED6": {
+    "k": 0,
+    "example": []
+   },
+   "FZBGTS": {
+    "k": 1,
+    "example": [
+     "B9C5M2"
+    ]
+   },
+   "3PZ52A": {
+    "k": 1,
+    "example": [
+     "B9C5M2"
+    ]
+   },
+   "Z4JNWT": {
+    "k": 1,
+    "example": [
+     "NSZG59"
+    ]
+   },
+   "F9RSSZ": {
+    "k": 1,
+    "example": [
+     "B3ZQRQ"
+    ]
+   },
+   "ZBDUD5": {
+    "k": 1,
+    "example": [
+     "5HQSZU"
+    ]
+   },
+   "6HBX6F": {
+    "k": 2,
+    "example": [
+     "H4ASE5",
+     "K6ESU9"
+    ]
+   },
+   "PGNBHL": {
+    "k": 2,
+    "example": [
+     "H4ASE5",
+     "K6ESU9"
+    ]
+   }
+  },
+  "scale-L-06": {
+   "RXZEKW": {
+    "k": 0,
+    "example": []
+   },
+   "6D2JA9": {
+    "k": 0,
+    "example": []
+   },
+   "GLRK2V": {
+    "k": 0,
+    "example": []
+   },
+   "3MG9YC": {
+    "k": 0,
+    "example": []
+   },
+   "DF9W6J": {
+    "k": 1,
+    "example": [
+     "87FAH8"
+    ]
+   },
+   "NGZDB9": {
+    "k": 1,
+    "example": [
+     "5K238K"
+    ]
+   },
+   "UQRWDK": {
+    "k": 1,
+    "example": [
+     "87HXZQ"
+    ]
+   },
+   "TCHQUQ": {
+    "k": 1,
+    "example": [
+     "87HXZQ"
+    ]
+   },
+   "QTM4TD": {
+    "k": 1,
+    "example": [
+     "UB5P7Y"
+    ]
+   },
+   "5FKT8M": {
+    "k": 2,
+    "example": [
+     "87FAH8",
+     "64MVLM"
+    ]
+   }
+  },
+  "scale-L-07": {
+   "US7MSU": {
+    "k": 0,
+    "example": []
+   },
+   "VKVQEC": {
+    "k": 0,
+    "example": []
+   },
+   "FRYP6S": {
+    "k": 0,
+    "example": []
+   },
+   "Z4Q5WT": {
+    "k": 0,
+    "example": []
+   },
+   "BHAQ47": {
+    "k": 0,
+    "example": []
+   },
+   "MYU3SW": {
+    "k": 0,
+    "example": []
+   },
+   "GKHNQS": {
+    "k": 0,
+    "example": []
+   },
+   "7GZE6W": {
+    "k": 1,
+    "example": [
+     "FTXE5U"
+    ]
+   },
+   "G9E3T8": {
+    "k": 1,
+    "example": [
+     "4WBCWG"
+    ]
+   },
+   "APX6HE": {
+    "k": 1,
+    "example": [
+     "4WBCWG"
+    ]
+   }
+  },
+  "scale-L-08": {
+   "39AHPR": {
+    "k": 0,
+    "example": []
+   },
+   "L44WGG": {
+    "k": 0,
+    "example": []
+   },
+   "92NNZM": {
+    "k": 0,
+    "example": []
+   },
+   "LHC8DL": {
+    "k": 0,
+    "example": []
+   },
+   "QKFCGW": {
+    "k": 0,
+    "example": []
+   },
+   "DHAMRX": {
+    "k": 1,
+    "example": [
+     "DNNFT5"
+    ]
+   },
+   "WWCK35": {
+    "k": 1,
+    "example": [
+     "DNNFT5"
+    ]
+   },
+   "9LZA3E": {
+    "k": 1,
+    "example": [
+     "MBGQVY"
+    ]
+   },
+   "GNTHVU": {
+    "k": 1,
+    "example": [
+     "EC673H"
+    ]
+   },
+   "ED6ZVB": {
+    "k": 2,
+    "example": [
+     "Z5JLN2",
+     "JDJ4E5"
+    ]
+   }
+  },
+  "scale-L-09": {
+   "E3W284": {
+    "k": 0,
+    "example": []
+   },
+   "LW86RR": {
+    "k": 0,
+    "example": []
+   },
+   "NH82K6": {
+    "k": 0,
+    "example": []
+   },
+   "CM46E3": {
+    "k": 1,
+    "example": [
+     "ZMNA9G"
+    ]
+   },
+   "JALXM9": {
+    "k": 1,
+    "example": [
+     "ZMNA9G"
+    ]
+   },
+   "4UQUSM": {
+    "k": 1,
+    "example": [
+     "8TMJCA"
+    ]
+   },
+   "M5SXN6": {
+    "k": 1,
+    "example": [
+     "8TMJCA"
+    ]
+   },
+   "63E4DZ": {
+    "k": 2,
+    "example": [
+     "ZMNA9G",
+     "5FEG4D"
+    ]
+   },
+   "CSEZP7": {
+    "k": 2,
+    "example": [
+     "TGMS2Z",
+     "5FEG4D"
+    ]
+   },
+   "A4UTZN": {
+    "k": 3,
+    "example": [
+     "W3GGT4",
+     "CLNJ6V",
+     "MXFAQ9"
+    ]
+   }
+  },
+  "scale-L-10": {
+   "GNDJYP": {
+    "k": 0,
+    "example": []
+   },
+   "JLTTXB": {
+    "k": 0,
+    "example": []
+   },
+   "MZXKSU": {
+    "k": 0,
+    "example": []
+   },
+   "53QA4Y": {
+    "k": 1,
+    "example": [
+     "3ZP8WJ"
+    ]
+   },
+   "MJ36AS": {
+    "k": 2,
+    "example": [
+     "Q6HZBG",
+     "LBC7VQ"
+    ]
+   },
+   "9BJ233": {
+    "k": 2,
+    "example": [
+     "3ZP8WJ",
+     "9LGC83"
+    ]
+   },
+   "VSMKRU": {
+    "k": 2,
+    "example": [
+     "3ZP8WJ",
+     "9LGC83"
+    ]
+   },
+   "HG48PB": {
+    "k": 2,
+    "example": [
+     "3ZP8WJ",
+     "9LGC83"
+    ]
+   },
+   "DLWQXL": {
+    "k": 2,
+    "example": [
+     "3ZP8WJ",
+     "QNUN86"
+    ]
+   },
+   "YLTXQC": {
+    "k": 3,
+    "example": [
+     "ECPCVX",
+     "3ZP8WJ",
+     "9LGC83"
+    ]
+   }
+  },
+  "scale-L-11": {
+   "BHQYHM": {
+    "k": 0,
+    "example": []
+   },
+   "8AWJ3B": {
+    "k": 0,
+    "example": []
+   },
+   "7KJRSG": {
+    "k": 0,
+    "example": []
+   },
+   "UTM42A": {
+    "k": 0,
+    "example": []
+   },
+   "KG96ZD": {
+    "k": 0,
+    "example": []
+   },
+   "YSRXGZ": {
+    "k": 0,
+    "example": []
+   },
+   "6LCN6L": {
+    "k": 1,
+    "example": [
+     "99B9F4"
+    ]
+   },
+   "9CSWRD": {
+    "k": 1,
+    "example": [
+     "X3737S"
+    ]
+   },
+   "TS8K2K": {
+    "k": 2,
+    "example": [
+     "MFLJW2",
+     "99B9F4"
+    ]
+   },
+   "2LV549": {
+    "k": 2,
+    "example": [
+     "EPJNJK",
+     "LZA64A"
+    ]
+   }
+  },
+  "scale-L-12": {
+   "T5L4YN": {
+    "k": 0,
+    "example": []
+   },
+   "HG8JBK": {
+    "k": 0,
+    "example": []
+   },
+   "4MZELC": {
+    "k": 0,
+    "example": []
+   },
+   "LAG9JC": {
+    "k": 0,
+    "example": []
+   },
+   "YCNR2D": {
+    "k": 0,
+    "example": []
+   },
+   "GP7JBF": {
+    "k": 1,
+    "example": [
+     "DXEKC9"
+    ]
+   },
+   "MBD3VX": {
+    "k": 1,
+    "example": [
+     "DXEKC9"
+    ]
+   },
+   "VZTBWP": {
+    "k": 1,
+    "example": [
+     "PL3CU8"
+    ]
+   },
+   "53RMT3": {
+    "k": 1,
+    "example": [
+     "PL3CU8"
+    ]
+   },
+   "DUYR3N": {
+    "k": 2,
+    "example": [
+     "MU2CPF",
+     "98E7DC"
+    ]
+   }
+  }
+ }
+}

@@ -1,0 +1,15 @@
+﻿{
+  "schema": "retrace.frontier-v6n-release-reproduction.v1",
+  "passed": true,
+  "status": "complete_host_recovered_schedule",
+  "files": 3819,
+  "planned_slots": 1800,
+  "provider_calls": 0,
+  "original_frozen_inference_available": false,
+  "amended_sensitivity_available": true,
+  "human_review_complete": false,
+  "submission_ready": false,
+  "scope": "Hash and pure replay verification; visual quality relies on current hash-bound all-page review receipts."
+}
+exit code: 0; seconds: 323
+python: 3.12.10 Windows 11

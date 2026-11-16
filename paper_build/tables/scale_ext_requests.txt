@@ -1,0 +1,33 @@
+Requests of the extension (prereg/scale_extension_rules.md and its addenda), from post_sweep/out/scale/ext
+
+copyshare            Gemma-26B    72 requests
+copyshare            Gemma        72 requests
+copyshare_working    Gemma-26B    24 requests
+copyshare_working    Gemma        24 requests
+main                 Gemma-26B   108 requests
+repeat               Gemma-26B   108 requests
+repeat               Gemma       108 requests
+stream               DeepSeek     31 requests
+stream               GLM-Flash    37 requests
+withdrawal_answer    Gemma-26B    36 requests
+withdrawal_answer    Gemma        36 requests
+withdrawal_answer    GLM-Flash    36 requests
+withdrawal_working   Gemma-26B    36 requests
+withdrawal_working   Gemma        36 requests
+working              Gemma-26B    36 requests
+working              Gemma        36 requests
+xl                   Gemma-26B    36 requests
+xl                   Gemma        36 requests
+xl_withdrawal_answer Gemma-26B    12 requests
+xl_withdrawal_answer Gemma        12 requests
+xl_withdrawal_working Gemma-26B    12 requests
+xl_withdrawal_working Gemma        13 requests
+xl_working           Gemma-26B    12 requests
+xl_working           Gemma        12 requests
+
+per model: DeepSeek 31, Gemma-26B 492, Gemma 385, GLM-Flash 73
+totals: {"requests": 981, "answer_records": 981, "http_429": 2, "http_504": 12, "cut_off_at_output_limit": 62, "other_errors": 1}
+requests without an answer record: 0
+failures by kind, part and model: cut_off_at_output_limit stream DeepSeek x25; cut_off_at_output_limit withdrawal_answer GLM-Flash x12; cut_off_at_output_limit withdrawal_working Gemma-26B x7; cut_off_at_output_limit xl Gemma-26B x5; cut_off_at_output_limit xl Gemma x2; cut_off_at_output_limit xl_withdrawal_working Gemma-26B x4; cut_off_at_output_limit xl_withdrawal_working Gemma x4; cut_off_at_output_limit xl_working Gemma-26B x1; cut_off_at_output_limit xl_working Gemma x2; http_429 stream GLM-Flash x1; http_429 xl_withdrawal_working Gemma x1; http_504 copyshare Gemma x4; http_504 copyshare_working Gemma x1; http_504 repeat Gemma x5; http_504 withdrawal_working Gemma x1; http_504 working Gemma x1; other_errors xl Gemma-26B x1
+reservation 34.86 credits (ceiling 80); observed token cost 1.06 credits; requests of at most 1,000 (900 until addendum 5)
+first request 2026-11-16T06:03:45.749Z, last answer 2026-11-16T10:11:21.352Z (UTC)

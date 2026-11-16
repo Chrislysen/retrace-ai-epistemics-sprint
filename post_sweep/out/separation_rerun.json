@@ -1,0 +1,89 @@
+{
+ "passed": true,
+ "scalar_graph_state_comparisons": 520,
+ "higher_order_k_values": [
+  1,
+  2,
+  3,
+  4,
+  5,
+  6
+ ],
+ "comparisons_higher_order": 504,
+ "comparisons_masked": 16,
+ "masked_truth_table": [
+  {
+   "release_document_P": false,
+   "withdraw": [],
+   "G_supported": false,
+   "H_supported": false,
+   "different": false
+  },
+  {
+   "release_document_P": false,
+   "withdraw": [
+    "P"
+   ],
+   "G_supported": false,
+   "H_supported": false,
+   "different": false
+  },
+  {
+   "release_document_P": false,
+   "withdraw": [
+    "Q"
+   ],
+   "G_supported": false,
+   "H_supported": false,
+   "different": false
+  },
+  {
+   "release_document_P": false,
+   "withdraw": [
+    "P",
+    "Q"
+   ],
+   "G_supported": false,
+   "H_supported": false,
+   "different": false
+  },
+  {
+   "release_document_P": true,
+   "withdraw": [],
+   "G_supported": true,
+   "H_supported": true,
+   "different": false
+  },
+  {
+   "release_document_P": true,
+   "withdraw": [
+    "P"
+   ],
+   "G_supported": false,
+   "H_supported": false,
+   "different": false
+  },
+  {
+   "release_document_P": true,
+   "withdraw": [
+    "Q"
+   ],
+   "G_supported": true,
+   "H_supported": false,
+   "different": true
+  },
+  {
+   "release_document_P": true,
+   "withdraw": [
+    "P",
+    "Q"
+   ],
+   "G_supported": false,
+   "H_supported": false,
+   "different": false
+  }
+ ],
+ "identical_to_saved_certificate": true,
+ "top_level_keys_that_differ": [],
+ "input_hashes_identical": true
+}

@@ -1,0 +1,4 @@
+[PASS] B.4 clarification planning
+       3000 random instances (2-7 candidates, 0-5 questions): 1803 settleable (1096 already in agreement), 1197 not settleable
+       cost differs from exhaustive minimum: 0; 'possible' differs from the no-blocking-pair test: 0; lower bound violated: 0
+       seed 20261116, Python 3.12.10

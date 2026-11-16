@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 430" width="900" height="430" role="img" aria-labelledby="t d" font-family="'Segoe UI', Helvetica, Arial, sans-serif">
+  <title id="t">Share of supported decisions for which a smallest withdrawal was found, by case size</title>
+  <desc id="d">Search over the accepted declaration finds a smallest set for 100 percent of decisions at 10, 20, 40 and 80 records. The model naming a set with its working shown first falls from 100 to 76, 55 and 34 percent. The model answering alone falls from 50 to 26, 22 and 6 percent.</desc>
+  <rect x="0.5" y="0.5" width="899" height="429" rx="10" fill="#fcfcfb" stroke="#e1e0d9"/>
+
+  <text x="28" y="38" font-size="17" font-weight="600" fill="#0b0b0b">Finding a smallest withdrawal gets harder for the model as cases grow</text>
+  <text x="28" y="60" font-size="13" fill="#52514e">Share of supported decisions answered with a smallest set. Gemma-4-31B, twelve generated cases per size.</text>
+
+  <!-- legend -->
+  <g font-size="12.5" fill="#0b0b0b">
+    <circle cx="36" cy="86" r="5.5" fill="#1baf7a"/>
+    <text x="48" y="90">Search over the accepted declaration, no model call</text>
+    <path d="M362 79.5 l6.5 6.5 l-6.5 6.5 l-6.5 -6.5 z" fill="#0b0b0b"/>
+    <text x="376" y="90">Model names the set, working shown first</text>
+    <rect x="641" y="80.5" width="11" height="11" rx="2" fill="#eb6834"/>
+    <text x="660" y="90">Model names the set, answer only</text>
+  </g>
+
+  <!-- grid and axis -->
+  <g stroke="#e1e0d9" stroke-width="1">
+    <line x1="96" y1="130" x2="700" y2="130"/>
+    <line x1="96" y1="187.5" x2="700" y2="187.5"/>
+    <line x1="96" y1="245" x2="700" y2="245"/>
+    <line x1="96" y1="302.5" x2="700" y2="302.5"/>
+  </g>
+  <line x1="96" y1="360" x2="700" y2="360" stroke="#c3c2b7" stroke-width="1.5"/>
+  <g font-size="12" fill="#6f6e69" text-anchor="end">
+    <text x="86" y="134">100%</text>
+    <text x="86" y="191.5">75%</text>
+    <text x="86" y="249">50%</text>
+    <text x="86" y="306.5">25%</text>
+    <text x="86" y="364">0%</text>
+  </g>
+  <g font-size="13" fill="#52514e" text-anchor="middle">
+    <text x="160" y="382">10</text>
+    <text x="330" y="382">20</text>
+    <text x="500" y="382">40</text>
+    <text x="670" y="382">80</text>
+    <text x="415" y="404" font-size="12.5" fill="#6f6e69">records per case</text>
+  </g>
+
+  <!-- answer only: 50, 26, 22, 6 -->
+  <polyline points="160,245 330,300.2 500,309.4 670,346.2" fill="none" stroke="#eb6834" stroke-width="2"/>
+  <g fill="#eb6834" stroke="#fcfcfb" stroke-width="2">
+    <rect x="154" y="239" width="12" height="12" rx="2"/>
+    <rect x="324" y="294.2" width="12" height="12" rx="2"/>
+    <rect x="494" y="303.4" width="12" height="12" rx="2"/>
+    <rect x="664" y="340.2" width="12" height="12" rx="2"/>
+  </g>
+
+  <!-- search: 100, 100, 100, 100 -->
+  <polyline points="160,130 330,130 500,130 670,130" fill="none" stroke="#1baf7a" stroke-width="2"/>
+  <g fill="#1baf7a" stroke="#fcfcfb" stroke-width="2">
+    <circle cx="160" cy="130" r="8"/>
+    <circle cx="330" cy="130" r="6.5"/>
+    <circle cx="500" cy="130" r="6.5"/>
+    <circle cx="670" cy="130" r="6.5"/>
+  </g>
+
+  <!-- working first: 100, 76, 55, 34 -->
+  <polyline points="160,130 330,185.2 500,233.5 670,281.8" fill="none" stroke="#0b0b0b" stroke-width="2"/>
+  <g fill="#0b0b0b" stroke="#fcfcfb" stroke-width="2">
+    <path d="M160 123.5 l6.5 6.5 l-6.5 6.5 l-6.5 -6.5 z" stroke-width="1.5"/>
+    <path d="M330 177.7 l7.5 7.5 l-7.5 7.5 l-7.5 -7.5 z"/>
+    <path d="M500 226 l7.5 7.5 l-7.5 7.5 l-7.5 -7.5 z"/>
+    <path d="M670 274.3 l7.5 7.5 l-7.5 7.5 l-7.5 -7.5 z"/>
+  </g>
+
+  <!-- direct labels -->
+  <g font-size="13" fill="#0b0b0b">
+    <text x="160" y="112" text-anchor="middle" font-weight="600">100%</text>
+    <text x="330" y="170" text-anchor="middle" font-weight="600">76%</text>
+    <text x="500" y="218" text-anchor="middle" font-weight="600">55%</text>
+    <text x="690" y="134" font-weight="600">100%</text>
+    <text x="728" y="134" fill="#52514e">search</text>
+    <text x="690" y="286" font-weight="600">34%</text>
+    <text x="722" y="286" fill="#52514e">working shown</text>
+    <text x="690" y="350.5" font-weight="600">6%</text>
+    <text x="714" y="350.5" fill="#52514e">answer only</text>
+    <text x="160" y="270" text-anchor="middle" fill="#52514e">50%</text>
+  </g>
+
+  <text x="28" y="421" font-size="11.5" fill="#6f6e69">Usable answers of 12: working shown 12, 12, 11, 8; answer only 12 at every size. Declarations accepted by the validator: 10, 11, 12, 9 of 12.</text>
+</svg>

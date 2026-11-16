@@ -1,0 +1,76 @@
+{
+ "smallest_sizes": {
+  "decisions": 288,
+  "same_smallest_size": 288,
+  "different": []
+ },
+ "reference_example_sets": {
+  "sets": 128,
+  "leave_no_support_in_engine": 128
+ },
+ "sets_named_by_models": {
+  "answers": 160,
+  "sets_of_records_of_the_case": 547,
+  "decision_states_compared": 4532,
+  "decision_states_equal": 4532,
+  "different": []
+ },
+ "per_run": {
+  "withdrawal_answer/gemma-4-26b-a4b-it": {
+   "answers": 36,
+   "sets": 113
+  },
+  "withdrawal_answer/gemma-4-31b-it": {
+   "answers": 36,
+   "sets": 145
+  },
+  "withdrawal_answer/glm-53-flash": {
+   "answers": 24,
+   "sets": 81
+  },
+  "withdrawal_working/gemma-4-26b-a4b-it": {
+   "answers": 29,
+   "sets": 87
+  },
+  "withdrawal_working/gemma-4-31b-it": {
+   "answers": 35,
+   "sets": 121
+  }
+ },
+ "cases_with_80_records": {
+  "smallest_sizes": {
+   "decisions": 144,
+   "same_smallest_size": 144,
+   "different": []
+  },
+  "reference_example_sets": {
+   "sets": 93,
+   "leave_no_support_in_engine": 93
+  },
+  "sets_named_by_models": {
+   "answers": 40,
+   "sets_of_records_of_the_case": 191,
+   "decision_states_compared": 2292,
+   "decision_states_equal": 2292,
+   "different": []
+  },
+  "per_run": {
+   "xl_withdrawal_answer/gemma-4-26b-a4b-it": {
+    "answers": 12,
+    "sets": 34
+   },
+   "xl_withdrawal_answer/gemma-4-31b-it": {
+    "answers": 12,
+    "sets": 64
+   },
+   "xl_withdrawal_working/gemma-4-26b-a4b-it": {
+    "answers": 8,
+    "sets": 31
+   },
+   "xl_withdrawal_working/gemma-4-31b-it": {
+    "answers": 8,
+    "sets": 62
+   }
+  }
+ }
+}

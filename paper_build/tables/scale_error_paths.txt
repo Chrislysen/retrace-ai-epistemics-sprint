@@ -1,0 +1,78 @@
+decisions that lose support, by size and kind: {'L|copy_mediated': 21, 'L|direct': 12, 'M|copy_mediated': 19, 'M|direct': 17, 'S|copy_mediated': 10, 'S|direct': 14}
+decisions without support after the withdrawal, by size and kind: {'L|copy_mediated': 23, 'L|direct': 37, 'M|copy_mediated': 20, 'M|direct': 38, 'S|copy_mediated': 14, 'S|direct': 28}
+== gemma-4-31b-it
+   formal_fresh  S   lost support, still asserted: direct 0 of 14; copy_mediated 1 of 10   | every unsupported decision, asserted: direct 0 of 28; copy_mediated 1 of 14
+   formal_fresh  M   lost support, still asserted: direct 3 of 17; copy_mediated 2 of 19   | every unsupported decision, asserted: direct 3 of 38; copy_mediated 2 of 20
+   formal_fresh  L   lost support, still asserted: direct 0 of 12; copy_mediated 11 of 21   | every unsupported decision, asserted: direct 2 of 37; copy_mediated 11 of 23
+   formal_fresh  all lost support, still asserted: direct 3 of 43; copy_mediated 14 of 50   | every unsupported decision, asserted: direct 5 of 103; copy_mediated 14 of 57
+   prose_fresh   S   lost support, still asserted: direct 2 of 14; copy_mediated 3 of 10   | every unsupported decision, asserted: direct 2 of 28; copy_mediated 4 of 14
+   prose_fresh   M   lost support, still asserted: direct 1 of 13; copy_mediated 2 of 19   | every unsupported decision, asserted: direct 1 of 33; copy_mediated 2 of 20
+   prose_fresh   L   lost support, still asserted: direct 0 of 12; copy_mediated 6 of 18   | every unsupported decision, asserted: direct 2 of 36; copy_mediated 6 of 20
+   prose_fresh   all lost support, still asserted: direct 3 of 39; copy_mediated 11 of 47   | every unsupported decision, asserted: direct 5 of 97; copy_mediated 12 of 54
+   prose_extract S   lost support, still asserted: direct 0 of 14; copy_mediated 0 of 6   | every unsupported decision, asserted: direct 0 of 25; copy_mediated 0 of 9
+   prose_extract M   lost support, still asserted: direct 0 of 17; copy_mediated 0 of 15   | every unsupported decision, asserted: direct 0 of 36; copy_mediated 0 of 16
+   prose_extract L   lost support, still asserted: direct 0 of 12; copy_mediated 0 of 21   | every unsupported decision, asserted: direct 0 of 37; copy_mediated 0 of 23
+   prose_extract all lost support, still asserted: direct 0 of 43; copy_mediated 0 of 42   | every unsupported decision, asserted: direct 0 of 98; copy_mediated 0 of 48
+== gemma-4-26b-a4b-it
+   formal_fresh  S   lost support, still asserted: direct 1 of 14; copy_mediated 0 of 10   | every unsupported decision, asserted: direct 1 of 28; copy_mediated 0 of 14
+   formal_fresh  M   lost support, still asserted: direct 0 of 17; copy_mediated 5 of 19   | every unsupported decision, asserted: direct 0 of 38; copy_mediated 5 of 20
+   formal_fresh  L   lost support, still asserted: direct 0 of 12; copy_mediated 2 of 21   | every unsupported decision, asserted: direct 1 of 37; copy_mediated 2 of 23
+   formal_fresh  all lost support, still asserted: direct 1 of 43; copy_mediated 7 of 50   | every unsupported decision, asserted: direct 2 of 103; copy_mediated 7 of 57
+   prose_fresh   S   lost support, still asserted: direct 0 of 14; copy_mediated 0 of 10   | every unsupported decision, asserted: direct 0 of 28; copy_mediated 0 of 14
+   prose_fresh   M   lost support, still asserted: direct 1 of 17; copy_mediated 0 of 19   | every unsupported decision, asserted: direct 1 of 38; copy_mediated 0 of 20
+   prose_fresh   L   lost support, still asserted: direct 0 of 12; copy_mediated 0 of 21   | every unsupported decision, asserted: direct 0 of 37; copy_mediated 0 of 23
+   prose_fresh   all lost support, still asserted: direct 1 of 43; copy_mediated 0 of 50   | every unsupported decision, asserted: direct 1 of 103; copy_mediated 0 of 57
+   prose_extract S   lost support, still asserted: direct 0 of 14; copy_mediated 0 of 9   | every unsupported decision, asserted: direct 0 of 28; copy_mediated 1 of 10
+   prose_extract M   lost support, still asserted: direct 0 of 7; copy_mediated 0 of 7   | every unsupported decision, asserted: direct 0 of 17; copy_mediated 0 of 8
+   prose_extract L   lost support, still asserted: direct 0 of 2; copy_mediated 0 of 8   | every unsupported decision, asserted: direct 0 of 11; copy_mediated 0 of 8
+   prose_extract all lost support, still asserted: direct 0 of 23; copy_mediated 0 of 24   | every unsupported decision, asserted: direct 0 of 56; copy_mediated 1 of 26
+== qwen3.8-27b
+   formal_fresh  S   lost support, still asserted: direct 0 of 14; copy_mediated 0 of 7   | every unsupported decision, asserted: direct 0 of 27; copy_mediated 0 of 11
+   formal_fresh  M   lost support, still asserted: direct 0 of 17; copy_mediated 0 of 19   | every unsupported decision, asserted: direct 0 of 38; copy_mediated 0 of 20
+   formal_fresh  L   lost support, still asserted: direct 0 of 12; copy_mediated 0 of 21   | every unsupported decision, asserted: direct 0 of 37; copy_mediated 0 of 23
+   formal_fresh  all lost support, still asserted: direct 0 of 43; copy_mediated 0 of 47   | every unsupported decision, asserted: direct 0 of 102; copy_mediated 0 of 54
+   prose_fresh   S   lost support, still asserted: direct 0 of 14; copy_mediated 0 of 10   | every unsupported decision, asserted: direct 0 of 28; copy_mediated 0 of 14
+   prose_fresh   M   lost support, still asserted: direct 0 of 17; copy_mediated 0 of 19   | every unsupported decision, asserted: direct 0 of 38; copy_mediated 0 of 20
+   prose_fresh   L   lost support, still asserted: direct 0 of 12; copy_mediated 0 of 18   | every unsupported decision, asserted: direct 0 of 36; copy_mediated 0 of 20
+   prose_fresh   all lost support, still asserted: direct 0 of 43; copy_mediated 0 of 47   | every unsupported decision, asserted: direct 0 of 102; copy_mediated 0 of 54
+   prose_extract S   lost support, still asserted: direct 0 of 14; copy_mediated 0 of 10   | every unsupported decision, asserted: direct 0 of 28; copy_mediated 0 of 14
+   prose_extract M   lost support, still asserted: direct 0 of 12; copy_mediated 0 of 15   | every unsupported decision, asserted: direct 0 of 26; copy_mediated 0 of 15
+   prose_extract L   lost support, still asserted: direct 0 of 1; copy_mediated 0 of 4   | every unsupported decision, asserted: direct 0 of 2; copy_mediated 0 of 4
+   prose_extract all lost support, still asserted: direct 0 of 27; copy_mediated 0 of 29   | every unsupported decision, asserted: direct 0 of 56; copy_mediated 0 of 33
+== deepseek-v4-flash
+   formal_fresh  S   lost support, still asserted: direct 0 of 14; copy_mediated 0 of 10   | every unsupported decision, asserted: direct 0 of 28; copy_mediated 0 of 14
+   formal_fresh  M   lost support, still asserted: direct 0 of 17; copy_mediated 0 of 19   | every unsupported decision, asserted: direct 0 of 38; copy_mediated 0 of 20
+   formal_fresh  L   lost support, still asserted: direct 0 of 8; copy_mediated 0 of 18   | every unsupported decision, asserted: direct 0 of 28; copy_mediated 0 of 20
+   formal_fresh  all lost support, still asserted: direct 0 of 39; copy_mediated 0 of 47   | every unsupported decision, asserted: direct 0 of 94; copy_mediated 0 of 54
+   prose_fresh   S   lost support, still asserted: direct 0 of 14; copy_mediated 0 of 10   | every unsupported decision, asserted: direct 0 of 28; copy_mediated 0 of 14
+   prose_fresh   M   lost support, still asserted: direct 0 of 14; copy_mediated 0 of 13   | every unsupported decision, asserted: direct 0 of 32; copy_mediated 0 of 14
+   prose_fresh   L   lost support, still asserted: direct 0 of 8; copy_mediated 0 of 13   | every unsupported decision, asserted: direct 0 of 20; copy_mediated 0 of 15
+   prose_fresh   all lost support, still asserted: direct 0 of 36; copy_mediated 0 of 36   | every unsupported decision, asserted: direct 0 of 80; copy_mediated 0 of 43
+   prose_extract S   lost support, still asserted: direct 0 of 5; copy_mediated 0 of 5   | every unsupported decision, asserted: direct 0 of 11; copy_mediated 0 of 5
+   prose_extract M   lost support, still asserted: direct 0 of 0; copy_mediated 0 of 0   | every unsupported decision, asserted: direct 0 of 0; copy_mediated 0 of 0
+   prose_extract L   lost support, still asserted: direct 0 of 0; copy_mediated 0 of 0   | every unsupported decision, asserted: direct 0 of 0; copy_mediated 0 of 0
+   prose_extract all lost support, still asserted: direct 0 of 5; copy_mediated 0 of 5   | every unsupported decision, asserted: direct 0 of 11; copy_mediated 0 of 5
+== glm-53-flash
+   formal_fresh  S   lost support, still asserted: direct 0 of 14; copy_mediated 0 of 10   | every unsupported decision, asserted: direct 0 of 28; copy_mediated 0 of 14
+   formal_fresh  M   lost support, still asserted: direct 0 of 17; copy_mediated 0 of 19   | every unsupported decision, asserted: direct 0 of 38; copy_mediated 0 of 20
+   formal_fresh  L   lost support, still asserted: direct 0 of 12; copy_mediated 0 of 21   | every unsupported decision, asserted: direct 0 of 37; copy_mediated 0 of 23
+   formal_fresh  all lost support, still asserted: direct 0 of 43; copy_mediated 0 of 50   | every unsupported decision, asserted: direct 0 of 103; copy_mediated 0 of 57
+   prose_fresh   S   lost support, still asserted: direct 0 of 14; copy_mediated 0 of 10   | every unsupported decision, asserted: direct 0 of 28; copy_mediated 0 of 14
+   prose_fresh   M   lost support, still asserted: direct 0 of 17; copy_mediated 0 of 19   | every unsupported decision, asserted: direct 0 of 38; copy_mediated 0 of 20
+   prose_fresh   L   lost support, still asserted: direct 0 of 12; copy_mediated 0 of 21   | every unsupported decision, asserted: direct 0 of 37; copy_mediated 0 of 23
+   prose_fresh   all lost support, still asserted: direct 0 of 43; copy_mediated 0 of 50   | every unsupported decision, asserted: direct 0 of 103; copy_mediated 0 of 57
+   prose_extract S   lost support, still asserted: direct 0 of 13; copy_mediated 0 of 10   | every unsupported decision, asserted: direct 0 of 26; copy_mediated 0 of 14
+   prose_extract M   lost support, still asserted: direct 0 of 16; copy_mediated 0 of 17   | every unsupported decision, asserted: direct 0 of 36; copy_mediated 0 of 18
+   prose_extract L   lost support, still asserted: direct 0 of 7; copy_mediated 0 of 20   | every unsupported decision, asserted: direct 0 of 26; copy_mediated 0 of 21
+   prose_extract all lost support, still asserted: direct 0 of 36; copy_mediated 0 of 47   | every unsupported decision, asserted: direct 0 of 88; copy_mediated 0 of 53
+first-day experiment, unsupported decisions by kind: {'copy_mediated': 48, 'direct': 24}
+== first day, gemma-4-31b-it
+   formal_fresh         asserted: direct 0 of 24; copy_mediated 2 of 48
+   prose_fresh          asserted: direct 0 of 24; copy_mediated 4 of 48
+   prose_history        asserted: direct 0 of 24; copy_mediated 3 of 48
+   prose_no_commitment  asserted: direct 0 of 24; copy_mediated 4 of 48
+== first day, glm-53-flash
+   formal_fresh         asserted: direct 0 of 24; copy_mediated 0 of 48
+   prose_fresh          asserted: direct 0 of 24; copy_mediated 0 of 48
+   prose_history        asserted: direct 0 of 24; copy_mediated 0 of 48
+   prose_no_commitment  asserted: direct 0 of 24; copy_mediated 0 of 48

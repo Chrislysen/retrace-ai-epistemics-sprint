@@ -1,0 +1,1836 @@
+{
+ "seed": 20261116,
+ "draws": 5000,
+ "A1_pipeline": {
+  "deepseek-v4-flash": {
+   "slots": 60,
+   "slot_admitted_bare": 40,
+   "admitted_and_exact": 40,
+   "admitted_not_exact": 0,
+   "pairs": 768,
+   "pairs_gold_ASSERT": 444,
+   "pair_agree": 492,
+   "pairs_gold_WITHHOLD": 306,
+   "slot_missing": 20,
+   "pair_no_verdict": 276,
+   "pairs_gold_SPLIT": 18,
+   "asserted_of_gold_assert": [
+    280,
+    444
+   ],
+   "asserted_of_gold_assert_interval": [
+    0.4966139954853273,
+    0.756152125279642
+   ],
+   "unsafe_of_gold_not_assert": [
+    0,
+    324
+   ]
+  },
+  "gemma-4-31b-it": {
+   "slots": 60,
+   "slot_admitted_fenced": 34,
+   "admitted_and_exact": 34,
+   "admitted_not_exact": 0,
+   "pairs": 768,
+   "pairs_gold_ASSERT": 444,
+   "pair_agree": 387,
+   "pairs_gold_WITHHOLD": 306,
+   "slot_rejected": 26,
+   "pair_no_verdict": 381,
+   "pairs_gold_SPLIT": 18,
+   "asserted_of_gold_assert": [
+    209,
+    444
+   ],
+   "asserted_of_gold_assert_interval": [
+    0.35665914221218964,
+    0.58675799086758
+   ],
+   "unsafe_of_gold_not_assert": [
+    0,
+    324
+   ]
+  },
+  "glm-5.2": {
+   "slots": 60,
+   "slot_missing": 27,
+   "admitted_and_exact": 28,
+   "admitted_not_exact": 0,
+   "pairs": 768,
+   "pairs_gold_ASSERT": 444,
+   "pair_no_verdict": 423,
+   "pairs_gold_WITHHOLD": 306,
+   "slot_admitted_bare": 20,
+   "pair_agree": 345,
+   "slot_admitted_fenced": 8,
+   "pairs_gold_SPLIT": 18,
+   "slot_rejected": 5,
+   "asserted_of_gold_assert": [
+    191,
+    444
+   ],
+   "asserted_of_gold_assert_interval": [
+    0.3211009174311927,
+    0.5426008968609866
+   ],
+   "unsafe_of_gold_not_assert": [
+    0,
+    324
+   ]
+  },
+  "glm-5.3-flash": {
+   "slots": 60,
+   "slot_admitted_bare": 33,
+   "admitted_and_exact": 33,
+   "admitted_not_exact": 0,
+   "pairs": 768,
+   "pairs_gold_ASSERT": 444,
+   "pair_agree": 387,
+   "pairs_gold_WITHHOLD": 306,
+   "slot_missing": 25,
+   "pair_no_verdict": 381,
+   "pairs_gold_SPLIT": 18,
+   "slot_rejected": 2,
+   "asserted_of_gold_assert": [
+    209,
+    444
+   ],
+   "asserted_of_gold_assert_interval": [
+    0.35374149659863946,
+    0.5959367945823928
+   ],
+   "unsafe_of_gold_not_assert": [
+    0,
+    324
+   ]
+  },
+  "qwen3.8-27b": {
+   "slots": 60,
+   "slot_admitted_bare": 46,
+   "admitted_and_exact": 46,
+   "admitted_not_exact": 0,
+   "pairs": 768,
+   "pairs_gold_ASSERT": 444,
+   "pair_agree": 579,
+   "pairs_gold_WITHHOLD": 306,
+   "slot_missing": 14,
+   "pair_no_verdict": 189,
+   "pairs_gold_SPLIT": 18,
+   "asserted_of_gold_assert": [
+    330,
+    444
+   ],
+   "asserted_of_gold_assert_interval": [
+    0.6301369863013698,
+    0.8507795100222717
+   ],
+   "unsafe_of_gold_not_assert": [
+    0,
+    324
+   ]
+  },
+  "qwen3.5-397b": {
+   "slots": 12,
+   "slot_admitted_bare": 10,
+   "admitted_and_exact": 10,
+   "admitted_not_exact": 0,
+   "pairs": 174,
+   "pairs_gold_ASSERT": 108,
+   "pair_agree": 144,
+   "pairs_gold_WITHHOLD": 63,
+   "pairs_gold_SPLIT": 3,
+   "slot_missing": 2,
+   "pair_no_verdict": 30,
+   "asserted_of_gold_assert": [
+    90,
+    108
+   ],
+   "asserted_of_gold_assert_interval": [
+    0.6635514018691588,
+    1.0
+   ],
+   "unsafe_of_gold_not_assert": [
+    0,
+    66
+   ]
+  }
+ },
+ "compiled_families_by_arm": {
+  "strict_source_ir": {
+   "compiled": 191,
+   "exact": 191,
+   "registry_gap": 0
+  },
+  "nl_projection": {
+   "compiled": 72,
+   "exact": 71,
+   "registry_gap": 0
+  },
+  "long_source_ir": {
+   "compiled": 7,
+   "exact": 6,
+   "registry_gap": 0
+  }
+ },
+ "A2_direct_vs_pipeline": {
+  "deepseek-v4-flash": {
+   "commitment/hist_init": {
+    "pairs": 58,
+    "gold_ASSERT": 41,
+    "direct_agree": 53,
+    "pipeline_agree": 43,
+    "gold_WITHHOLD": 17,
+    "cases": 12,
+    "direct_cases_answered": 11,
+    "direct_cases_fully_right_by_class": 11,
+    "direct_cases_exact_object": 11,
+    "pipeline_cases_with_verdict": 9,
+    "pipeline_no_verdict": 15,
+    "direct_no_answer": 5,
+    "direct_unsafe_interval": [
+     0.0,
+     0.0
+    ],
+    "direct_over_cautious_interval": [
+     0.0,
+     0.0
+    ]
+   },
+   "commitment/hist_withdrawn": {
+    "pairs": 58,
+    "gold_ASSERT": 26,
+    "direct_agree": 53,
+    "pipeline_agree": 43,
+    "gold_WITHHOLD": 30,
+    "cases": 12,
+    "direct_cases_answered": 11,
+    "direct_cases_fully_right_by_class": 11,
+    "direct_cases_exact_object": 11,
+    "pipeline_cases_with_verdict": 9,
+    "pipeline_no_verdict": 15,
+    "gold_SPLIT": 2,
+    "direct_no_answer": 5,
+    "direct_unsafe_interval": [
+     0.0,
+     0.0
+    ],
+    "direct_over_cautious_interval": [
+     0.0,
+     0.0
+    ]
+   },
+   "commitment/hist_restored": {
+    "pairs": 58,
+    "gold_WITHHOLD": 16,
+    "direct_agree": 53,
+    "pipeline_agree": 43,
+    "gold_ASSERT": 41,
+    "cases": 12,
+    "direct_cases_answered": 11,
+    "direct_cases_fully_right_by_class": 11,
+    "direct_cases_exact_object": 11,
+    "pipeline_cases_with_verdict": 9,
+    "pipeline_no_verdict": 15,
+    "direct_no_answer": 5,
+    "gold_SPLIT": 1,
+    "direct_unsafe_interval": [
+     0.0,
+     0.0
+    ],
+    "direct_over_cautious_interval": [
+     0.0,
+     0.0
+    ]
+   },
+   "commitment/evt_no_commit": {
+    "pairs": 58,
+    "gold_ASSERT": 26,
+    "direct_agree": 43,
+    "pipeline_agree": 43,
+    "gold_WITHHOLD": 30,
+    "cases": 12,
+    "direct_cases_answered": 9,
+    "direct_cases_fully_right_by_class": 9,
+    "direct_cases_exact_object": 9,
+    "pipeline_cases_with_verdict": 9,
+    "pipeline_no_verdict": 15,
+    "direct_no_answer": 15,
+    "gold_SPLIT": 2,
+    "direct_unsafe_interval": [
+     0.0,
+     0.0
+    ],
+    "direct_over_cautious_interval": [
+     0.0,
+     0.0
+    ]
+   },
+   "commitment/fresh_withdrawn": {
+    "pairs": 58,
+    "gold_ASSERT": 26,
+    "direct_agree": 29,
+    "pipeline_agree": 43,
+    "gold_WITHHOLD": 30,
+    "cases": 12,
+    "direct_cases_answered": 6,
+    "direct_cases_fully_right_by_class": 6,
+    "direct_cases_exact_object": 6,
+    "pipeline_cases_with_verdict": 9,
+    "direct_no_answer": 29,
+    "pipeline_no_verdict": 15,
+    "gold_SPLIT": 2,
+    "direct_unsafe_interval": [
+     0.0,
+     0.0
+    ],
+    "direct_over_cautious_interval": [
+     0.0,
+     0.0
+    ]
+   },
+   "commitment/fresh_restored": {
+    "pairs": 58,
+    "gold_WITHHOLD": 16,
+    "direct_agree": 48,
+    "pipeline_agree": 43,
+    "gold_ASSERT": 41,
+    "cases": 12,
+    "direct_cases_answered": 10,
+    "direct_cases_fully_right_by_class": 10,
+    "direct_cases_exact_object": 10,
+    "pipeline_cases_with_verdict": 9,
+    "pipeline_no_verdict": 15,
+    "direct_no_answer": 10,
+    "gold_SPLIT": 1,
+    "direct_unsafe_interval": [
+     0.0,
+     0.0
+    ],
+    "direct_over_cautious_interval": [
+     0.0,
+     0.0
+    ]
+   },
+   "oracle_ir_consumption/fresh_withdrawn": {
+    "pairs": 58,
+    "gold_ASSERT": 26,
+    "direct_agree": 43,
+    "pipeline_agree": 43,
+    "gold_WITHHOLD": 30,
+    "cases": 12,
+    "direct_cases_answered": 9,
+    "direct_cases_fully_right_by_class": 9,
+    "direct_cases_exact_object": 9,
+    "pipeline_cases_with_verdict": 9,
+    "direct_no_answer": 15,
+    "pipeline_no_verdict": 15,
+    "gold_SPLIT": 2,
+    "direct_unsafe_interval": [
+     0.0,
+     0.0
+    ],
+    "direct_over_cautious_interval": [
+     0.0,
+     0.0
+    ]
+   },
+   "symbolic_assistance/fresh_withdrawn": {
+    "pairs": 58,
+    "gold_ASSERT": 26,
+    "direct_agree": 48,
+    "pipeline_agree": 43,
+    "gold_WITHHOLD": 30,
+    "cases": 12,
+    "direct_cases_answered": 10,
+    "direct_cases_fully_right_by_class": 10,
+    "direct_cases_exact_object": 10,
+    "pipeline_cases_with_verdict": 9,
+    "direct_no_answer": 10,
+    "pipeline_no_verdict": 15,
+    "gold_SPLIT": 2,
+    "direct_unsafe_interval": [
+     0.0,
+     0.0
+    ],
+    "direct_over_cautious_interval": [
+     0.0,
+     0.0
+    ]
+   }
+  },
+  "gemma-4-31b-it": {
+   "commitment/hist_init": {
+    "pairs": 58,
+    "gold_ASSERT": 41,
+    "direct_agree": 55,
+    "pipeline_agree": 33,
+    "gold_WITHHOLD": 17,
+    "cases": 12,
+    "direct_cases_answered": 12,
+    "direct_cases_fully_right_by_class": 10,
+    "direct_cases_exact_object": 10,
+    "pipeline_cases_with_verdict": 7,
+    "pipeline_no_verdict": 25,
+    "direct_over_cautious": 3,
+    "direct_unsafe_interval": [
+     0.0,
+     0.0
+    ],
+    "direct_over_cautious_interval": [
+     0.047619047619047616,
+     0.1
+    ]
+   },
+   "commitment/hist_withdrawn": {
+    "pairs": 58,
+    "gold_ASSERT": 26,
+    "direct_over_cautious": 2,
+    "pipeline_agree": 33,
+    "direct_agree": 54,
+    "gold_WITHHOLD": 30,
+    "cases": 12,
+    "direct_cases_answered": 12,
+    "direct_cases_fully_right_by_class": 9,
+    "direct_cases_exact_object": 8,
+    "pipeline_cases_with_verdict": 7,
+    "pipeline_no_verdict": 25,
+    "direct_unsafe": 1,
+    "gold_SPLIT": 2,
+    "direct_other_difference": 1,
+    "direct_unsafe_interval": [
+     0.0,
+     0.0625
+    ],
+    "direct_over_cautious_interval": [
+     0.0,
+     0.15384615384615385
+    ]
+   },
+   "commitment/hist_restored": {
+    "pairs": 58,
+    "gold_WITHHOLD": 16,
+    "direct_agree": 54,
+    "pipeline_agree": 33,
+    "gold_ASSERT": 41,
+    "cases": 12,
+    "direct_cases_answered": 12,
+    "direct_cases_fully_right_by_class": 9,
+    "direct_cases_exact_object": 8,
+    "pipeline_cases_with_verdict": 7,
+    "pipeline_no_verdict": 25,
+    "direct_over_cautious": 4,
+    "gold_SPLIT": 1,
+    "direct_unsafe_interval": [
+     0.0,
+     0.0
+    ],
+    "direct_over_cautious_interval": [
+     0.023809523809523808,
+     0.175
+    ]
+   },
+   "commitment/evt_no_commit": {
+    "pairs": 58,
+    "gold_ASSERT": 26,
+    "direct_no_answer": 4,
+    "pipeline_agree": 33,
+    "gold_WITHHOLD": 30,
+    "cases": 12,
+    "direct_cases_answered": 11,
+    "direct_cases_fully_right_by_class": 7,
+    "direct_cases_exact_object": 7,
+    "pipeline_cases_with_verdict": 7,
+    "direct_agree": 49,
+    "direct_over_cautious": 4,
+    "pipeline_no_verdict": 25,
+    "gold_SPLIT": 2,
+    "direct_other_difference": 1,
+    "direct_unsafe_interval": [
+     0.0,
+     0.0
+    ],
+    "direct_over_cautious_interval": [
+     0.07692307692307693,
+     0.23076923076923078
+    ]
+   },
+   "commitment/fresh_withdrawn": {
+    "pairs": 58,
+    "gold_ASSERT": 26,
+    "direct_over_cautious": 6,
+    "pipeline_agree": 33,
+    "direct_agree": 46,
+    "gold_WITHHOLD": 30,
+    "cases": 12,
+    "direct_cases_answered": 11,
+    "direct_cases_fully_right_by_class": 7,
+    "direct_cases_exact_object": 7,
+    "pipeline_cases_with_verdict": 7,
+    "pipeline_no_verdict": 25,
+    "gold_SPLIT": 2,
+    "direct_other_difference": 1,
+    "direct_no_answer": 5,
+    "direct_unsafe_interval": [
+     0.0,
+     0.0
+    ],
+    "direct_over_cautious_interval": [
+     0.15384615384615385,
+     0.3076923076923077
+    ]
+   },
+   "commitment/fresh_restored": {
+    "pairs": 58,
+    "gold_WITHHOLD": 16,
+    "direct_agree": 46,
+    "pipeline_agree": 33,
+    "gold_ASSERT": 41,
+    "cases": 12,
+    "direct_cases_answered": 11,
+    "direct_cases_fully_right_by_class": 7,
+    "direct_cases_exact_object": 6,
+    "pipeline_cases_with_verdict": 7,
+    "direct_no_answer": 5,
+    "pipeline_no_verdict": 25,
+    "direct_over_cautious": 7,
+    "gold_SPLIT": 1,
+    "direct_unsafe_interval": [
+     0.0,
+     0.0
+    ],
+    "direct_over_cautious_interval": [
+     0.075,
+     0.2619047619047619
+    ]
+   },
+   "oracle_ir_consumption/fresh_withdrawn": {
+    "pairs": 58,
+    "gold_ASSERT": 26,
+    "direct_agree": 47,
+    "pipeline_agree": 33,
+    "gold_WITHHOLD": 30,
+    "cases": 12,
+    "direct_cases_answered": 12,
+    "direct_cases_fully_right_by_class": 4,
+    "direct_cases_exact_object": 4,
+    "pipeline_cases_with_verdict": 7,
+    "direct_over_cautious": 7,
+    "pipeline_no_verdict": 25,
+    "gold_SPLIT": 2,
+    "direct_unsafe": 4,
+    "direct_unsafe_interval": [
+     0.0625,
+     0.1875
+    ],
+    "direct_over_cautious_interval": [
+     0.15384615384615385,
+     0.38461538461538464
+    ]
+   },
+   "symbolic_assistance/fresh_withdrawn": {
+    "pairs": 58,
+    "gold_ASSERT": 26,
+    "direct_agree": 56,
+    "pipeline_agree": 33,
+    "gold_WITHHOLD": 30,
+    "cases": 12,
+    "direct_cases_answered": 12,
+    "direct_cases_fully_right_by_class": 11,
+    "direct_cases_exact_object": 11,
+    "pipeline_cases_with_verdict": 7,
+    "pipeline_no_verdict": 25,
+    "direct_over_cautious": 2,
+    "gold_SPLIT": 2,
+    "direct_unsafe_interval": [
+     0.0,
+     0.0
+    ],
+    "direct_over_cautious_interval": [
+     0.0,
+     0.15384615384615385
+    ]
+   }
+  },
+  "glm-5.2": {
+   "commitment/hist_init": {
+    "pairs": 58,
+    "gold_ASSERT": 41,
+    "direct_no_answer": 49,
+    "pipeline_agree": 28,
+    "gold_WITHHOLD": 17,
+    "cases": 12,
+    "direct_cases_answered": 2,
+    "direct_cases_fully_right_by_class": 2,
+    "direct_cases_exact_object": 2,
+    "pipeline_cases_with_verdict": 6,
+    "direct_agree": 9,
+    "pipeline_no_verdict": 30,
+    "direct_unsafe_interval": [
+     0.0,
+     0.0
+    ],
+    "direct_over_cautious_interval": [
+     0.0,
+     0.0
+    ]
+   },
+   "commitment/hist_withdrawn": {
+    "pairs": 58,
+    "gold_ASSERT": 26,
+    "direct_no_answer": 53,
+    "pipeline_agree": 28,
+    "gold_WITHHOLD": 30,
+    "cases": 12,
+    "direct_cases_answered": 1,
+    "direct_cases_fully_right_by_class": 1,
+    "direct_cases_exact_object": 1,
+    "pipeline_cases_with_verdict": 6,
+    "pipeline_no_verdict": 30,
+    "direct_agree": 5,
+    "gold_SPLIT": 2,
+    "direct_unsafe_interval": [
+     0.0,
+     0.0
+    ],
+    "direct_over_cautious_interval": [
+     0.0,
+     0.0
+    ]
+   },
+   "commitment/hist_restored": {
+    "pairs": 58,
+    "gold_WITHHOLD": 16,
+    "direct_no_answer": 53,
+    "pipeline_agree": 28,
+    "gold_ASSERT": 41,
+    "cases": 12,
+    "direct_cases_answered": 1,
+    "direct_cases_fully_right_by_class": 1,
+    "direct_cases_exact_object": 1,
+    "pipeline_cases_with_verdict": 6,
+    "pipeline_no_verdict": 30,
+    "direct_agree": 5,
+    "gold_SPLIT": 1,
+    "direct_unsafe_interval": [
+     0.0,
+     0.0
+    ],
+    "direct_over_cautious_interval": [
+     0.0,
+     0.0
+    ]
+   },
+   "commitment/evt_no_commit": {
+    "pairs": 58,
+    "gold_ASSERT": 26,
+    "direct_no_answer": 58,
+    "pipeline_agree": 28,
+    "gold_WITHHOLD": 30,
+    "cases": 12,
+    "direct_cases_answered": 0,
+    "direct_cases_fully_right_by_class": 0,
+    "direct_cases_exact_object": 0,
+    "pipeline_cases_with_verdict": 6,
+    "pipeline_no_verdict": 30,
+    "gold_SPLIT": 2,
+    "direct_unsafe_interval": [
+     0.0,
+     0.0
+    ],
+    "direct_over_cautious_interval": [
+     0.0,
+     0.0
+    ]
+   },
+   "commitment/fresh_withdrawn": {
+    "pairs": 58,
+    "gold_ASSERT": 26,
+    "direct_no_answer": 48,
+    "pipeline_agree": 28,
+    "gold_WITHHOLD": 30,
+    "cases": 12,
+    "direct_cases_answered": 2,
+    "direct_cases_fully_right_by_class": 2,
+    "direct_cases_exact_object": 2,
+    "pipeline_cases_with_verdict": 6,
+    "direct_agree": 10,
+    "pipeline_no_verdict": 30,
+    "gold_SPLIT": 2,
+    "direct_unsafe_interval": [
+     0.0,
+     0.0
+    ],
+    "direct_over_cautious_interval": [
+     0.0,
+     0.0
+    ]
+   },
+   "commitment/fresh_restored": {
+    "pairs": 58,
+    "gold_WITHHOLD": 16,
+    "direct_no_answer": 48,
+    "pipeline_agree": 28,
+    "gold_ASSERT": 41,
+    "cases": 12,
+    "direct_cases_answered": 2,
+    "direct_cases_fully_right_by_class": 2,
+    "direct_cases_exact_object": 2,
+    "pipeline_cases_with_verdict": 6,
+    "direct_agree": 10,
+    "pipeline_no_verdict": 30,
+    "gold_SPLIT": 1,
+    "direct_unsafe_interval": [
+     0.0,
+     0.0
+    ],
+    "direct_over_cautious_interval": [
+     0.0,
+     0.0
+    ]
+   },
+   "oracle_ir_consumption/fresh_withdrawn": {
+    "pairs": 58,
+    "gold_ASSERT": 26,
+    "direct_no_answer": 53,
+    "pipeline_agree": 28,
+    "gold_WITHHOLD": 30,
+    "cases": 12,
+    "direct_cases_answered": 1,
+    "direct_cases_fully_right_by_class": 1,
+    "direct_cases_exact_object": 1,
+    "pipeline_cases_with_verdict": 6,
+    "pipeline_no_verdict": 30,
+    "gold_SPLIT": 2,
+    "direct_agree": 5,
+    "direct_unsafe_interval": [
+     0.0,
+     0.0
+    ],
+    "direct_over_cautious_interval": [
+     0.0,
+     0.0
+    ]
+   },
+   "symbolic_assistance/fresh_withdrawn": {
+    "pairs": 58,
+    "gold_ASSERT": 26,
+    "direct_agree": 38,
+    "pipeline_agree": 28,
+    "gold_WITHHOLD": 30,
+    "cases": 12,
+    "direct_cases_answered": 8,
+    "direct_cases_fully_right_by_class": 8,
+    "direct_cases_exact_object": 8,
+    "pipeline_cases_with_verdict": 6,
+    "pipeline_no_verdict": 30,
+    "direct_no_answer": 20,
+    "gold_SPLIT": 2,
+    "direct_unsafe_interval": [
+     0.0,
+     0.0
+    ],
+    "direct_over_cautious_interval": [
+     0.0,
+     0.0
+    ]
+   }
+  },
+  "glm-5.3-flash": {
+   "commitment/hist_init": {
+    "pairs": 58,
+    "gold_ASSERT": 41,
+    "direct_agree": 49,
+    "pipeline_agree": 19,
+    "gold_WITHHOLD": 17,
+    "cases": 12,
+    "direct_cases_answered": 10,
+    "direct_cases_fully_right_by_class": 10,
+    "direct_cases_exact_object": 10,
+    "pipeline_cases_with_verdict": 4,
+    "direct_no_answer": 9,
+    "pipeline_no_verdict": 39,
+    "direct_unsafe_interval": [
+     0.0,
+     0.0
+    ],
+    "direct_over_cautious_interval": [
+     0.0,
+     0.0
+    ]
+   },
+   "commitment/hist_withdrawn": {
+    "pairs": 58,
+    "gold_ASSERT": 26,
+    "direct_agree": 49,
+    "pipeline_agree": 19,
+    "gold_WITHHOLD": 30,
+    "cases": 12,
+    "direct_cases_answered": 10,
+    "direct_cases_fully_right_by_class": 10,
+    "direct_cases_exact_object": 10,
+    "pipeline_cases_with_verdict": 4,
+    "direct_no_answer": 9,
+    "pipeline_no_verdict": 39,
+    "gold_SPLIT": 2,
+    "direct_unsafe_interval": [
+     0.0,
+     0.0
+    ],
+    "direct_over_cautious_interval": [
+     0.0,
+     0.0
+    ]
+   },
+   "commitment/hist_restored": {
+    "pairs": 58,
+    "gold_WITHHOLD": 16,
+    "direct_agree": 44,
+    "pipeline_agree": 19,
+    "gold_ASSERT": 41,
+    "cases": 12,
+    "direct_cases_answered": 9,
+    "direct_cases_fully_right_by_class": 9,
+    "direct_cases_exact_object": 9,
+    "pipeline_cases_with_verdict": 4,
+    "direct_no_answer": 14,
+    "pipeline_no_verdict": 39,
+    "gold_SPLIT": 1,
+    "direct_unsafe_interval": [
+     0.0,
+     0.0
+    ],
+    "direct_over_cautious_interval": [
+     0.0,
+     0.0
+    ]
+   },
+   "commitment/evt_no_commit": {
+    "pairs": 58,
+    "gold_ASSERT": 26,
+    "direct_agree": 29,
+    "pipeline_agree": 19,
+    "gold_WITHHOLD": 30,
+    "cases": 12,
+    "direct_cases_answered": 6,
+    "direct_cases_fully_right_by_class": 6,
+    "direct_cases_exact_object": 5,
+    "pipeline_cases_with_verdict": 4,
+    "direct_no_answer": 29,
+    "pipeline_no_verdict": 39,
+    "gold_SPLIT": 2,
+    "direct_unsafe_interval": [
+     0.0,
+     0.0
+    ],
+    "direct_over_cautious_interval": [
+     0.0,
+     0.0
+    ]
+   },
+   "commitment/fresh_withdrawn": {
+    "pairs": 58,
+    "gold_ASSERT": 26,
+    "direct_no_answer": 38,
+    "pipeline_agree": 19,
+    "gold_WITHHOLD": 30,
+    "cases": 12,
+    "direct_cases_answered": 4,
+    "direct_cases_fully_right_by_class": 4,
+    "direct_cases_exact_object": 4,
+    "pipeline_cases_with_verdict": 4,
+    "pipeline_no_verdict": 39,
+    "gold_SPLIT": 2,
+    "direct_agree": 20,
+    "direct_unsafe_interval": [
+     0.0,
+     0.0
+    ],
+    "direct_over_cautious_interval": [
+     0.0,
+     0.0
+    ]
+   },
+   "commitment/fresh_restored": {
+    "pairs": 58,
+    "gold_WITHHOLD": 16,
+    "direct_agree": 34,
+    "pipeline_agree": 19,
+    "gold_ASSERT": 41,
+    "cases": 12,
+    "direct_cases_answered": 7,
+    "direct_cases_fully_right_by_class": 7,
+    "direct_cases_exact_object": 7,
+    "pipeline_cases_with_verdict": 4,
+    "direct_no_answer": 24,
+    "pipeline_no_verdict": 39,
+    "gold_SPLIT": 1,
+    "direct_unsafe_interval": [
+     0.0,
+     0.0
+    ],
+    "direct_over_cautious_interval": [
+     0.0,
+     0.0
+    ]
+   },
+   "oracle_ir_consumption/fresh_withdrawn": {
+    "pairs": 58,
+    "gold_ASSERT": 26,
+    "direct_agree": 28,
+    "pipeline_agree": 19,
+    "gold_WITHHOLD": 30,
+    "cases": 12,
+    "direct_cases_answered": 6,
+    "direct_cases_fully_right_by_class": 6,
+    "direct_cases_exact_object": 6,
+    "pipeline_cases_with_verdict": 4,
+    "pipeline_no_verdict": 39,
+    "direct_no_answer": 30,
+    "gold_SPLIT": 2,
+    "direct_unsafe_interval": [
+     0.0,
+     0.0
+    ],
+    "direct_over_cautious_interval": [
+     0.0,
+     0.0
+    ]
+   },
+   "symbolic_assistance/fresh_withdrawn": {
+    "pairs": 58,
+    "gold_ASSERT": 26,
+    "direct_agree": 28,
+    "pipeline_agree": 19,
+    "gold_WITHHOLD": 30,
+    "cases": 12,
+    "direct_cases_answered": 6,
+    "direct_cases_fully_right_by_class": 6,
+    "direct_cases_exact_object": 6,
+    "pipeline_cases_with_verdict": 4,
+    "pipeline_no_verdict": 39,
+    "direct_no_answer": 30,
+    "gold_SPLIT": 2,
+    "direct_unsafe_interval": [
+     0.0,
+     0.0
+    ],
+    "direct_over_cautious_interval": [
+     0.0,
+     0.0
+    ]
+   }
+  },
+  "qwen3.8-27b": {
+   "commitment/hist_init": {
+    "pairs": 58,
+    "gold_ASSERT": 41,
+    "direct_agree": 18,
+    "pipeline_agree": 39,
+    "gold_WITHHOLD": 17,
+    "cases": 12,
+    "direct_cases_answered": 4,
+    "direct_cases_fully_right_by_class": 4,
+    "direct_cases_exact_object": 4,
+    "pipeline_cases_with_verdict": 8,
+    "pipeline_no_verdict": 19,
+    "direct_no_answer": 40,
+    "direct_unsafe_interval": [
+     0.0,
+     0.0
+    ],
+    "direct_over_cautious_interval": [
+     0.0,
+     0.0
+    ]
+   },
+   "commitment/hist_withdrawn": {
+    "pairs": 58,
+    "gold_ASSERT": 26,
+    "direct_no_answer": 44,
+    "pipeline_agree": 39,
+    "gold_WITHHOLD": 30,
+    "cases": 12,
+    "direct_cases_answered": 3,
+    "direct_cases_fully_right_by_class": 3,
+    "direct_cases_exact_object": 3,
+    "pipeline_cases_with_verdict": 8,
+    "direct_agree": 14,
+    "pipeline_no_verdict": 19,
+    "gold_SPLIT": 2,
+    "direct_unsafe_interval": [
+     0.0,
+     0.0
+    ],
+    "direct_over_cautious_interval": [
+     0.0,
+     0.0
+    ]
+   },
+   "commitment/hist_restored": {
+    "pairs": 58,
+    "gold_WITHHOLD": 16,
+    "direct_no_answer": 44,
+    "pipeline_agree": 39,
+    "gold_ASSERT": 41,
+    "cases": 12,
+    "direct_cases_answered": 3,
+    "direct_cases_fully_right_by_class": 3,
+    "direct_cases_exact_object": 3,
+    "pipeline_cases_with_verdict": 8,
+    "direct_agree": 14,
+    "pipeline_no_verdict": 19,
+    "gold_SPLIT": 1,
+    "direct_unsafe_interval": [
+     0.0,
+     0.0
+    ],
+    "direct_over_cautious_interval": [
+     0.0,
+     0.0
+    ]
+   },
+   "commitment/evt_no_commit": {
+    "pairs": 58,
+    "gold_ASSERT": 26,
+    "direct_agree": 19,
+    "pipeline_agree": 39,
+    "gold_WITHHOLD": 30,
+    "cases": 12,
+    "direct_cases_answered": 4,
+    "direct_cases_fully_right_by_class": 4,
+    "direct_cases_exact_object": 3,
+    "pipeline_cases_with_verdict": 8,
+    "direct_no_answer": 39,
+    "pipeline_no_verdict": 19,
+    "gold_SPLIT": 2,
+    "direct_unsafe_interval": [
+     0.0,
+     0.0
+    ],
+    "direct_over_cautious_interval": [
+     0.0,
+     0.0
+    ]
+   },
+   "commitment/fresh_withdrawn": {
+    "pairs": 58,
+    "gold_ASSERT": 26,
+    "direct_no_answer": 53,
+    "pipeline_agree": 39,
+    "gold_WITHHOLD": 30,
+    "cases": 12,
+    "direct_cases_answered": 1,
+    "direct_cases_fully_right_by_class": 1,
+    "direct_cases_exact_object": 1,
+    "pipeline_cases_with_verdict": 8,
+    "pipeline_no_verdict": 19,
+    "direct_agree": 5,
+    "gold_SPLIT": 2,
+    "direct_unsafe_interval": [
+     0.0,
+     0.0
+    ],
+    "direct_over_cautious_interval": [
+     0.0,
+     0.0
+    ]
+   },
+   "commitment/fresh_restored": {
+    "pairs": 58,
+    "gold_WITHHOLD": 16,
+    "direct_no_answer": 49,
+    "pipeline_agree": 39,
+    "gold_ASSERT": 41,
+    "cases": 12,
+    "direct_cases_answered": 2,
+    "direct_cases_fully_right_by_class": 2,
+    "direct_cases_exact_object": 2,
+    "pipeline_cases_with_verdict": 8,
+    "direct_agree": 9,
+    "pipeline_no_verdict": 19,
+    "gold_SPLIT": 1,
+    "direct_unsafe_interval": [
+     0.0,
+     0.0
+    ],
+    "direct_over_cautious_interval": [
+     0.0,
+     0.0
+    ]
+   },
+   "oracle_ir_consumption/fresh_withdrawn": {
+    "pairs": 58,
+    "gold_ASSERT": 26,
+    "direct_agree": 33,
+    "pipeline_agree": 39,
+    "gold_WITHHOLD": 30,
+    "cases": 12,
+    "direct_cases_answered": 7,
+    "direct_cases_fully_right_by_class": 7,
+    "direct_cases_exact_object": 7,
+    "pipeline_cases_with_verdict": 8,
+    "pipeline_no_verdict": 19,
+    "direct_no_answer": 25,
+    "gold_SPLIT": 2,
+    "direct_unsafe_interval": [
+     0.0,
+     0.0
+    ],
+    "direct_over_cautious_interval": [
+     0.0,
+     0.0
+    ]
+   },
+   "symbolic_assistance/fresh_withdrawn": {
+    "pairs": 58,
+    "gold_ASSERT": 26,
+    "direct_agree": 53,
+    "pipeline_agree": 39,
+    "gold_WITHHOLD": 30,
+    "cases": 12,
+    "direct_cases_answered": 11,
+    "direct_cases_fully_right_by_class": 11,
+    "direct_cases_exact_object": 11,
+    "pipeline_cases_with_verdict": 8,
+    "pipeline_no_verdict": 19,
+    "gold_SPLIT": 2,
+    "direct_no_answer": 5,
+    "direct_unsafe_interval": [
+     0.0,
+     0.0
+    ],
+    "direct_over_cautious_interval": [
+     0.0,
+     0.0
+    ]
+   }
+  }
+ },
+ "A3_copy_links": {
+  "strict_source_ir|deepseek-v4-flash": {
+   "gold_certain_links_scheduled": 101,
+   "gold_certain_links_in_compiled": 71,
+   "captured": 71,
+   "model_certain_links": 71,
+   "model_links_gold_possible": 71
+  },
+  "strict_source_ir|gemma-4-31b-it": {
+   "gold_certain_links_scheduled": 101,
+   "gold_certain_links_in_compiled": 57,
+   "captured": 57,
+   "model_certain_links": 57,
+   "model_links_gold_possible": 57
+  },
+  "strict_source_ir|glm-5.2": {
+   "gold_certain_links_scheduled": 101,
+   "gold_certain_links_in_compiled": 32,
+   "captured": 32,
+   "model_certain_links": 32,
+   "model_links_gold_possible": 32
+  },
+  "strict_source_ir|glm-5.3-flash": {
+   "gold_certain_links_scheduled": 101,
+   "gold_certain_links_in_compiled": 46,
+   "captured": 46,
+   "model_certain_links": 46,
+   "model_links_gold_possible": 46
+  },
+  "strict_source_ir|qwen3.8-27b": {
+   "gold_certain_links_scheduled": 101,
+   "gold_certain_links_in_compiled": 65,
+   "captured": 65,
+   "model_certain_links": 65,
+   "model_links_gold_possible": 65
+  },
+  "nl_projection|deepseek-v4-flash": {
+   "gold_certain_links_scheduled": 55,
+   "gold_certain_links_in_compiled": 45,
+   "captured": 45,
+   "model_certain_links": 45,
+   "model_links_gold_possible": 45
+  },
+  "nl_projection|gemma-4-31b-it": {
+   "gold_certain_links_scheduled": 55,
+   "gold_certain_links_in_compiled": 38,
+   "captured": 38,
+   "model_certain_links": 38,
+   "model_links_gold_possible": 38
+  },
+  "nl_projection|glm-5.2": {
+   "gold_certain_links_scheduled": 55,
+   "gold_certain_links_in_compiled": 17,
+   "captured": 17,
+   "model_certain_links": 17,
+   "model_links_gold_possible": 17
+  },
+  "nl_projection|glm-5.3-flash": {
+   "gold_certain_links_scheduled": 55,
+   "gold_certain_links_in_compiled": 19,
+   "captured": 19,
+   "model_certain_links": 19,
+   "model_links_gold_possible": 19
+  },
+  "nl_projection|qwen3.8-27b": {
+   "gold_certain_links_scheduled": 55,
+   "gold_certain_links_in_compiled": 10,
+   "captured": 10,
+   "model_certain_links": 10,
+   "model_links_gold_possible": 10
+  }
+ },
+ "A4_baselines_on_authored_families": {
+  "naive_gate": {
+   "pairs": 768,
+   "agree": 762,
+   "unsafe": 6
+  },
+  "naive_gate|ECO": {
+   "pairs": 72,
+   "agree": 72
+  },
+  "naive_gate|F1": {
+   "pairs": 120,
+   "agree": 120
+  },
+  "naive_gate|F2": {
+   "pairs": 120,
+   "agree": 120
+  },
+  "naive_gate|F3": {
+   "pairs": 120,
+   "agree": 120
+  },
+  "naive_gate|F4": {
+   "pairs": 120,
+   "agree": 120
+  },
+  "naive_gate|F5": {
+   "pairs": 96,
+   "agree": 90,
+   "unsafe": 6
+  },
+  "naive_gate|F6": {
+   "pairs": 120,
+   "agree": 120
+  },
+  "no_lineage": {
+   "pairs": 768,
+   "agree": 729,
+   "unsafe": 39
+  },
+  "no_lineage|ECO": {
+   "pairs": 72,
+   "agree": 67,
+   "unsafe": 5
+  },
+  "no_lineage|F1": {
+   "pairs": 120,
+   "agree": 119,
+   "unsafe": 1
+  },
+  "no_lineage|F2": {
+   "pairs": 120,
+   "agree": 112,
+   "unsafe": 8
+  },
+  "no_lineage|F3": {
+   "pairs": 120,
+   "agree": 120
+  },
+  "no_lineage|F4": {
+   "pairs": 120,
+   "agree": 116,
+   "unsafe": 4
+  },
+  "no_lineage|F5": {
+   "pairs": 96,
+   "agree": 94,
+   "unsafe": 2
+  },
+  "no_lineage|F6": {
+   "pairs": 120,
+   "agree": 101,
+   "unsafe": 19
+  },
+  "single_reading": {
+   "pairs": 768,
+   "agree": 752,
+   "other_difference": 10,
+   "unsafe": 6
+  },
+  "single_reading|ECO": {
+   "pairs": 72,
+   "agree": 72
+  },
+  "single_reading|F1": {
+   "pairs": 120,
+   "agree": 120
+  },
+  "single_reading|F2": {
+   "pairs": 120,
+   "agree": 120
+  },
+  "single_reading|F3": {
+   "pairs": 120,
+   "agree": 107,
+   "other_difference": 10,
+   "unsafe": 3
+  },
+  "single_reading|F4": {
+   "pairs": 120,
+   "agree": 120
+  },
+  "single_reading|F5": {
+   "pairs": 96,
+   "agree": 93,
+   "unsafe": 3
+  },
+  "single_reading|F6": {
+   "pairs": 120,
+   "agree": 120
+  },
+  "withdraw_downstream": {
+   "pairs": 768,
+   "agree": 629,
+   "over_cautious": 123,
+   "other_difference": 16
+  },
+  "withdraw_downstream|ECO": {
+   "pairs": 72,
+   "agree": 70,
+   "over_cautious": 2
+  },
+  "withdraw_downstream|F1": {
+   "pairs": 120,
+   "agree": 98,
+   "over_cautious": 22
+  },
+  "withdraw_downstream|F2": {
+   "pairs": 120,
+   "agree": 103,
+   "over_cautious": 17
+  },
+  "withdraw_downstream|F3": {
+   "pairs": 120,
+   "agree": 88,
+   "over_cautious": 19,
+   "other_difference": 13
+  },
+  "withdraw_downstream|F4": {
+   "pairs": 120,
+   "agree": 88,
+   "over_cautious": 32
+  },
+  "withdraw_downstream|F5": {
+   "pairs": 96,
+   "agree": 79,
+   "over_cautious": 14,
+   "other_difference": 3
+  },
+  "withdraw_downstream|F6": {
+   "pairs": 120,
+   "agree": 103,
+   "over_cautious": 17
+  }
+ },
+ "A4_cases_changed": {
+  "withdraw_downstream": [
+   "ECO-07",
+   "ECO-08",
+   "V6H-F5-01",
+   "V6H-F5-02",
+   "V6H-F5-03",
+   "V6H-F5-04",
+   "V6H-F5-05",
+   "V6H-F5-06",
+   "V6H-F5-07",
+   "V6H-F5-08",
+   "V6H-frontier-v6c-01-01",
+   "V6H-frontier-v6c-01-02",
+   "V6H-frontier-v6c-01-03",
+   "V6H-frontier-v6c-01-04",
+   "V6H-frontier-v6c-01-05",
+   "V6H-frontier-v6c-01-06",
+   "V6H-frontier-v6c-01-07",
+   "V6H-frontier-v6c-01-08",
+   "V6H-frontier-v6c-02-01",
+   "V6H-frontier-v6c-02-02",
+   "V6H-frontier-v6c-02-03",
+   "V6H-frontier-v6c-02-04",
+   "V6H-frontier-v6c-02-05",
+   "V6H-frontier-v6c-02-06",
+   "V6H-frontier-v6c-02-07",
+   "V6H-frontier-v6c-02-08",
+   "V6H-frontier-v6c-03-01",
+   "V6H-frontier-v6c-03-02",
+   "V6H-frontier-v6c-03-03",
+   "V6H-frontier-v6c-03-04",
+   "V6H-frontier-v6c-03-05",
+   "V6H-frontier-v6c-03-06",
+   "V6H-frontier-v6c-03-07",
+   "V6H-frontier-v6c-03-08",
+   "V6H-frontier-v6c-04-01",
+   "V6H-frontier-v6c-04-02",
+   "V6H-frontier-v6c-04-03",
+   "V6H-frontier-v6c-04-04",
+   "V6H-frontier-v6c-04-05",
+   "V6H-frontier-v6c-04-06",
+   "V6H-frontier-v6c-04-07",
+   "V6H-frontier-v6c-04-08",
+   "V6H-frontier-v6c-06-01",
+   "V6H-frontier-v6c-06-02",
+   "V6H-frontier-v6c-06-03",
+   "V6H-frontier-v6c-06-04",
+   "V6H-frontier-v6c-06-05",
+   "V6H-frontier-v6c-06-06",
+   "V6H-frontier-v6c-06-07",
+   "V6H-frontier-v6c-06-08"
+  ],
+  "no_lineage": [
+   "ECO-01",
+   "ECO-03",
+   "ECO-07",
+   "ECO-08",
+   "ECO-10",
+   "V6H-F5-05",
+   "V6H-frontier-v6c-01-04",
+   "V6H-frontier-v6c-02-01",
+   "V6H-frontier-v6c-02-02",
+   "V6H-frontier-v6c-02-03",
+   "V6H-frontier-v6c-02-04",
+   "V6H-frontier-v6c-02-05",
+   "V6H-frontier-v6c-02-06",
+   "V6H-frontier-v6c-02-07",
+   "V6H-frontier-v6c-04-02",
+   "V6H-frontier-v6c-04-08",
+   "V6H-frontier-v6c-06-01",
+   "V6H-frontier-v6c-06-02",
+   "V6H-frontier-v6c-06-03",
+   "V6H-frontier-v6c-06-04",
+   "V6H-frontier-v6c-06-05",
+   "V6H-frontier-v6c-06-06",
+   "V6H-frontier-v6c-06-07",
+   "V6H-frontier-v6c-06-08"
+  ],
+  "single_reading": [
+   "V6H-F5-05",
+   "V6H-F5-08",
+   "V6H-frontier-v6c-03-01",
+   "V6H-frontier-v6c-03-02",
+   "V6H-frontier-v6c-03-03",
+   "V6H-frontier-v6c-03-04",
+   "V6H-frontier-v6c-03-05",
+   "V6H-frontier-v6c-03-06",
+   "V6H-frontier-v6c-03-07",
+   "V6H-frontier-v6c-03-08"
+  ],
+  "naive_gate": [
+   "V6H-F5-03",
+   "V6H-F5-04",
+   "V6H-F5-07"
+  ]
+ },
+ "A5_static": {
+  "cases": 60,
+  "cases_with_several_readings": 10,
+  "cases_with_unknown_ancestry": 1,
+  "cases_with_copies": 36,
+  "cases_with_multi_parent_copy": 17,
+  "cases_with_negative_warrant": 4,
+  "cases_with_undercutter": 6,
+  "multi_reading_cases_where_readings_never_differ_in_class": 0,
+  "decision_state_pairs": 768,
+  "gold_pairs_ASSERT": 444,
+  "gold_pairs_SPLIT": 18,
+  "gold_pairs_WITHHOLD": 306
+ },
+ "A6_casebook": [
+  {
+   "case": "ECO-01",
+   "title": "VITALITY I: separately licensed direction and significance summaries",
+   "documents": 8,
+   "roots": 1,
+   "copies": 2,
+   "unknown": 0,
+   "claims": 2,
+   "decisions": 2,
+   "gold": {
+    "initial": {
+     "ASSERT": 2
+    },
+    "withdrawn": {
+     "WITHHOLD": 2
+    },
+    "restored": {
+     "ASSERT": 1,
+     "WITHHOLD": 1
+    }
+   },
+   "changed_by": [
+    "no_lineage"
+   ],
+   "strict_ir": {
+    "deepseek-v4-flash": "admitted_bare",
+    "gemma-4-31b-it": "admitted_fenced",
+    "glm-5.2": "missing",
+    "glm-5.3-flash": "admitted_bare",
+    "qwen3.8-27b": "admitted_bare"
+   }
+  },
+  {
+   "case": "ECO-02",
+   "title": "VITALITY I: reconstruction denominator and an unissued replication memo",
+   "documents": 9,
+   "roots": 2,
+   "copies": 2,
+   "unknown": 0,
+   "claims": 2,
+   "decisions": 2,
+   "gold": {
+    "initial": {
+     "ASSERT": 1,
+     "WITHHOLD": 1
+    },
+    "withdrawn": {
+     "WITHHOLD": 2
+    },
+    "restored": {
+     "WITHHOLD": 2
+    }
+   },
+   "changed_by": [],
+   "strict_ir": {
+    "deepseek-v4-flash": "admitted_bare",
+    "gemma-4-31b-it": "admitted_fenced",
+    "glm-5.2": "missing",
+    "glm-5.3-flash": "missing",
+    "qwen3.8-27b": "admitted_bare"
+   }
+  },
+  {
+   "case": "ECO-03",
+   "title": "VITALITY II: a published plan and no completed patient-burden result",
+   "documents": 8,
+   "roots": 2,
+   "copies": 1,
+   "unknown": 0,
+   "claims": 2,
+   "decisions": 2,
+   "gold": {
+    "initial": {
+     "ASSERT": 1,
+     "WITHHOLD": 1
+    },
+    "withdrawn": {
+     "WITHHOLD": 2
+    },
+    "restored": {
+     "ASSERT": 1,
+     "WITHHOLD": 1
+    }
+   },
+   "changed_by": [
+    "no_lineage"
+   ],
+   "strict_ir": {
+    "deepseek-v4-flash": "admitted_bare",
+    "gemma-4-31b-it": "admitted_fenced",
+    "glm-5.2": "admitted_bare",
+    "glm-5.3-flash": "admitted_bare",
+    "qwen3.8-27b": "admitted_bare"
+   }
+  },
+  {
+   "case": "ECO-04",
+   "title": "Cochrane IHCA: current-version citation versus historical audit",
+   "documents": 10,
+   "roots": 3,
+   "copies": 0,
+   "unknown": 0,
+   "claims": 2,
+   "decisions": 2,
+   "gold": {
+    "initial": {
+     "ASSERT": 2
+    },
+    "withdrawn": {
+     "WITHHOLD": 2
+    },
+    "restored": {
+     "ASSERT": 1,
+     "WITHHOLD": 1
+    }
+   },
+   "changed_by": [],
+   "strict_ir": {
+    "deepseek-v4-flash": "admitted_bare",
+    "gemma-4-31b-it": "admitted_fenced",
+    "glm-5.2": "admitted_fenced",
+    "glm-5.3-flash": "admitted_bare",
+    "qwen3.8-27b": "admitted_bare"
+   }
+  },
+  {
+   "case": "ECO-05",
+   "title": "INSPECT-SR: preserve the replacement exception in a review card",
+   "documents": 10,
+   "roots": 1,
+   "copies": 2,
+   "unknown": 0,
+   "claims": 2,
+   "decisions": 2,
+   "gold": {
+    "initial": {
+     "ASSERT": 2
+    },
+    "withdrawn": {
+     "WITHHOLD": 2
+    },
+    "restored": {
+     "WITHHOLD": 1,
+     "ASSERT": 1
+    }
+   },
+   "changed_by": [],
+   "strict_ir": {
+    "deepseek-v4-flash": "missing",
+    "gemma-4-31b-it": "admitted_fenced",
+    "glm-5.2": "admitted_bare",
+    "glm-5.3-flash": "admitted_bare",
+    "qwen3.8-27b": "admitted_bare"
+   }
+  },
+  {
+   "case": "ECO-06",
+   "title": "Citation persistence: counted citations and their possible purposes",
+   "documents": 8,
+   "roots": 1,
+   "copies": 2,
+   "unknown": 0,
+   "claims": 2,
+   "decisions": 2,
+   "gold": {
+    "initial": {
+     "ASSERT": 2
+    },
+    "withdrawn": {
+     "WITHHOLD": 2
+    },
+    "restored": {
+     "WITHHOLD": 1,
+     "ASSERT": 1
+    }
+   },
+   "changed_by": [],
+   "strict_ir": {
+    "deepseek-v4-flash": "admitted_bare",
+    "gemma-4-31b-it": "admitted_fenced",
+    "glm-5.2": "admitted_bare",
+    "glm-5.3-flash": "admitted_bare",
+    "qwen3.8-27b": "admitted_bare"
+   }
+  },
+  {
+   "case": "ECO-07",
+   "title": "SciFact49: two alternative excerpts from the same abstract",
+   "documents": 8,
+   "roots": 1,
+   "copies": 2,
+   "unknown": 0,
+   "claims": 2,
+   "decisions": 2,
+   "gold": {
+    "initial": {
+     "ASSERT": 2
+    },
+    "withdrawn": {
+     "WITHHOLD": 2
+    },
+    "restored": {
+     "ASSERT": 1,
+     "WITHHOLD": 1
+    }
+   },
+   "changed_by": [
+    "no_lineage",
+    "withdraw_downstream"
+   ],
+   "strict_ir": {
+    "deepseek-v4-flash": "admitted_bare",
+    "gemma-4-31b-it": "admitted_fenced",
+    "glm-5.2": "missing",
+    "glm-5.3-flash": "admitted_bare",
+    "qwen3.8-27b": "admitted_bare"
+   }
+  },
+  {
+   "case": "ECO-08",
+   "title": "SciFact452: retain the source of each variation excerpt",
+   "documents": 10,
+   "roots": 2,
+   "copies": 2,
+   "unknown": 0,
+   "claims": 2,
+   "decisions": 2,
+   "gold": {
+    "initial": {
+     "ASSERT": 2
+    },
+    "withdrawn": {
+     "WITHHOLD": 2
+    },
+    "restored": {
+     "ASSERT": 1,
+     "WITHHOLD": 1
+    }
+   },
+   "changed_by": [
+    "no_lineage",
+    "withdraw_downstream"
+   ],
+   "strict_ir": {
+    "deepseek-v4-flash": "admitted_bare",
+    "gemma-4-31b-it": "admitted_fenced",
+    "glm-5.2": "missing",
+    "glm-5.3-flash": "admitted_bare",
+    "qwen3.8-27b": "missing"
+   }
+  },
+  {
+   "case": "ECO-09",
+   "title": "HoVer: two building-location excerpts without current-geography assumptions",
+   "documents": 10,
+   "roots": 2,
+   "copies": 2,
+   "unknown": 0,
+   "claims": 2,
+   "decisions": 2,
+   "gold": {
+    "initial": {
+     "ASSERT": 2
+    },
+    "withdrawn": {
+     "WITHHOLD": 2
+    },
+    "restored": {
+     "WITHHOLD": 2
+    }
+   },
+   "changed_by": [],
+   "strict_ir": {
+    "deepseek-v4-flash": "admitted_bare",
+    "gemma-4-31b-it": "rejected",
+    "glm-5.2": "missing",
+    "glm-5.3-flash": "admitted_bare",
+    "qwen3.8-27b": "admitted_bare"
+   }
+  },
+  {
+   "case": "ECO-10",
+   "title": "HoVer: a redevelopment identity bridge and two locations",
+   "documents": 11,
+   "roots": 3,
+   "copies": 1,
+   "unknown": 0,
+   "claims": 2,
+   "decisions": 2,
+   "gold": {
+    "initial": {
+     "ASSERT": 2
+    },
+    "withdrawn": {
+     "WITHHOLD": 2
+    },
+    "restored": {
+     "ASSERT": 1,
+     "WITHHOLD": 1
+    }
+   },
+   "changed_by": [
+    "no_lineage"
+   ],
+   "strict_ir": {
+    "deepseek-v4-flash": "admitted_bare",
+    "gemma-4-31b-it": "admitted_fenced",
+    "glm-5.2": "admitted_bare",
+    "glm-5.3-flash": "admitted_bare",
+    "qwen3.8-27b": "admitted_bare"
+   }
+  },
+  {
+   "case": "ECO-11",
+   "title": "AVeriTeC136: an as-of claim date and a narrower generation measure",
+   "documents": 9,
+   "roots": 2,
+   "copies": 1,
+   "unknown": 0,
+   "claims": 2,
+   "decisions": 2,
+   "gold": {
+    "initial": {
+     "ASSERT": 1,
+     "WITHHOLD": 1
+    },
+    "withdrawn": {
+     "WITHHOLD": 2
+    },
+    "restored": {
+     "WITHHOLD": 2
+    }
+   },
+   "changed_by": [],
+   "strict_ir": {
+    "deepseek-v4-flash": "missing",
+    "gemma-4-31b-it": "admitted_fenced",
+    "glm-5.2": "missing",
+    "glm-5.3-flash": "admitted_bare",
+    "qwen3.8-27b": "missing"
+   }
+  },
+  {
+   "case": "ECO-12",
+   "title": "AVeriTeC283: a dated scenario model and separately discussed pumped hydro",
+   "documents": 10,
+   "roots": 2,
+   "copies": 2,
+   "unknown": 0,
+   "claims": 2,
+   "decisions": 2,
+   "gold": {
+    "initial": {
+     "ASSERT": 1,
+     "WITHHOLD": 1
+    },
+    "withdrawn": {
+     "WITHHOLD": 2
+    },
+    "restored": {
+     "WITHHOLD": 2
+    }
+   },
+   "changed_by": [],
+   "strict_ir": {
+    "deepseek-v4-flash": "admitted_bare",
+    "gemma-4-31b-it": "admitted_fenced",
+    "glm-5.2": "admitted_bare",
+    "glm-5.3-flash": "missing",
+    "qwen3.8-27b": "admitted_bare"
+   }
+  }
+ ],
+ "A7_engine_checks": {
+  "cases": 60,
+  "withdrawn_state_reached_by_events": 60,
+  "restored_state_reached_by_events": 60,
+  "evaluations": 180,
+  "evaluations_identical_twice": 180,
+  "worlds": 645,
+  "arguments": 5051,
+  "attacks": 11,
+  "labels_out": 0,
+  "labels_undecided": 11,
+  "accepted_but_attacked": 0,
+  "unattacked_not_accepted": 0
+ }
+}

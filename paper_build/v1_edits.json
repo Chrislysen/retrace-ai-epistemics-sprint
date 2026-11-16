@@ -1,0 +1,467 @@
+{
+ "note": "Edits that turn Astra's final draft (report/v6n-study/revisions/r4) into paper v1. Applied by build_v1.ps1. Every number comes from post_sweep/out/v1_numbers.json, post_sweep/out/sweep_tables.json, paper_build/tables/prose24.md, post_sweep/out/theory_check.json or post_sweep/out/independent_evaluator.json. An entry with whole=true replaces the entire paragraph that contains the find text.",
+ "replace": [
+  {
+   "why": "reviewer item 1: an abstract that can be skimmed; every number as in the tables",
+   "find": "Agreement about a decision can conceal",
+   "whole": true,
+   "with": "Two readers can agree on a decision yet read the evidence differently, which matters only once the evidence changes. RETRACE makes that difference checkable: cited passages are compiled into a family of declared readings, and a deterministic engine searches for a smallest evidence change after which the readings differ and plans the cheapest questions to settle it. Language models only propose; exact checks admit or reject each proposal and repair nothing. We prove four properties, including that finding a smallest separating withdrawal is NP-hard. In a frozen 1,800-slot study of 60 authored cases and five models, the checks failed closed on the primary route: all 181 admitted declarations were exact, 86 requests returned no answer and 33 outputs were rejected or cut off; 139 met the bare-JSON endpoint. Refuters recovered the complete family with a consequential witness in 75 of 150 deficient-seed slots. A separate recomputation reproduced every outcome. On such small cases direct answers were mostly correct. In a prespecified scaling run (10 to 40 records), two models without a reasoning phase got 41 of 270 and 102 of 288 decisions wrong when answering alone. Three reasoning models got none wrong; visible working or a compiled declaration removed nearly all errors. Search differed: asked for a smallest further withdrawal, the two models showing their working named one for 88 of 121 and 64 of 97 decisions; search over their accepted declarations found one every time. The engine does not check that a reading follows from its source."
+  },
+  {
+   "why": "reviewer item 1: open with the example in plain words, things named; still labelled constructed",
+   "find": "Suppose release is permitted by evidence P alone",
+   "whole": true,
+   "with": "Two reviewers read the same rule. One takes it to permit release when record P is available. The other takes it to require P and a second record Q. A hold on P's document makes P unavailable, so both withhold release, and they go on agreeing however many further records are withdrawn. Lifting the hold alone also leaves them in agreement, now on release. Only lifting the hold and withdrawing Q separates them. Until then the question “Does release also need Q?” changes nothing; afterwards it decides the case (Figure 1, a constructed example)."
+  },
+  {
+   "why": "reviewer items 1 and 2: propose-then-check stated once, then the contributions",
+   "find": "RETRACE makes this sequence inspectable",
+   "whole": true,
+   "with": "RETRACE makes this sequence inspectable: agreement, a scoped change to the evidence, an exposed difference between readings, and a source question that settles it. Cited passages are compiled into a small family of declared readings, and a deterministic engine does the checking. Language models only propose: they write the declarations and the counter-readings, exact checks admit or reject each proposal whole, nothing is repaired, and no proposal is ever applied automatically. Agreement among readings is never taken as evidence that the source was read completely. The paper makes three contributions."
+  },
+  {
+   "why": "reviewer round 2, item 2: say what the checks did, with its scope; same counts (86 + 4 + 29 + 181 = 300; 139 bare)",
+   "find": "Of 300 first-attempt direct IR slots",
+   "whole": true,
+   "with": "On the primary route the checks failed closed. Of 300 first-attempt direct IR slots, 86 requests returned no answer, four answers were cut off and 29 completed outputs were rejected; all 181 admitted declarations were the exact authored family, and 139 of them were also bare JSON, the frozen primary endpoint (Table 1, Figure G1). The 181 of 181 is conditional on admission and does not establish general extraction reliability."
+  },
+  {
+   "why": "code: undercutters are Boolean guards on evidence, evaluated before arguments exist (tiered_v6h.py:101-102)",
+   "find": "Positive dependencies use Boolean expressions.",
+   "with": "Positive dependencies use Boolean expressions, including scoped evidence-only exceptions (A unless U) that are evaluated on evidence availability before arguments are formed."
+  },
+  {
+   "why": "code: the only attacks are rebuttals and every attacker is attacked back (argumentation_v6h.py:78-82), so nothing is ever labelled out",
+   "find": ", including scoped evidence-only undercutters.",
+   "with": " with rebuttals only; a conflict leaves the claim contested and defeats nothing (Proposition B.3)."
+  },
+  {
+   "why": "code: the stop test compares the status of every target decision (workbench_v6h.py:52-55)",
+   "find": "It can stop with multiple readings when the selected decision target agrees.",
+   "with": "It can stop with several readings left when they agree on the status of every selected decision."
+  },
+  {
+   "why": "page budget: the software-check sentence moves to Appendix F (next entry), with its wording made exact there",
+   "find": " Post-sweep checks covered 120 authored computational cases, 17 constructed state transitions and 385 Python syntax parses; these are software checks, not model gains.",
+   "with": ""
+  },
+  {
+   "why": "code: the 120 cases are generated and run on the earlier engine retrace.core (check_frontier_v6n_post_sweep.py:263-265, benchmark.py:13)",
+   "find": "evaluation, not an incremental reasoning kernel.",
+   "with": "evaluation, not an incremental reasoning kernel. Post-sweep checks covered 120 generated cases for the earlier Boolean support engine, 17 constructed state transitions and 385 Python syntax parses; these are software checks, not model gains."
+  },
+  {
+   "why": "Figure 1 names the two readings G and H, Appendix B names them A and B",
+   "find": "For the veto construction, A requires P and B requires P AND Q.",
+   "with": "For the veto construction of Figure 1, A requires P and B requires P AND Q (G and H in the figure)."
+  },
+  {
+   "why": "code: 504 comparisons for k = 1..6 plus 16 for the veto construction (check_frontier_v6j_separation.py:58-70, 95-109, 143)",
+   "find": "checks 520 graph/state comparisons against an independent scalar computation.",
+   "with": "checks 520 graph/state comparisons (k from 1 to 6, and the veto construction) against an independent closed-form computation."
+  },
+  {
+   "why": "code: the stop test is over the status vector of the target decisions",
+   "find": "question cost for a selected decision target,",
+   "with": "question cost for the selected decisions' status vector,"
+  },
+  {
+   "why": "code: graphs carry no labels and extra fields are rejected (tiered_v6h.py:36, graph_identity_v6h.py:22-24)",
+   "find": "Labels, row order and irrelevant metadata are ignored.",
+   "with": "Row, parent and requirement order do not affect identity; graphs carry no labels, and extra fields are rejected."
+  },
+  {
+   "why": "code: what the scored witness is (frontier_v6h_eval.py:207-217, impact_v6h.py:83)",
+   "find": "explaining why located objections and consequential successes have different counts.",
+   "with": "explaining why located objections and consequential successes have different counts. That witness is a withdrawal set, possibly empty, or one hypothetical activation followed by one withdrawal, after which the augmented family loses universal support or gains possible support."
+  },
+  {
+   "why": "code: the engine issues no certificate",
+   "find": "limits every certificate.",
+   "with": "limits every symbolic result."
+  },
+  {
+   "why": "sprint rules: the required appendix has this exact name",
+   "find": "Appendix E. Limitations and Dual-Use",
+   "with": "Appendix E. Limitations and Dual-Use / Ethical Considerations"
+  },
+  {
+   "why": "the receipts bind Astra's build, not this one, and a note on who typeset what is of no use to a reader: sentence removed",
+   "find": " Rendering receipts bind the manuscript, template, author metadata, PDF and inspected pages.",
+   "with": ""
+  },
+  {
+   "why": "the author stated on 16 November, about 05:00 CET, that he has read the paper and approves it",
+   "find": "Human manuscript review has not occurred; automated and AI-assisted checks are not author approval, external peer review or submission.",
+   "with": "The author reviewed and approved the final manuscript before submission. Automated and AI-assisted checks are not external peer review."
+  },
+  {
+   "why": "the author's own statement of 15 November (nothing existed before the sprint) and the file times support a direct sentence; the copying claim rests on the project record, hence 'to the author's knowledge'",
+   "find": "The preserved project record states that the workspace contained",
+   "whole": true,
+   "with": "No project source files existed before the sprint began on 13 November 2026. Code, authored cases, UI and experiments were produced during the sprint with AI assistance. Papers, platform services and general-purpose libraries predate this work; to the author's knowledge no third-party research-repository implementation was copied. Earlier within-sprint RETRACE modules and evaluation machinery are reused rather than attributed to recovery n as new work."
+  },
+  {
+   "why": "the delta is drawn from a fallback font and looks unlike the other headers",
+   "find": "Δ pp",
+   "with": "Diff. pp"
+  },
+  {
+   "why": "reviewer item 1: a caveat already stated in Section 3 (privileged arms) said once, shorter",
+   "find": "None survived Holm adjustment. Both arms provide privileged information; these observations do not isolate a causal or general capability gain.",
+   "with": "None survived Holm adjustment; with both arms privileged, no capability gain is shown."
+  },
+  {
+   "why": "post_sweep/agreement_depth.py: two deficient cases have no scored witness, so ten slots cannot earn credit; the four exact objections without credit are on them",
+   "find": "There were 79 source-located objections, all exact authored families, and none on faithful seeds.",
+   "with": "There were 79 source-located objections (Figure G2 shows one in the workbench), all exact authored families, and none on faithful seeds. The four of them without credit fell on two cases whose complete family has no scored witness, so ten of the 150 slots could not earn credit (Appendix G)."
+  },
+  {
+   "why": "reviewer item 1: repeated in Section 3 and in the caption of Table 3",
+   "find": " The endpoint permits admitted fenced syntax and is separate from bare-JSON success.",
+   "with": ""
+  },
+  {
+   "why": "reviewer item 1: the sentence before it gives the reason; Appendix D repeats the boundary",
+   "find": " The bare K10/direct-IR comparison is therefore neither an extraction-capability estimate nor a compute-efficiency win.",
+   "with": ""
+  },
+  {
+   "why": "reviewer item 1: stated in Section 5 (small subsets) and in Appendix D",
+   "find": " These small subset results do not justify causal sycophancy or general long-context claims.",
+   "with": ""
+  },
+  {
+   "why": "page budget for Section 4.5: the interpretation paragraph in two sentences; the Gemma-only diagnostics move to Appendix D unchanged",
+   "find": "The central empirical lesson is a separation of stages",
+   "whole": true,
+   "with": "The lesson of the sweep is a separation of stages: exact accepted representations coexisted with substantial scheduled failure, and symbolic correctness after admission cannot repair missing, invalid or unavailable interpretations. The assisted and oracle arms and the Gemma-only diagnostics (K10 sampling, preference probes, long documents) are in Appendix D."
+  },
+  {
+   "why": "reviewer item 1: three caveats that Section 3 and Appendix D also state, in one sentence",
+   "find": "This measures correction of controlled seed defects",
+   "whole": true,
+   "with": "This measures correction of controlled seed defects, not repair of omissions that models share naturally. A defensible but incomplete proposal earns no credit (Appendix D)."
+  },
+  {
+   "why": "page budget: frees one line; the sentence before it names the endpoint",
+   "find": "Admitted outer fences are permitted for that endpoint.",
+   "with": "Admitted outer fences are permitted."
+  },
+  {
+   "why": "author's decision of 16 November: Track 2 is the anchor, as the sprint brief in research/sprint-brief.md says",
+   "find": "Tracks 1, 2 and 3",
+   "with": "Track 2 (primary); Tracks 1 and 3"
+  },
+  {
+   "why": "16 November, page budget and plainer wording: the same eight statements in five lines; the details of the two interrupted segments stay in Appendix A",
+   "find": "All 1,800 slots are accounted for across preserved segments",
+   "whole": true,
+   "with": "All 1,800 slots are accounted for. Two interrupted segments each left one issued request without a recorded response. Recovery issued only untouched slots. The original frozen diagnostic therefore retains 21 null tests and no intervals. A separately predeclared sensitivity applies the same grades, cases and 21 contrasts and counts both unanswered requests as failures, with exact McNemar tests in one Holm family and 10,000 within-family case-cluster bootstrap draws. These amended results are not untouched confirmatory evidence."
+  },
+  {
+   "why": "reviewer item 1: the caption of Table 1 says the same",
+   "find": " Repeated conditions do not create independent base cases.",
+   "with": ""
+  },
+  {
+   "why": "page budget: the per-stratum counts move to Appendix G unchanged, so the paragraph can be two sentences",
+   "find": "zero bare successes do not mean zero source-family recovery",
+   "whole": true,
+   "with": "Gemma's zero bare successes do not mean zero recovery: its 34 admitted outputs were exact but fenced, and GLM-5.2 had eight more of that kind. Appendix G gives descriptive counts by stratum; they do not rank models."
+  },
+  {
+   "why": "page budget: the code-and-data paragraph says the same",
+   "find": " Exact source/hash bindings, both score views and raw journals support replay.",
+   "with": ""
+  },
+  {
+   "why": "page budget: Appendix D says the same (NL-source prose has no independently graded correctness)",
+   "find": " NL prose alone has no independent semantic grade.",
+   "with": ""
+  },
+  {
+   "why": "page budget: Appendix A says the same (histories contain actual predecessor responses)",
+   "find": " Temporal histories retain actual predecessor answers.",
+   "with": ""
+  },
+  {
+   "why": "page budget: Appendix D defines identity in full",
+   "find": " Identity canonicalizes local Boolean functions while preserving named claims, origins, eligibility and decision requirements; it does not equate all globally behavior-equivalent graphs.",
+   "with": " Appendix D defines graph identity."
+  },
+  {
+   "why": "page budget: two sentences as one, nothing removed",
+   "find": "The observed contrast mixes operational availability, formatting and projection. It does not isolate information lost in prose.",
+   "with": "The contrast mixes operational availability, formatting and projection and does not isolate information lost in prose."
+  },
+  {
+   "why": "Table 3 now stands after Section 4.3, so Section 4.2 refers to it by number",
+   "find": "deficient-seed slots. Valid abstention occurred in 115/150 faithful slots.",
+   "with": "deficient-seed slots (Table 2). Valid abstention occurred in 115/150 faithful slots."
+  },
+  {
+   "why": "reviewer round 2, item 5: the claim about planning questions now has a proposition behind it",
+   "find": "Clarification uses an exact minimax program over supplied binary questions and costs.",
+   "with": "Clarification uses an exact minimax program over supplied binary questions and costs (Proposition B.4)."
+  },
+  {
+   "why": "page budget for the extension results (reviewer round 2, item 6): the same seven references in fewer words",
+   "find": "The foundations are established",
+   "whole": true,
+   "with": "The foundations are established: truth maintenance keeps alternative supporting environments [1], provenance semirings express conjunction and alternative derivation [2], and translation from language to logic is known to lose information [3]. Closer work separates interpreter fidelity from symbolic guarantees [4, §4.1] and present agreement from state sufficient for every future authorization continuation [5]; full-pipeline costs matter in revision comparisons [6], and our witnesses differ from responsibility defined through minimum contingency sets [7]. RETRACE instead examines bounded interventions over a declared family."
+  },
+  {
+   "why": "the limitations appendix names the one observed case of the limit it states",
+   "find": "Missing readings, wrong dependencies and mis-scoped warrants can yield precise but misleading results.",
+   "with": "Missing readings, wrong dependencies and mis-scoped warrants can yield precise but misleading results; the scaling run holds five observed cases among 235 accepted declarations, each a confusion between withdrawn and never-available records, and two of them produced unsafe decisions (Appendix H)."
+  },
+  {
+   "why": "reviewer round 2, item 6: end on what comes next",
+   "find": "It makes the scope of agreement reviewable without converting that agreement into a guarantee about omitted readings.",
+   "with": "It makes the scope of agreement reviewable without turning agreement into a guarantee about omitted readings. Next come natural documents with independent human annotation of the readings."
+  },
+  {
+   "why": "page budget for the extension results: the design table moves to Appendix A as Table A1 (moved below); the two result tables are renumbered",
+   "find": "Table 1. Frozen scheduled design (1,800 slots).",
+   "with": "Table A1. Frozen scheduled design (1,800 slots)."
+  },
+  {
+   "why": "renumbered after the design table moved to Appendix A",
+   "find": "Table 2. First-attempt scheduled source-family recovery.",
+   "with": "Table 1. First-attempt scheduled source-family recovery."
+  },
+  {
+   "why": "renumbered after the design table moved to Appendix A",
+   "find": "Table 3. Controlled authored seeds",
+   "with": "Table 2. Controlled authored seeds"
+  },
+  {
+   "why": "renumbered after the design table moved to Appendix A",
+   "find": "in Table 2 model order.",
+   "with": "in Table 1 model order."
+  },
+  {
+   "why": "points to the design table, now in Appendix A",
+   "find": "Generation ceilings and subset details appear in Appendix A.",
+   "with": "Ceilings, subset details and the slot table (Table A1) are in Appendix A."
+  },
+  {
+   "why": "the limits of the added analyses, joined to the paragraph on limits (page budget)",
+   "find": "Correlated provider incidents, unequal arm information, and fixed small subsets limit inference.",
+   "with": "Correlated provider incidents, unequal arm information, and fixed small subsets limit inference. Reinstatement is untested (Proposition B.3). In the scaling run compilation was only one of three ways to remove the errors of direct answering, and five of the 235 accepted declarations misstated which records were available, two with unsafe decisions: the engine checks form and consequences, not truth."
+  },
+  {
+   "why": "page budget: Appendix A gives the same figure with its qualifications",
+   "find": " The conservative cumulative accounting bound closed at 224.692061361 credits; it includes retained unknown reservations and is not actual billing.",
+   "with": ""
+  }
+ ],
+ "scale": [
+  {"why": "page budget: Figure 1 at 85 percent of its size", "caption": "Figure 1. Authored separation example", "factor": 0.85}
+ ],
+ "nobreak": [],
+ "delete": [
+  "The release preserves 1,703 logged issued request attempts",
+  "All five assisted/oracle contrasts were nonnegative",
+  "bare K10 union, Pass@1 and observed Pass@10",
+  "Preference testing yielded 17/24 fully valid matched quartets"
+ ],
+ "unkeep": [
+  "Of 300 first-attempt direct IR slots",
+  "Exact complete-family correction with a baseline consequential witness",
+  "This measures correction of controlled seed defects",
+  "Second, do models need the engine to reach the verdict",
+  "Two post hoc questions need no further model call",
+  "Projection receives the actual preceding natural-language account"
+ ],
+ "move": [
+  {
+   "why": "Table 3 does not fit under the text of Section 4.2 on its page and left a quarter of the page empty; it now follows the two paragraphs of Section 4.3, and Section 4.2 refers to it by number",
+   "table": true,
+   "caption": "Table 2. Controlled authored seeds",
+   "after": "The lesson of the sweep is a separation of stages"
+  },
+  {
+   "why": "the design table moves to Appendix A, after its first paragraph, to make room in the main text for the extension results",
+   "table": true,
+   "caption": "Table A1. Frozen scheduled design",
+   "after": "The frozen design has 1,716 primary slots"
+  },
+  {
+   "why": "Figure 1 no longer fits where it stood and left a third of a page empty; it now follows the paragraph that explains why a release is a separate action",
+   "caption": "Figure 1. Authored separation example",
+   "after": "Three properties bound what these checks"
+  }
+ ],
+ "minusfont": "Cambria Math",
+ "insert": [
+  {
+   "anchor": "The paper makes three contributions.",
+   "items": [
+    {"kind": "li", "after": 2, "text": "1.\tA review contract, with an executable implementation, that connects present agreement to a bounded intervention and to a decision-relevant source question (Section 2)."},
+    {"kind": "li", "after": 2, "text": "2.\tFour properties of that contract, proved in Appendix B and tested against the released engine: finding a smallest separating withdrawal is hard while checking one is cheap; withdrawal alone cannot separate readings that all withhold support; the rule for opposing warrants reduces to a conflict test that can be done by hand; and the question planner returns the least worst-case cost."},
+    {"kind": "li", "text": "3.\tA frozen 1,800-slot study of five models that keeps every failed request and every rejected output in its denominators, a separately written recomputation, and a prespecified scaling run with controls: direct answers fail where a model must answer without working, and a smallest withdrawal was found reliably only by search over the declaration (Sections 3 and 4)."}
+   ]
+  },
+  {
+   "anchor": "The foundations are established",
+   "items": [
+    {"kind": "p", "text": "Recent systems address neighbouring problems. PACMI propagates validity changes through a provenance graph of agent memories [9], and Shen et al. report that none of five agent-memory systems enforces revocation by default [10]. Language models and research agents count copied or restated reports as separate confirmations [11, 12, 17] and rarely recognise retracted articles from title and abstract [13]. RETRACE does not detect copies or retractions. It takes them as declared inputs and makes their consequences recomputable when one source supports several readings, a combination that, to our knowledge, none of these works provides."},
+    {"kind": "p", "text": "The intended users maintain conclusions that outlive their sources. Cochrane, for example, now tags retracted studies in its CENTRAL database and adds steps for retractions that follow a review's publication [14]. After such an event the practical question is which conclusions fall, which survive through an independent route, and which now depend on how a passage is read. If dependencies were declared when a conclusion was written, that question could be answered by recomputation and audited from the record."}
+   ]
+  },
+  {
+   "anchor": "These are authored formal illustrations, not model results.",
+   "items": [
+    {"kind": "p", "text": "Three properties bound what these checks can be asked to do (Appendix B). Call a family monotone when ancestry is known and no reading uses an exception or an opposing warrant. First, deciding whether some withdrawal of at most k records separates a proposed reading from a family is NP-complete even then, by reduction from Vertex Cover [15], while checking a claimed witness takes one evaluation per reading; the engine therefore searches inside a declared scope. Second, in a monotone family no withdrawal separates readings that all withhold support, which is why releasing a named veto is a separate, typed action. Third, the rule for opposing warrants is a conflict test: a claim is supported exactly when it has a positive argument none of whose conclusions is opposed."}
+   ]
+  },
+  {
+   "anchor": "Recovery issued only untouched slots",
+   "items": [
+    {"kind": "p", "text": "After the sweep closed, a second AI session recomputed the results on a file copy with separately written code and its own evaluator. It added analyses that need no model call (Section 4.4, Appendix G) and one further experiment (Section 4.5). Rules for the recomputation were hashed before any sweep outcome was opened, those for the scaling run before its first call. All of it is descriptive and outside the 21-test family."}
+   ]
+  },
+  {
+   "anchor": "The lesson of the sweep is a separation of stages",
+   "items": [
+    {"kind": "h2", "text": "4.4 Mechanism checks and direct answers"},
+    {"kind": "p", "text": "Two post hoc questions need no further model call (Appendix G). First, do the cases need the mechanism? On the 768 decision-state pairs of the authored families, counting copies as independent evidence asserts 39 pairs that the engine does not (24 cases), and withholding everything downstream of a withdrawal drops 123 asserted pairs (50 cases changed; Table G2). The corpus exercises each mechanism; how often real documents would is not measured."},
+    {"kind": "p", "text": "Second, do models need the engine to reach the verdict? On cases this small, mostly not. Over the six temporal conditions, DeepSeek, GLM-Flash, Qwen and GLM-5.2 answered 279, 225, 79 and 39 of 348 pairs and matched the authored support verdict on every one (two answers differ in a listed state label, Appendix G); Gemma answered 334 and matched 304, mostly by dropping asserted pairs (Table G3). No model's compiled family asserted any of the 324 pairs that the authored family does not. On the sweep's cases the measured benefit is therefore refusal and auditability, not accuracy."},
+    {"kind": "h2", "text": "4.5 Scaling run"},
+    {"kind": "p", "text": "The sweep's cases are small. A further run, with rules and cases committed before its first call (Appendix H), varies case size: 36 generated cases with 10, 20 and 40 records, twelve per size, under the first-day prompts, engine and scorer. A model answers from the formal ledger, answers from the prose, or compiles a declaration from the same prose for the engine to evaluate. An extension, also fixed before its calls, added a second model without a reasoning phase, a prompt that asks for the working first, streamed responses, cases with no copies or 80 percent copies, a search task and, last, cases with 80 records and a second run (Figure 2)."},
+    {"kind": "figure", "file": "paper_build\\figures\\fig3_scale.png", "width": 468},
+    {"kind": "figcap", "text": "Figure 2. Scaling run and extension: twelve cases per size, model and condition (Tables H1 and H2). Rings mark cells whose twelve streamed compilations were all issued (GLM-Flash)."},
+    {"kind": "p", "text": "Models without a reasoning phase failed when they had to answer alone. Gemma was fully correct from prose on 7, 7 and 1 of 12 cases, and on none of twelve cases with 80 records that were added last; a case counts only if all of its decisions are right, and per decision it was wrong on 14, 10, 20 and 38 percent. The smaller Gemma-26B was fully correct from prose on 2, 0 and 0 cases and wrong on 32, 34 and 38 percent of decisions, nearly always by withholding a supported one. From the formal ledger Gemma's unsafe answers followed lineage. Decisions that lack support only because a copy's source is unavailable were about a third of the unsupported ones and drew 14 of its 19 unsafe answers (a post hoc split). When the extension then set the share of copies in advance at 40 records, it asserted 1 of 55 unsupported decisions with no copies, 13 of 60 with 40 percent and 23 of 60 with 80 percent, all 23 of them copy-mediated, in line with reports that models count copies as confirmations [11, 12, 17]. From prose the expectation failed: more copies brought more withheld decisions, not more unsafe ones."},
+    {"kind": "p", "text": "Writing the structure out removed nearly all the errors, in each of three forms. The three reasoning models made no wrong decision in 205 direct answers. Asked to show their working first, Gemma got 0 of 282 decisions wrong and Gemma-26B 4 of 288; at 80 records Gemma's working still got 119 of 120 decisions right, though 2 of its 12 answers ran out of output; Gemma-26B's then got 20 of 132 wrong, and none of its twelve declarations at that size was accepted. Compiled declarations were exact when accepted: all 33 of Gemma's and all 99 of the reasoning models', streamed repeats included; of Gemma-26B's 19, one declared an unavailable record available and gave one unsafe decision. Compilation is therefore not what makes the answers right. It adds an object that can be checked: the validator refused 17 of Gemma-26B's 36 declarations, where the four wrong decisions of its visible working passed silently. Its price is availability: a refused, late or unfinished declaration gives no answer."},
+    {"kind": "p", "text": "The engine's own task is a search (Proposition B.1), and there the routes did differ. Asked to name a smallest set of further records whose withdrawal leaves a decision without support, Gemma answering alone named a valid set for 85 of 128 supported decisions and a smallest one for 38; Gemma-26B a smallest one for 16. With the working shown first, Gemma's sets were nearly always valid (113 of 121) but smallest for only 88, and the share fell with size: 100, 76 and 55 percent at 10, 20 and 40 records and 34 percent at 80, where 4 of its 12 answers also ran out of output. Gemma-26B named a smallest set for 64 of 97 decisions and ran out of output in 7 of 36 cases. GLM-Flash, a reasoning model, used up its output limit without an answer in 12 of 36 cases and named a smallest set for 74 of 81 decisions in the rest. Exhaustive search of the models' accepted declarations returned a smallest set for every supported decision at every size, in 33, 19 and 31 of the 36 cases and in 9 of Gemma's 12 at 80 records, with no further call (Tables H3 and H5); Gemma-26B's misread declaration also returned a set for one decision that had no support. Where one record was needed, nearly every oversized set was padded (one of its records would have sufficed); a smallest set came reliably only from the search. All of this rests on generated prose, the first-day engine without alternative readings, and twelve cases per cell; a second run of both Gemma models changed 14 of 1,456 decisions."}
+   ]
+  },
+  {
+   "anchor": "One broad warning score asks about",
+   "items": [
+    {"kind": "p", "lead": "Assisted and oracle arms.", "text": "Assisted and oracle arms. All five assisted/oracle contrasts were nonnegative on their matched 12 cases: correct counts changed 9→10, 4→11, 6→6, 7→11 and 1→8 in Table 1 model order. None survived Holm adjustment; with both arms privileged, no capability gain is shown."},
+    {"kind": "p", "lead": "Gemma-only diagnostics.", "text": "Gemma-only diagnostics. Gemma's bare K10 union, Pass@1 and observed Pass@10 were all 0/12; admitting permitted fences recovered two complete unions. Six of the 12 families contain more than ten readings, so ten single-graph samples cannot recover them even with perfect sampling. Preference testing yielded 17/24 fully valid matched quartets, with zero flips in those complete units; seven incomplete units remain visible. Matched long-context Gemma verdict correctness fell from 7/12 to 1/12, descriptively; both short and long bare IR recovery were 0/12."}
+   ]
+  },
+  {
+   "anchor": "The principal limitation is the source-to-declaration boundary",
+   "items": [
+    {"kind": "p", "lead": "Code and data.", "bold": true, "text": "Code and data. The release artifact holds the engine, validator, workbench, frozen corpus and design, all 1,703 logged request attempts with their 1,701 response records, failed and invalid ones included, both score views and the replay scripts; the recomputation and the scaling run form a supplement, which was rerun in a fresh extraction of the release archive (Appendix F). Every count in Section 4 can be regenerated offline."}
+   ]
+  },
+  {
+   "anchor": "Phan Minh Dung. 1995.",
+   "items": [
+    {"kind": "ref", "text": "9. Yiqi Wang, Jiaqi Liu, Jiaqi Zhang, Zhangkai Wu, Yiqun Duan, Mingkai Zheng and Taotao Cai. 2026. PACMI: Provenance-Aware Cascading Memory Invalidation for Long-Term LLM Agents. arXiv:2610.05732v1, 5 October. https://arxiv.org/abs/2610.05732v1"},
+    {"kind": "ref", "text": "10. Yi Ting Shen, Kentaroh Toyoda and Alex Leung. 2026. Revoked but Still Authoritative: An Empirical Study of Revocation Enforcement in Agent-Memory Systems. arXiv:2609.08258v1, 8 September. https://arxiv.org/abs/2609.08258v1"},
+    {"kind": "ref", "text": "11. Abdelkader Metales, Miriam Grabenheinrich and Aicha Metales. 2026. Copies Are Not Confirmations: How News Duplication Fools LLM Judges and Continual Learners. arXiv:2611.09203v2, 11 November. https://arxiv.org/abs/2611.09203v2"},
+    {"kind": "ref", "text": "12. Jianxin Gao, Runze Li, Tianyi Yu, Liangwei Ren, Bohan Chen and Zining Wang. 2026. Copies or Sources? Measuring How LLM Aggregators Count Restated Evidence in Multi-Agent Systems. arXiv:2610.06192v1, 5 October. https://arxiv.org/abs/2610.06192v1"},
+    {"kind": "ref", "text": "13. Mike Thelwall. 2026. Do Large Language Models know Which Published Articles have been Retracted? arXiv:2604.16872v1, 18 April. https://arxiv.org/abs/2604.16872v1"},
+    {"kind": "ref", "text": "14. Cochrane. 2026. Cochrane strengthens systems to manage retracted publications in its published reviews. News item, 10 June. https://www.cochrane.org/about-us/news/cochrane-strengthens-systems-manage-retracted-publications-its-published-reviews"},
+    {"kind": "ref", "text": "15. Richard M. Karp. 1972. Reducibility among Combinatorial Problems. In Complexity of Computer Computations, 85–103. Springer. https://doi.org/10.1007/978-1-4684-2001-2_9"},
+    {"kind": "ref", "text": "16. Laurent Hyafil and Ronald L. Rivest. 1976. Constructing optimal binary decision trees is NP-complete. Information Processing Letters 5(1): 15–17. https://doi.org/10.1016/0020-0190(76)90095-8"},
+    {"kind": "ref", "text": "17. Ruihua Zhou, Hao Huang, Yijie Zheng, JiaTang Luo, Yunpeng Li, Yuling Liu and Dan Du. 2026. Evidence Laundering: Deep Research Agents Mistake Correlated Sources for Independent Evidence. In Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing, 11682–11693. https://aclanthology.org/2026.emnlp-main.509/"}
+   ]
+  },
+  {
+   "anchor": "The clarification dynamic program minimizes",
+   "items": [
+    {"kind": "p", "lead": "Setting for Propositions B.1 to B.3.", "text": "Setting for Propositions B.1 to B.3. A state U is the set of usable records. Each reading gives each decision a Boolean support function of U. A family is monotone when ancestry is known and no reading uses an exception or an opposing warrant; support is then built from AND and OR over usability, so withdrawing records never creates support. For a nonempty family F, Box is support under every reading and Diamond under at least one. A proposal P is consequential at U if Box holds for F and fails once P is added, or Diamond fails for F and holds once P is added. A withdrawal witness of size k is a set W of k withdrawable records such that P is consequential at U minus W."},
+    {"kind": "p", "lead": "Proposition B.1 (finding is hard, checking is cheap).", "text": "Proposition B.1 (finding is hard, checking is cheap). For monotone families, deciding whether a withdrawal witness of size at most k exists is NP-complete. It remains NP-hard when F and P hold one reading each and the proposed reading only adds one alternative route to a disjunction of two-record conjunctions. The same holds for the withdrawal robustness of a single reading. Checking a claimed witness takes one evaluation of each reading."},
+    {"kind": "p", "lead": "Proof.", "text": "Proof. Membership: evaluate the predicate at U minus W. Hardness: reduce from Vertex Cover [15]. Given a graph and a number k, take one record per vertex and one further record q, all usable. Reading A supports the decision when some edge has both endpoints usable; reading B when A does or q is usable. With F = {A} and P = {B}, adding B leaves Box unchanged and turns Diamond into “A or q”. So P is consequential at U minus W exactly when q is not in W and every edge has an endpoint in W, that is, when W is a vertex cover. For robustness, A loses support exactly when W is a vertex cover."},
+    {"kind": "p", "lead": "Remarks.", "text": "Remarks. The k-construction above is the special case of k disjoint one-record routes. The engine searches exactly inside a declared scope, at most 16 withdrawal candidates on its decision-diagram path and 10 on its enumeration path, and reports that scope; the hardness result is the reason for a bounded, declared scope. On 400 random reduction instances with 3 to 9 vertices, the engine's minimum for both searches equalled a brute-force minimum vertex cover every time."},
+    {"kind": "p", "lead": "Proposition B.2 (withdrawal blindness).", "text": "Proposition B.2 (withdrawal blindness). In a monotone family, if no reading of F or P supports a decision at U, then no withdrawal makes P consequential for that decision."},
+    {"kind": "p", "lead": "Proof.", "text": "Proof. Support is monotone, so after any withdrawal still no reading supports the decision. Both halves of the consequential predicate need a supporting reading: Box for F needs every reading of F to support, and Diamond for F with P added needs one."},
+    {"kind": "p", "lead": "Remarks.", "text": "Remarks. A difference among readings that all withhold support can therefore be exposed only by an action that enables something. That is the role of the typed release of a named veto, and in Figure 1 two typed actions are both needed and sufficient. With exceptions, support is not monotone and the statement can fail, which is why the engine's search assumes no monotonicity. Of 1,500 random monotone families, 292 had no supporting reading at the baseline, and the engine reported no withdrawal witness in any of them."},
+    {"kind": "p", "lead": "Proposition B.3 (the rebuttal fragment is a conflict test).", "text": "Proposition B.3 (the rebuttal fragment is a conflict test). In the engine, an argument b attacks an argument a exactly when b concludes the opposite of the conclusion of a or of one of a's subarguments. The grounded labelling then rejects no argument, and a is accepted exactly when no argument concludes the opposite of any conclusion in a's closure. A claim is therefore supported when it has a positive argument with no opposed conclusion in its closure, contested when it has none but some argument for or against it is opposed, and otherwise not supported."},
+    {"kind": "p", "lead": "Proof.", "text": "Proof. An unattacked argument a attacks nobody: if a attacked c, some s in the closure of c would conclude the opposite of a, and s would then attack a. So the first step of the grounded iteration accepts exactly the unattacked arguments, they defeat nothing, and no attacked argument is ever accepted."},
+    {"kind": "p", "lead": "Remarks.", "text": "Remarks. The trusted core for opposing warrants is thus a check that a reviewer can do by hand. In 20,000 random argument sets with 129,084 arguments, 107,741 of them attacked, the engine rejected none and accepted exactly the conflict-free ones."},
+    {"kind": "p", "lead": "Proposition B.4 (questions: optimum, feasibility, lower bound).", "text": "Proposition B.4 (questions: optimum, feasibility, lower bound). Let the remaining candidate readings have status vectors over the selected decisions, and let each supplied yes-or-no question have a positive cost and a known answer for every candidate. (a) The clarification program returns the minimum, over all adaptive orders of the supplied questions, of the worst-case total cost until the remaining candidates share one status vector. (b) Settling is possible exactly when no two candidates with different status vectors answer every question alike. (c) If m distinct status vectors remain, every strategy asks at least log2 m questions, rounded up, on some branch."},
+    {"kind": "p", "lead": "Proof.", "text": "Proof. (a) By induction on the number of remaining candidates. A first question that splits them into two nonempty groups costs its own cost plus the larger of the two continuations; the program takes the minimum over first questions, and a question that does not split the group cannot help. (b) A pair that answers every question alike stays in one group on every branch, so no branch can end in agreement if their status vectors differ. If there is no such pair, asking every question leaves groups whose members answer alike and therefore share a status vector. (c) A branch with q questions separates at most 2 to the power q groups, and each final group holds one status vector."},
+    {"kind": "p", "lead": "Remarks.", "text": "Remarks. The statement assumes truthful, decisive answers; Unknown keeps candidates. The engine keeps the program exact by bounding the instance to five questions and 32 candidates; for expected instead of worst-case cost, constructing an optimal binary decision tree is NP-complete [16]. On 3,000 random instances with 2 to 7 candidates and up to five questions, 1,803 could be settled and 1,197 could not: the program's cost equalled an exhaustive minimum in all 3,000, its feasibility flag matched the pair test of (b) in all 3,000, and the lower bound of (c) was never violated."}
+   ]
+  },
+  {
+   "anchor": "AI tools assisted literature retrieval and synthesis",
+   "items": [
+    {"kind": "p", "text": "Three AI sessions worked separately under the author's direction. The first (ChatGPT) built the project, ran the sweep and drafted the report. The second (Claude) then worked on a file copy: it recomputed the results with its own code, compared each number and method statement with that recomputation and with the code, wrote Sections 4.4 and 4.5 and Appendices G and H, and ran the scaling run and its extension after the author approved their model calls. The third (Claude) reviewed the draft and proposed the four properties of Appendix B with their proofs and test scripts. Each proposal was checked against the code before it was applied."},
+    {"kind": "p", "lead": "Release verifier.", "text": "Release verifier. The second session extracted the artifact archive (362,879,791 bytes, SHA-256 afc3ad9241a5d28d5a48bff65dfd1e6c6c9c46f1a3ae5c85c29e6087dcaebefe) into an empty folder and reran the documented release verifier on Windows 11 with Python 3.12.10. It passed: 3,819 files, 1,800 planned slots, no provider call. The reviewing session reports the same result from its own extraction of the same archive on Linux with Python 3.13. The verifier checks hashes and replays saved records; it reruns no model. The supplement was then unpacked into a second fresh extraction and its 22 scripts were run in the documented order. The frozen scorer reproduced the saved score files exactly, and every result file and table of the supplement came out byte for byte as shipped, apart from the record of that rerun, which holds its duration."}
+   ]
+  },
+  {
+   "anchor": "State-sequence checks compare normalized reconstruction",
+   "items": [
+    {"kind": "h1", "text": "Appendix G. Independent Recomputation and Post Hoc Analyses"},
+    {"kind": "p", "lead": "Procedure.", "text": "Procedure. The second session worked on a file copy of the project and changed no file of the original project. Nothing in this appendix needed a model call; the scaling run is described in Appendix H. Its rules (prereg/post_sweep_rules.md, SHA-256 d55cbdd3033880bbe6703c19d77de1d4719675af8b2bbebb3eb8931c94762766) were committed at 22:59 CET on 15 November 2026. By then it had seen the design, the authored cases, the code, progress counts of the sweep and the first-day experiment, but no outcome, grade or table of the sweep. The author authorised the rules in advance and reviewed them before submission. They fix the recomputation, two codings of unavailable outcomes, the analyses below and their labels. Everything here is post hoc and descriptive."},
+    {"kind": "p", "lead": "Recomputation.", "text": "Recomputation. Rerunning the frozen scorer reproduced the saved score files exactly. A separately written merge of the five launch journals gave the same 1,800 slot outcomes, the same counts in every cell and the same 21 tests; a separate regrade of the 474 declaration slots gave the same grades. Each number in the text was then compared with this recomputation or with the file it is read from, and all agreed. The separation check of Appendix B was rerun and matched its saved certificate, and the tests of Propositions B.1 to B.4 were rerun on the engine with the counts stated there. Across the three compilation routes 270 declarations compiled and 268 matched the authored family exactly. One exception covered four of eight readings and one was over-cautious on four pairs; neither gave an unsafe verdict."},
+    {"kind": "p", "lead": "Independent evaluator.", "text": "Independent evaluator. To test whether the definitions in Section 2 and Proposition B.3 are enough to reimplement the engine, the second session wrote an evaluator of 136 lines that shares no code with it. On the 214 authored readings at the three case states the two agree on all 3,072 decision states (1,968 supported, 1,096 not supported, 6 contested, 2 with insufficient provenance) and on Box and Diamond for all 768 family pairs. Under 25 random withdrawal sets per reading they agree on all 25,600 further decision states."},
+    {"kind": "p", "lead": "Agreement depth.", "text": "Agreement depth. These are properties of the authored cases, computed with the project's own search functions as the grader calls them. At the initial state 180 of the 256 decisions are supported under every reading; one further withdrawal destroys that support for 141 of them, two are needed for 35 and three or more for 4. For the 30 deficient seeds, with each case's initial vetoes in force, the planted difference from the complete family shows without any withdrawal in 2 cases, after one withdrawal in 21, after two or more in 1, and after no withdrawal of any size in 6. In four of those six, all from the dormant-prerequisite family, releasing a named veto and withdrawing one record exposes it, as Proposition B.2 leads one to expect. A review limited to single withdrawals would therefore miss the planted difference in 7 of 30 cases. Under the scored scope, which ignores initial vetoes, two cases still have no witness: the ten refuter slots on them cannot earn credit, and the four exact objections without credit (79 located, 75 credited) all fell there. None of the 30 faithful seeds has a witness."},
+    {"kind": "p", "lead": "Unavailable outcomes.", "text": "Unavailable outcomes. A slot whose request failed at the provider has no outcome. Table G1 brackets each model's bare-JSON exact rate by counting such slots as failures and as successes. For four models 23 to 45 percent of slots are unavailable, so the brackets are too wide to rank models. Figure G1 shows the same slots by outcome. On the 48 synthetic and the 12 bridge cases the bare exact counts were DeepSeek 30 and 10, Gemma 0 and 0, GLM-Flash 23 and 10, Qwen 36 and 10, and GLM-5.2 15 and 5."},
+    {"kind": "table", "like": 3, "widths": [108, 84, 96, 84, 96],
+     "rows": [["Model", "Bare exact /60", "Admitted exact /60", "Unavailable /60", "Bare exact rate, bounds"],
+              ["DeepSeek", "40", "40", "20", "67–100%"],
+              ["Gemma", "0", "34", "0", "0–0%"],
+              ["GLM-Flash", "33", "33", "25", "55–97%"],
+              ["Qwen27B", "46", "46", "14", "77–100%"],
+              ["GLM-5.2", "20", "28", "27", "33–78%"]],
+     "caption": "Table G1. Bare-JSON exact-family recovery with unavailable slots counted as failures (lower bound) and as successes (upper bound)."},
+    {"kind": "figure", "file": "paper_build\\figures\\fig2_v1_strict_ir.png", "width": 430},
+    {"kind": "figcap", "text": "Figure G1. Outcome of the 300 first-attempt direct source-IR slots. Every admitted output was exact. Gemma's 34 were all fenced; the other models lost 14 to 27 slots each to operational failures."},
+    {"kind": "table", "like": 3, "widths": [228, 54, 60, 54, 72],
+     "rows": [["Rule replacing the engine", "Extra", "Dropped", "Other", "Cases changed /60"],
+              ["Copies treated as independent evidence", "39", "0", "0", "24"],
+              ["Everything downstream of a withdrawal withheld", "0", "123", "16", "50"],
+              ["First reading only", "6", "0", "10", "10"],
+              ["Contested arguments accepted", "6", "0", "0", "3"]],
+     "caption": "Table G2. Simpler rules against the engine on the authored families (768 pairs, no model call). Extra: asserted by the rule only. Dropped: asserted by the engine only. Other: split against withheld."},
+    {"kind": "p", "lead": "Simpler rules (Table G2).", "text": "Simpler rules (Table G2). Each rule is applied to the authored family at the initial, withdrawn and restored state and compared with the engine on the same family; a pair is one decision at one state, and the engine asserts 444 of the 768 pairs. Withholding everything downstream drops 123 asserted pairs in 49 cases and, with 16 shifts from split to withheld, changes 50 cases in all. Copies as independent evidence: every copy becomes an original record. Downstream withheld: a decision is withheld when any record it depends on, under any reading, is withdrawn. First reading: the first authored reading replaces the family. Contested accepted: arguments left undecided by mutual rebuttal count as accepted. Thirty-six cases contain copies, 17 a copy with several parents, ten several readings, six an exception guard and four an opposing warrant. Five of the 24 cases changed by the first rule are bridges. In bridge case ECO-07, which rests on two excerpts of one abstract, the engine withholds both decisions after the withdrawal, while the first rule still asserts one of them through a copy of the withdrawn record. After the partial restoration the engine asserts that decision again and the second rule keeps it withheld."},
+    {"kind": "p", "lead": "Direct answers.", "text": "Direct answers. Table G3 pools the six temporal conditions of the 12-case subset; a verdict counts as asserted, split or withheld according to the model's two support fields. The frozen grade also compares the listed state labels: on one decision of one case, three of Gemma's answers and one each of GLM-Flash's and Qwen's give the reference's two support fields with a different label. The table counts them as matching; the frozen field grades those five answers not fully correct. On the same 12 cases, compiled declarations gave a verdict for 74, 57, 33, 67 and 48 percent of pairs (Table 1 model order) and no unsafe one. On the 12 assisted cases Gemma asserted none of the 32 non-asserted pairs when it was given the engine's result, against four when it received the correct declaration without that result."},
+    {"kind": "table", "like": 3, "widths": [84, 60, 78, 60, 66, 66, 54],
+     "rows": [["Model", "Usable answers /72", "Pairs answered /348", "Matching", "Asserted pair dropped", "Other pair asserted", "Other"],
+              ["DeepSeek", "58", "279", "279", "0", "0", "0"],
+              ["Gemma", "69", "334", "304", "26", "1", "3"],
+              ["GLM-Flash", "46", "225", "225", "0", "0", "0"],
+              ["Qwen27B", "17", "79", "79", "0", "0", "0"],
+              ["GLM-5.2", "8", "39", "39", "0", "0", "0"]],
+     "caption": "Table G3. Direct verdicts over six temporal conditions compared with the authored verdicts. Slots without a usable answer failed at the provider, were truncated or were unusable."},
+    {"kind": "p", "lead": "First-day experiment.", "text": "First-day experiment. On 13 November a separate frozen design of 24 authored cases with six decisions each compared answering from prose with compiling a declaration and recomputing, for gemma-4-31b-it and glm-53-flash (the identifier under which the provider's price list carries GLM-5.3-Flash) at temperature 0 without retries. Table G4 gives fully correct cases. The validator accepted 22 and 20 declarations, and all 42 matched the reference graph. Most of Gemma's prose errors were protected alternatives dropped after a withdrawal (14 of 42 at the final state). Over all scheduled decisions, with a rejected declaration counted as wrong, compiling differed from answering from prose by +4.2 points for Gemma (95% interval −9.0 to +14.6) and by −16.7 points for glm-53-flash (−33.3 to −4.2)."},
+    {"kind": "table", "like": 4, "widths": [258, 105, 105],
+     "rows": [["Condition", "gemma-4-31b-it", "glm-53-flash"],
+              ["Formal graph, final state", "21", "24"],
+              ["Prose, final state", "12", "24"],
+              ["Prose with history, first answer", "22", "24"],
+              ["Prose with history, after withdrawal", "12", "24"],
+              ["Prose, withdrawal with no prior answer", "10", "24"],
+              ["Declaration compiled and recomputed", "22", "20"]],
+     "caption": "Table G4. First-day experiment: fully correct cases of 24 per condition and model."},
+    {"kind": "figure", "file": "results\\frontier-v6n-browser-qa-complete-v3\\05-real-controlled-seed-preview.png", "width": 440},
+    {"kind": "figcap", "text": "Figure G2. The workbench showing a refuter proposal from the sweep (bridge case ECO-01, DeepSeek, first attempt; a screenshot from the release artifact). The proposal is located in the source and marked as unverified in meaning. Adding it to the seed family changes one decision once one record is withdrawn; nothing is applied. The counts in its header and the witness agree with the recorded slot."},
+    {"kind": "p", "lead": "Engine checks.", "text": "Engine checks. Evaluating each of the 180 case states twice gave identical output, and replaying each case's events reached the declared withdrawn and restored states in all 60 cases. The 645 evaluated worlds of the authored families contain 5,051 arguments and only 11 attacks. These checks call no model; the workbench server and the unit-test suite were outside their scope."},
+    {"kind": "h1", "text": "Appendix H. Scaling Run"},
+    {"kind": "p", "lead": "Design.", "text": "Design. The run asks whether answering directly from prose gets worse as the declared dependency structure grows, and whether compile-then-compute holds up. Its rules (prereg/scale_rules.md, SHA-256 de35df02972ef1a9e5e8e43c21efba2d877e4cf7c66d63db6e9926b077296e4f) and its 36 generated cases were committed at 05:22 CET on 16 November 2026, before its first model call, which the author approved. Cases have 10, 20 or 40 records, with 5, 10 or 20 claims, 6, 8 or 10 decisions and 1, 2 or 3 records withdrawn, twelve per size. About 40 percent of records are copies with one or two parents, chains included, and a claim may rest on another claim. The prose is composed from the sentence templates of the first-day packets and runs to about 690, 1,170 and 2,080 words. Reference decisions come from the first-day engine and agree with an independent evaluator on every case. Prompts, temperature 0 and the scorer are those of the first-day experiment; every slot was scored by the frozen scorer and by the independent evaluator, without a single disagreement."},
+    {"kind": "p", "lead": "Amendments.", "text": "Amendments. Two operational amendments were hashed and committed during the run, each before the first request it governs. First, the first-day runner limits output to 8,192 tokens and stops at a failed request. The three reasoning models spend much of that limit on reasoning, and two of Qwen's first answers were cut off at it. They therefore ran with a limit of 32,768 tokens, through a runner that sends the same request and does not stop at a failed one; Qwen's 11 earlier requests stand as they are, and its two cut-off answers and two requests that were in flight when that run was stopped count as unusable. Gemma ran under the original settings. Second, when two models ran side by side the provider rejected 13 requests with HTTP 429 before any inference; those slots were issued again with one model at a time, and a rejected request is retried after 65 seconds at most twice, as in the sweep. Every other failure is left unretried and counts as an unusable answer. The provider's gateway returns HTTP 504 after 60 seconds, so answers that need longer could not be received."},
+    {"kind": "p", "lead": "Extension.", "text": "Extension. After the main run the author approved further model calls, and an extension was fixed in advance in the same way (prereg/scale_extension_rules.md, SHA-256 42506ac0c207897959f210e80ed463defb33146cc98cd7d9a0d7c7ba89a104c3, committed at 07:02 CET, before its first call). It has eight parts. E1 runs the main design on gemma-4-26b-a4b-it, the provider's other Gemma model; a model counts as without a reasoning phase when the median output of its direct answers at 10 records is under 200 tokens, which holds for both Gemma models (49 tokens each). E2 gives the same 36 prose packets to both Gemma models with an instruction that asks for step-by-step working in plain text and the answer on a final line; only the last two lines of the first-day instruction differ, and the scored answer is the last JSON object in the output. E3 issues the reasoning models' 36 compilations again with streamed responses, as the sweep's own transport did, to lift the 60-second limit. E4 adds 24 cases with 40 records, twelve without copies and twelve with 80 percent copies, in four conditions for both Gemma models; its cases were committed in an addendum before its calls. E5, added in a third addendum after E1 and E2 had been scored and before any of its calls, asks for a smallest further withdrawal (below), and E6, in a fourth addendum, puts the same question to the second Gemma model. A second addendum changed only the order of the remaining parts after a rate limit. Calls stopped at 09:15 CET as fixed in advance; E6 ran after that under a stop of its own, set in its addendum, and ended at 09:25. E7 and E8 were added in a fifth addendum at about 10:25, after the author had read the draft and asked for work on two of its weaknesses: every request had been issued once, and the cases stopped at 40 records. E7 issues the main run's 108 requests a second time for both Gemma models. E8 adds twelve cases with 80 records for both, in the first-day conditions, with working shown first and on the search task. Both ran under a stop at 11:15. The extension is post hoc relative to the main run and prespecified relative to its own outputs; the main run's results stand as they are."},
+    {"kind": "p", "lead": "Results for Gemma.", "text": "Results for Gemma. Table H1 gives every cell. Direct answers from prose were fully correct in 7, 7 and 1 of 12 cases and contained 10, 9 and 22 wrong decisions among the 72, 88 and 110 answered. At 40 records the errors were of every kind: 6 of 30 decisions whose support had been withdrawn were still asserted, 2 of 26 never-supported decisions were asserted, 9 of 28 decisions with a surviving alternative were dropped, and 5 of 26 untouched decisions were dropped. From the formal ledger the model was fully correct in 10, 8 and 6 cases with 3, 7 and 14 wrong decisions among 72, 96 and 120; of the decisions whose support had been withdrawn it still asserted 1 of 24, 5 of 36 and 11 of 33, which is 17 of its 24 errors from the ledger. All 33 declarations that the validator accepted were identical to the reference graph; of the other three, two failed at the gateway and one was rejected because its evidence field was not a list. Over all scheduled decisions, compiling differed from answering from prose by −2.8 points at 10 records (95% interval −25.0 to 15.3), +9.4 at 20 (−17.7 to 33.3) and +26.7 at 40 (15.8 to 42.5). At 40 records the compiled route was fully correct in 11 cases where the direct answer was not, and never the reverse. In the cases where both routes gave a usable answer, the direct answers contained 3, 3 and 8 unsafe decisions and the compiled route none."},
+    {"kind": "p", "lead": "Gemma-26B (extension, E1).", "text": "Gemma-26B (extension, E1). All 108 answers arrived. Its direct answers were fully correct in 2, 0 and 0 of 12 cases from prose and in 3, 2 and 0 from the formal ledger, with 102 and 89 of 288 decisions wrong; 101 and 80 of those were supported decisions that it withheld, and 1 and 9 were unsafe. The validator accepted 11, 5 and 3 of its declarations. Seventeen of the 19 were identical to the reference graph and 18 gave fully correct decisions; one, for a 10-record case, declared a record available that the packet says was never available, and one never-supported decision came out supported. The other 17 declarations were refused: in nine the evidence field was not a list, in five the evidence identifiers did not match the task, two repeated an identifier and one was malformed JSON. The compiled route was fully correct in 10, 5 and 3 cases against 2, 0 and 0 for the direct answer from prose, and in no case was the direct answer right where the compiled route was not. Over all scheduled decisions, where a refused declaration counts every decision as wrong, compiling differed from answering from prose by +22.2 points at 10 records (95% interval 1.4 to 38.9), −24.0 at 20 (−52.1 to 3.1) and −36.7 at 40 (−55.8 to −15.0)."},
+    {"kind": "p", "lead": "Visible working (extension, E2).", "text": "Visible working (extension, E2). With the instruction that asks for the working first, Gemma was fully correct in 11 of 11, 12 of 12 and 12 of 12 cases, with no wrong decision in 282 (one request failed at the gateway), and Gemma-26B in 11, 11 and 11 of 12, with 4 wrong decisions in 288: three supported decisions withheld and one copy-mediated decision asserted. Every output ended in a readable answer line. The working took a median of 902, 1,240 and 1,614 output tokens for Gemma and 926, 1,309 and 2,234 for Gemma-26B, against 1,017, 1,857 and 2,226 and 1,012, 1,283 and 2,576 for their accepted declarations. On these cases a prompt that lets the model work before it answers was therefore about as accurate as compilation where both gave an answer (for Gemma-26B, 4 wrong decisions in 288 against 1 in 136) and far more often usable. Its errors, unlike a refused declaration, carry no signal."},
+    {"kind": "p", "lead": "Where the unsafe answers fall.", "text": "Where the unsafe answers fall. This split was made after the results had been seen. A decision without support after the withdrawal is called copy-mediated when it would be supported if every copy counted as a record of its own, that is, when seeing that it lacks support requires following a copy back to a source that was withdrawn or never available; otherwise it is direct. Of the 160 unsupported decisions in the 36 cases, 57 are copy-mediated. From the formal ledger Gemma asserted 14 of those 57 and 5 of the 103 direct ones; at 40 records it asserted 11 of 23 against 2 of 37. From prose, among the decisions it answered, it asserted 12 of 54 and 5 of 97. The rule of Section 4.4 that treats copies as independent evidence asserts every copy-mediated decision by construction, so on these cases the unsafe answers of this model are largely the ones that rule would give. Gemma-26B rarely asserted an unsupported decision at all: from the ledger 7 of the 57 copy-mediated ones and 2 of the 103 direct ones, from prose none and 1. The three reasoning models asserted no unsupported decision of either kind. The 24 authored cases of the first-day experiment, whose answers predate this question, show the same pattern: over its four direct conditions Gemma asserted 13 of 192 copy-mediated unsupported decisions and none of 96 direct ones, and glm-53-flash none of either."},
+    {"kind": "p", "lead": "Copy share (extension, E4).", "text": "Copy share (extension, E4). The share of copies was set in advance at 40 records: no copies, the main run's 40 percent, and 80 percent (Table H2). The expectation written down before the calls was that the rate of unsafe direct answers would rise with the share and that the compiled route would stay exact. From the formal ledger it held for Gemma: it asserted 1 of 55 unsupported decisions with no copies, 13 of 60 with 40 percent and 23 of 60 with 80 percent; at 80 percent all 23 were copy-mediated (23 of 45, against 0 of 15 direct ones), and its fully correct cases fell from 9 to 6 to 4 of 12. Gemma-26B, which withholds most decisions, moved the same way on a smaller scale (1 of 55, 3 of 60 and 6 of 60). From prose the expectation failed for both models: Gemma's unsafe answers went from 10 of 49 to 8 of 56 to 2 of 57, while the supported decisions it withheld rose from 10 of 61 to 14 of 54 to 25 of 53, and its wrong decisions in all stayed between 18 and 25 percent (20, 22 and 27 of 110). So copies turned into unsafe answers when the model read a formal ledger and into withheld answers when it read prose. With working shown first Gemma made no wrong decision at either new share (0 of 230) and Gemma-26B 8 in 240, all of them withheld. Compiled declarations were accepted for 9 and 11 of Gemma's 12 cases and for 3 and 2 of Gemma-26B's, and every accepted one was identical to the reference graph."},
+    {"kind": "p", "lead": "Reasoning models.", "text": "Reasoning models. None of the three made a wrong decision in a usable answer: 205 of their 216 direct answers were usable, and all 205 were fully correct. Qwen gave 35 of 36 usable direct answers from the ledger and 35 of 36 from prose, DeepSeek 34 and 29, GLM-Flash 36 and 36. Usable compilations numbered 12, 9 and 1 for Qwen at 10, 20 and 40 records, 5, 0 and 0 for DeepSeek and 11, 11 and 9 for GLM-Flash, and each of the 58 was identical to the reference graph, as were Gemma's 33. The prespecified comparison of compiled against direct answers from prose, over all scheduled decisions, therefore goes against compilation: 0.0, −25.0 (95% interval −50.0 to 0.0) and −83.3 (−100.0 to −58.3) points for Qwen, −58.3 (−83.3 to −33.3), −83.3 (−100.0 to −58.3) and −58.3 (−83.3 to −33.3) for DeepSeek, and −8.3 (−25.0 to 0.0), −8.3 (−25.0 to 0.0) and −25.0 (−50.0 to 0.0) for GLM-Flash. Every lost case is a missing or refused answer: wherever both routes gave a usable answer, both were fully correct. Compiling took longer than answering from prose for all three: medians of 28 and 43 seconds against 12 and 28 for Qwen at 10 and 20 records, 24 against 10 for DeepSeek at 10 records, and 9, 21 and 43 against 6, 15 and 23 for GLM-Flash. Table H1 gives all medians."},
+    {"kind": "p", "lead": "Streamed compilations (extension, E3).", "text": "Streamed compilations (extension, E3). With streamed responses all 36 of GLM-Flash's compilations arrived, in a median of 7, 22 and 45 seconds at the three sizes; all 36 were accepted and identical to the reference graph, against 31 of 36 in the main run. One streamed request was rejected with HTTP 429 and issued again. For DeepSeek streaming changed little. Thirty-one of its 36 compilations were issued before the stop at 09:15 CET: 25 spent the whole output limit of 32,768 tokens on reasoning and returned no declaration (6 of 10, 9 of 10 and 10 of 11 at the three sizes), one was refused by the validator because a route of a claim was not a list of identifiers, and five were accepted, all identical to the reference graph. Its failures in the main run were therefore not only a matter of the 60-second limit. Qwen's streamed compilations were not issued before the stop."},
+    {"kind": "p", "lead": "The smallest further withdrawal (extension, E5 and E6).", "text": "The smallest further withdrawal (extension, E5 and E6). This part puts the engine's own task to the models, on the main run's 36 cases in the state after the withdrawal: for each decision, name a smallest set of further records whose withdrawal would leave it without support. The reference comes from exhaustive search over subsets of the available records: of the 128 supported decisions, 103 need one record, 23 two and 2 three. A named set is valid when the decision has no support once it is withdrawn, and smallest when it is valid and has the reference size (Table H3). Answering alone, Gemma named a valid set for 77 of the 103 one-record decisions and for 8 of the 25 others, a smallest set for 36 and 2, and gave a set for 38 of the 160 decisions that had no support to lose; in one case of 36 every set was smallest. With its working shown first, 35 answers arrived: the sets were valid for 97 of 99 and 16 of 22 decisions and smallest for 72 and 16, no unsupported decision got a set, and every set was smallest in 12 of 12, 6 of 12 and 2 of 11 cases at 10, 20 and 40 records. Its usual error with working was a valid set that was larger than necessary: 25 of the 27 one-record decisions it missed. In all 25 one of the named records would have sufficed alone, as in all 41 such sets when it answered alone, all 7 of GLM-Flash's and all 22 and 18 of Gemma-26B's: the sets were padded, not misdirected, so what this part shows is a failure to minimise more than a failure to find. GLM-Flash, a reasoning model, was asked with the answer-only instruction and streamed responses. Twelve of its 36 answers were cut off at the output limit of 32,768 tokens (1, 7 and 4 at the three sizes) and count as unusable. In the other 24 its sets were valid for all 81 supported decisions and smallest for 74 (59 of 66 one-record decisions and all 15 others), and every set was smallest in 20 cases; a usable answer took a median of 6,182 output tokens and 33 seconds, against 1,701 tokens and 17 seconds for Gemma's working. Gemma-26B (part E6, the same two instructions) did worse when answering alone: valid sets for 44 of the 128 supported decisions, smallest ones for 16, the empty set for only 30 of the 160 decisions that had no support to lose, and no case with every set smallest. With its working shown first, seven of its 36 answers ran into the output limit of 8,192 tokens (0, 4 and 3 at the three sizes). In the other 29 its sets were valid for 84 of 97 supported decisions and smallest for 64 (58 of 84 one-record decisions and 6 of 13 others), 94 of 129 unsupported decisions got the empty set, and every set was smallest in 5 of 12, 4 of 8 and 2 of 9 cases. Both expectations written down before its calls held: working first gave more smallest sets than answering alone, and each gave a smaller share than the search in its accepted declarations. No valid set named by a model was smaller than the reference size. The reference and the scoring use the independent evaluator; the project's engine, run on the same question afterwards, gave the same smallest size for all 288 decisions and the same verdict on every set that a model named. The compiled route made no call: the program that produced the reference searched each model's accepted declarations from the main run. For Gemma that gave a smallest set for all 122 supported decisions of its 33 accepted declarations, for GLM-Flash for all 103 of its 31 and for Gemma-26B for all 54 of its 19; over the five models every searched set for a supported decision was smallest, and the one wrong declaration of Gemma-26B gave a set for a decision that had no support. For Gemma-26B the search covers only 19 of the 36 cases, against 29 usable answers with working. The comparison favours the search by construction once a declaration is accepted and exact; what the part measures is how far direct naming falls short of it, and that it falls short more as cases grow."},
+    {"kind": "p", "lead": "Eighty records (extension, E8).", "text": "Eighty records (extension, E8). Twelve further cases take the main run\u0027s size ladder one step up: 80 records, 40 claims, 12 decisions and four records withdrawn, about 3,900 words of prose each, from the same generator (Table H4). Both Gemma models answered them in the first-day conditions, with working shown first and on the search task; all requests of this part were streamed. Four expectations for Gemma were written down before the calls. First, answering alone from prose it would be fully correct in at most 1 of 12 cases: it was in none, with 54 of 144 decisions wrong, 48 of them supported decisions that it withheld. Second, with its working shown first it would still get at least 95 percent of decisions right: it got 119 of 120 right in ten answers, and two answers ran into the output limit of 8,192 tokens. Third, every accepted declaration would be identical to the reference graph. Nine of twelve were accepted (two were refused because their evidence identifiers did not match the task, one ran into the output limit) and all nine gave fully correct decisions, but only eight were identical: the ninth marked the four withdrawn records as never available, and one of them, a copy, as an original record. That leaves every decision after the withdrawal unchanged, yet it is not the graph the source describes, and a question about restoring one of those records would be answered wrongly from it. So this expectation failed in one case. Fourth, with working shown first the share of supported decisions that got a smallest set would be below the share at 40 records (29 of 53), and the search in its accepted declarations would give a smallest set for every supported decision. Both held (Table H5). Answering alone it named a valid set for 25 of the 93 supported decisions and a smallest one for 6. With working, four of twelve answers ran into the output limit; the other eight named a valid set for 45 of 62 decisions and a smallest one for 21, which is 34 percent against 100, 76 and 55 percent at 10, 20 and 40 records, and in no case was every set smallest. Of its oversized sets for one-record decisions, 19 of 19 and 21 of 23 held a record that would have sufficed alone. The search in its nine accepted declarations gave a smallest set for all 67 supported decisions and the empty set for all 41 others, the inexact declaration included. The engine check of the search task was repeated on these cases: the same smallest size for all 144 decisions and the same verdict after all 191 sets that the two models named. Gemma-26B did not hold up at this size on any route. Answering alone it was fully correct in no case, from the ledger (76 of 144 decisions wrong) or from prose (78 of 132), nearly always by withholding. With its working shown first it was fully correct in 5 of 11 usable answers and got 20 of 132 decisions wrong, all of them supported decisions that it withheld; at 10 to 40 records it had 4 wrong in 288. None of its twelve declarations was accepted: seven were refused by the validator and five ran into the output limit. On the search task it named a smallest set for 6 of 93 supported decisions when answering alone and for 8 of 64 with working, where four answers were cut off, and it had no accepted declaration to search."},
+    {"kind": "p", "lead": "A second run (extension, E7).", "text": "A second run (extension, E7). The main run and part E1 issued every request once at temperature 0. Part E7 issued the 108 requests of each Gemma model a second time with the main run's settings. For Gemma the second run reproduced the first almost exactly. From the formal ledger all 36 answers were usable in both runs and all 288 decisions were the same. From prose, 31 answers were usable in both runs and 3 of their 246 decisions differed, all in one answer; fully correct cases were 7, 6 and 1 against 7, 7 and 1, with 38 of 264 decisions wrong against 41 of 270. The validator accepted 33 declarations in each run, 31 of them for the same cases, and all 33 of the second run were again identical to the reference graph. Five requests of the second run failed at the gateway, and which requests fail accounts for the cases that were usable in one run only. For Gemma-26B the two runs agreed on 283 of 288 decisions from the ledger and 283 of 288 from prose, with 86 and 103 decisions wrong against 89 and 102. Its compilations were less stable: 17 declarations were accepted against 19, only 14 of them for the same cases. The declaration that had been wrong in the first run was right in the second, and one for a 20-record case, accepted only in the second run, gave two unsafe decisions. Over both models 14 of the 1,456 decisions in answers usable in both runs differed. Single runs at temperature 0 were therefore repeatable for direct answers and for Gemma's compilations, and less so for which of Gemma-26B's declarations pass the validator. In the whole scaling run and its extension the validator accepted 235 declarations; 230 were identical to the reference graph and 233 gave fully correct decisions. The five that were not identical made one kind of mistake: they marked withdrawn records as never available, never-available records as available, or both. Two of them, both from Gemma-26B, turned that into unsafe decisions, three in all."},
+    {"kind": "p", "lead": "Requests and failures.", "text": "Requests and failures. The run sent 449 requests, four connection tests included: 108 for Gemma, 116 for Qwen, 113 for DeepSeek and 108 for GLM-Flash. Thirteen were rejected with HTTP 429 and their slots issued again. Fifty-eight failed with HTTP 504 at the 60-second limit (Gemma 4, Qwen 11, DeepSeek 39, GLM-Flash 4); Gemma answers in about a second, so not every such failure reflects a slow model. Two of Qwen's answers were cut off at the original output limit and two of its requests have no recorded answer. The validator refused four declarations, one from each model, and a refused declaration is never evaluated: Gemma's evidence field was not a list, Qwen's evidence identifiers did not match the task, and DeepSeek and GLM-Flash wrapped the routes of the same claim in an extra pair of brackets, with the right content inside. Observed token cost was about 0.66 credits. The frozen scorer and the independent evaluator agreed on every slot. The extension sent 981 further requests (Gemma 385, Gemma-26B 492, GLM-Flash 73, DeepSeek 31), each with a recorded answer. Two were rejected with HTTP 429 and issued again, twelve of Gemma's failed with HTTP 504, one of Gemma-26B's with HTTP 502, and 62 were cut off at the output limit: 25 of DeepSeek's streamed compilations, 12 of GLM-Flash's and 7 of Gemma-26B's answers to the search question, and 18 answers of the two Gemma models at 80 records. Its observed token cost was about 1.06 credits, and the two scorers again agreed on every slot of parts E1 to E4, E7 and E8; the search question is scored by the independent evaluator and was checked against the engine."},
+    {"kind": "p", "lead": "Limits.", "text": "Limits. The failures of answering alone rest on two models of one family and on twelve cases per cell. The prose is generated from sentence templates, and the first-day engine has copies, alternative routes and claims that rest on claims, but no alternative readings, exceptions or opposing warrants. The direct prompt of the main run asks for the answer alone, without explanation, so a model with no hidden reasoning phase has no room to work step by step; the visible-working prompt and the search prompt were written after the main run's results were known, and each was tried in one wording. As the provider counts them, no prompt exceeds 4,000 tokens in the main run, 4,200 in parts E1 to E6 or 6,600 at 80 records, so the decline is not a matter of context length. The main run's requests were not streamed, so its 60-second limit belongs to this provider and this client; part E3 streamed compilations only: all of GLM-Flash's, 31 of DeepSeek's and none of Qwen's."},
+    {"kind": "p", "lead": "Long documents in the sweep.", "text": "Long documents in the sweep. The sweep contains a comparison of the same kind for one model, noticed after its outcomes had been seen and therefore post hoc. For twelve cases Gemma was asked for its verdict, and for a declaration, with short documents and again with documents padded to 16,384 tokens. A declaration counts here when the validator admits it, fenced or bare. The direct verdict was fully right in 7 of 12 cases with short documents and in 1 with long ones; among the pairs it answered, 6 and then 10 asserted pairs were dropped and 0 and then 1 pairs were asserted without support. The compiled declarations gave a verdict in 7 cases both times, and all 14 verdict sets were fully right. With long documents the compiled route was right where the direct verdict was not in 7 cases, and the reverse held in 1 (exact McNemar p = 0.07). Per decision the two routes were close with long documents (36 against 33 of 58 right) and the direct verdicts were ahead with short ones (46 against 33): the compiled route did not get more decisions right, its failures were refusals. The ten refused declarations were malformed JSON (3 short, 4 long) or failed validation (2 and 1); one admitted long declaration held four of the eight authored readings and still gave the authored verdicts. None of the 48 outputs was bare JSON, so under the frozen bare-JSON endpoint every declaration cell is 0 of 12. The reviewing session's script reproduces these counts from the released per-slot scores. As a sensitivity only: seven of the ten refused outputs close their code fence on the last line of the JSON, which the frozen wrapper rule does not accept; a tolerant unwrap would admit three more short and two more long declarations, all exact."},
+    {"kind": "table", "like": 3, "widths": [70, 122, 43, 43, 43, 70, 77], "rows": [["Model", "Condition", "10 records", "20 records", "40 records", "Wrong decisions in usable answers", "Median seconds at 10, 20, 40"], ["Gemma", "Direct, formal ledger", "10 / 12", "8 / 12", "6 / 12", "24 of 288", "0.8, 0.9, 1.1"], ["Gemma", "Direct, from prose", "7 / 12", "7 / 11", "1 / 11", "41 of 270", "0.8, 0.9, 1.1"], ["Gemma", "From prose, working first", "11 / 11", "12 / 12", "12 / 12", "0 of 282", "9.2, 12, 16"], ["Gemma", "Compiled from prose", "10 / 10", "11 / 11", "12 / 12", "0 of 268", "9.6, 17, 21"], ["Gemma-26B", "Direct, formal ledger", "3 / 12", "2 / 12", "0 / 12", "89 of 288", "0.5, 0.5, 0.6"], ["Gemma-26B", "Direct, from prose", "2 / 12", "0 / 12", "0 / 12", "102 of 288", "0.7, 0.5, 0.6"], ["Gemma-26B", "From prose, working first", "11 / 12", "11 / 12", "11 / 12", "4 of 288", "4.2, 5.8, 9.9"], ["Gemma-26B", "Compiled from prose", "10 / 11", "5 / 5", "3 / 3", "1 of 136", "4.4, 5.8, 11"], ["Qwen27B", "Direct, formal ledger", "11 / 11", "12 / 12", "12 / 12", "0 of 282", "6.7, 10, 23"], ["Qwen27B", "Direct, from prose", "12 / 12", "12 / 12", "11 / 11", "0 of 278", "12, 28, 43"], ["Qwen27B", "Compiled from prose", "12 / 12", "9 / 9", "1 / 1", "0 of 154", "28, 43, 36"], ["DeepSeek", "Direct, formal ledger", "12 / 12", "12 / 12", "10 / 10", "0 of 268", "6.4, 13, 30"], ["DeepSeek", "Direct, from prose", "12 / 12", "10 / 10", "7 / 7", "0 of 222", "10, 17, 32"], ["DeepSeek", "Compiled from prose", "5 / 5", "0 / 0", "0 / 0", "0 of 30", "24, –, –"], ["DeepSeek", "Compiled, streamed", "3 / 3", "1 / 1", "1 / 1", "0 of 36", "19, 48, 67"], ["GLM-Flash", "Direct, formal ledger", "12 / 12", "12 / 12", "12 / 12", "0 of 288", "4.6, 7.6, 15"], ["GLM-Flash", "Direct, from prose", "12 / 12", "12 / 12", "12 / 12", "0 of 288", "6.0, 15, 23"], ["GLM-Flash", "Compiled from prose", "11 / 11", "11 / 11", "9 / 9", "0 of 244", "9.3, 21, 43"], ["GLM-Flash", "Compiled, streamed", "12 / 12", "12 / 12", "12 / 12", "0 of 288", "7.4, 22, 45"]], "caption": "Table H1. Scaling run and its extension: fully correct cases / usable answers, of twelve scheduled, by size. Wrong decisions are counted in usable answers over the three sizes. Seconds are medians over requests that returned an answer. Gemma-26B, the rows with working shown first and the streamed compilations belong to the extension. DeepSeek's streamed row covers the 31 compilations issued before the stop."},
+    {"kind": "table", "like": 3, "widths": [70, 118, 40, 40, 40, 88, 72], "rows": [["Model", "Condition", "No copies", "40% copies", "80% copies", "Unsupported decisions asserted, at 0%, 40%, 80% copies", "Of these copy-mediated, at 40% and 80%"], ["Gemma", "Direct, formal ledger", "9 / 12", "6 / 12", "4 / 12", "1 of 55; 13 of 60; 23 of 60", "11 of 23; 23 of 45"], ["Gemma", "Direct, from prose", "2 / 11", "1 / 11", "3 / 11", "10 of 49; 8 of 56; 2 of 57", "6 of 20; 2 of 43"], ["Gemma", "From prose, working first", "11 / 11", "12 / 12", "12 / 12", "0 of 51; 0 of 60; 0 of 60", "0 of 23; 0 of 45"], ["Gemma", "Compiled from prose", "9 / 9", "12 / 12", "11 / 11", "0 of 41; 0 of 60; 0 of 53", "0 of 23; 0 of 38"], ["Gemma-26B", "Direct, formal ledger", "0 / 12", "0 / 12", "1 / 12", "1 of 55; 3 of 60; 6 of 60", "2 of 23; 6 of 45"], ["Gemma-26B", "Direct, from prose", "0 / 12", "0 / 12", "0 / 12", "3 of 55; 0 of 60; 1 of 60", "0 of 23; 1 of 45"], ["Gemma-26B", "From prose, working first", "9 / 12", "11 / 12", "9 / 12", "0 of 55; 0 of 60; 0 of 60", "0 of 23; 0 of 45"], ["Gemma-26B", "Compiled from prose", "3 / 3", "3 / 3", "2 / 2", "0 of 13; 0 of 19; 0 of 11", "0 of 8; 0 of 9"]], "caption": "Table H2. Copy share at 40 records (extension, part E4): fully correct cases / usable answers of twelve, and unsupported decisions that a usable answer asserted, in all and for the copy-mediated ones. The 40 percent column is the main run's 40-record set."},
+    {"kind": "table", "like": 3, "widths": [66, 126, 40, 64, 58, 62, 52], "rows": [["Model", "How the set was found", "Usable /36", "One record needed: valid, smallest, of", "More needed: valid, smallest, of", "More needed at 40 records: valid, smallest, of", "Cases with every set smallest /36"], ["Gemma", "Named by the model, answer only", "36", "77, 36, 103", "8, 2, 25", "3, 0, 18", "1"], ["Gemma", "Named by the model, working first", "35", "97, 72, 99", "16, 16, 22", "9, 9, 15", "20"], ["Gemma", "Searched in its accepted declarations, no call", "33", "98, 98, 98", "24, 24, 24", "18, 18, 18", "33"], ["Gemma-26B", "Named by the model, answer only", "36", "37, 15, 103", "7, 1, 25", "5, 0, 18", "0"], ["Gemma-26B", "Named by the model, working first", "29", "76, 58, 84", "8, 6, 13", "4, 2, 8", "11"], ["Gemma-26B", "Searched in its accepted declarations, no call", "19", "47, 47, 47", "7, 7, 7", "3, 3, 3", "18"], ["GLM-Flash", "Named by the model, answer only", "24", "66, 59, 66", "15, 15, 15", "9, 9, 9", "20"], ["GLM-Flash", "Searched in its accepted declarations, no call", "31", "84, 84, 84", "19, 19, 19", "13, 13, 13", "31"]], "caption": "Table H3. The smallest further withdrawal (extension, parts E5 and E6), over the 128 supported decisions of the 36 cases: sets that are valid, sets that are smallest, and decisions answered. A set is valid when the decision has no support after it is withdrawn."},
+    {"kind": "table", "like": 3, "widths": [60, 118, 62, 66, 66, 50, 46], "rows": [["Model", "Condition", "Fully correct / usable, of 12", "Wrong decisions in usable answers", "Unsupported decisions asserted", "Median output tokens", "Median seconds"], ["Gemma", "Direct, formal ledger", "3 / 11", "17 of 132", "7 of 48", "99", "1.3"], ["Gemma", "Direct, from prose", "0 / 12", "54 of 144", "6 of 51", "93", "1.4"], ["Gemma", "From prose, working first", "9 / 10", "1 of 120", "0 of 37", "2596", "26"], ["Gemma", "Compiled from prose", "9 / 9", "0 of 108", "0 of 41", "4157", "41"], ["Gemma-26B", "Direct, formal ledger", "0 / 12", "76 of 144", "2 of 51", "98", "0.7"], ["Gemma-26B", "Direct, from prose", "0 / 11", "78 of 132", "3 of 47", "93", "0.7"], ["Gemma-26B", "From prose, working first", "5 / 11", "20 of 132", "0 of 48", "3372", "15"], ["Gemma-26B", "Compiled from prose", "0 / 0", "0 of 0", "0 of 0", "–", "–"]], "caption": "Table H4. Twelve cases with 80 records (extension, part E8): fully correct cases / usable answers, wrong decisions in usable answers, and unsupported decisions that a usable answer asserted. All requests of this part were streamed."},
+    {"kind": "table", "like": 3, "widths": [64, 126, 40, 66, 60, 60, 52], "rows": [["Model", "How the set was found", "Usable /12", "One record needed: valid, smallest, of", "More needed: valid, smallest, of", "No support: empty set given, of", "Cases with every set smallest /12"], ["Gemma", "Named by the model, answer only", "12", "23, 4, 71", "2, 2, 22", "32, 51", "0"], ["Gemma", "Named by the model, working first", "8", "42, 19, 46", "3, 2, 16", "34, 34", "0"], ["Gemma", "Searched in its accepted declarations, no call", "9", "52, 52, 52", "15, 15, 15", "41, 41", "9"], ["Gemma-26B", "Named by the model, answer only", "12", "12, 6, 71", "2, 0, 22", "5, 51", "0"], ["Gemma-26B", "Named by the model, working first", "8", "21, 6, 51", "3, 2, 13", "32, 32", "0"], ["Gemma-26B", "Searched in its accepted declarations, no call", "0", "0, 0, 0", "0, 0, 0", "0, 0", "0"]], "caption": "Table H5. The smallest further withdrawal at 80 records (extension, part E8), over the 93 supported and 51 unsupported decisions of the twelve cases: sets that are valid, sets that are smallest, and decisions answered."}
+   ]
+  }
+ ]
+}

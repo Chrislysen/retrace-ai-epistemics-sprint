@@ -1,0 +1,32 @@
+Check of field meanings against the paper (Section 4.1):
+  primary declaration slots 300, completed 210, admitted 181, exact family 181, exact in bare JSON 139
+  reference verdicts recomputed for 12 cases; they equal all 32 released fully correct direct answers
+
+Matched 12 cases, gemma-4-31b-it, withdrawn state, first attempt
+  docs    route                   fully correct  wrong somewhere  no usable answer   decisions right
+  short   direct answer                    7/12             4/12              1/12             46/58
+  short   declaration + engine             7/12             0/12              5/12             33/58
+  long    direct answer                    1/12             9/12              2/12             36/58
+  long    declaration + engine             7/12             0/12              5/12             33/58
+
+  short paired by case: declaration only 3, direct only 3, both 4, neither 2
+  long  paired by case: declaration only 7, direct only 1, both 0, neither 4
+
+Declarations in detail
+  short admitted 7 (exact family 7; verdicts right at all three states 7), refused 5 {'invalid_JSONDecodeError': 3, 'invalid_ValueError': 2}
+        in bare JSON 0/12; frozen bare-JSON endpoint 0/12
+  long  admitted 7 (exact family 6; verdicts right at all three states 7), refused 5 {'invalid_JSONDecodeError': 4, 'invalid_ValueError': 1}
+        admitted without the exact family: V6H-frontier-v6c-03-01 (4 of 8 readings, 0 spurious)
+        in bare JSON 0/12; frozen bare-JSON endpoint 0/12
+
+Direct answers in detail
+  short parsed 11, in bare JSON 0; wrong decisions: dropped 6, extra 0, other 1; answers with an extra assertion 0
+  long  parsed 10, in bare JSON 0; wrong decisions: dropped 10, extra 1, other 1; answers with an extra assertion 1
+
+Sensitivity only: refused outputs whose closing fence shares a line with the JSON
+  primary route, 300 slots        refused 29, of which fence closed on the JSON line 16; a tolerant unwrap would admit 10 (exact family 10, verdicts right at all three states 10)
+  matched 12, short declarations  refused  5, of which fence closed on the JSON line  3; a tolerant unwrap would admit  3 (exact family 3, verdicts right at all three states 3)
+  matched 12, long declarations   refused  5, of which fence closed on the JSON line  4; a tolerant unwrap would admit  2 (exact family 2, verdicts right at all three states 2)
+
+[PASS] internal consistency (paper counts reproduced, reference verdicts agree, per-decision counts agree, frozen admission reproduced)
+       Python 3.12.10

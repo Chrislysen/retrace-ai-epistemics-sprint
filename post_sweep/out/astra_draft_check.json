@@ -1,0 +1,144 @@
+{
+ "corpus": {
+  "cases": 60,
+  "authored_readings": 214,
+  "single_reading_cases": 50,
+  "multiplicities": {
+   "1": 50,
+   "2": 2,
+   "8": 2,
+   "16": 3,
+   "32": 3
+  },
+  "seed_kinds": {
+   "deficient": 30,
+   "faithful_complete": 30
+  },
+  "seed_kinds_by_partition": {
+   "('synthetic', 'deficient')": 24,
+   "('synthetic', 'faithful_complete')": 24,
+   "('ecological', 'deficient')": 6,
+   "('ecological', 'faithful_complete')": 6
+  },
+  "k10_families_over_ten": 6
+ },
+ "strict_ir_by_partition": {
+  "deepseek-v4-flash": {
+   "synthetic_cases": 48,
+   "synthetic_bare_exact": 30,
+   "synthetic_admitted_exact": 30,
+   "ecological_cases": 12,
+   "ecological_bare_exact": 10,
+   "ecological_admitted_exact": 10
+  },
+  "gemma-4-31b-it": {
+   "synthetic_cases": 48,
+   "synthetic_bare_exact": 0,
+   "synthetic_admitted_exact": 23,
+   "ecological_cases": 12,
+   "ecological_bare_exact": 0,
+   "ecological_admitted_exact": 11
+  },
+  "glm-5.2": {
+   "synthetic_cases": 48,
+   "synthetic_bare_exact": 15,
+   "synthetic_admitted_exact": 22,
+   "ecological_cases": 12,
+   "ecological_bare_exact": 5,
+   "ecological_admitted_exact": 6
+  },
+  "glm-5.3-flash": {
+   "synthetic_cases": 48,
+   "synthetic_bare_exact": 23,
+   "synthetic_admitted_exact": 23,
+   "ecological_cases": 12,
+   "ecological_bare_exact": 10,
+   "ecological_admitted_exact": 10
+  },
+  "qwen3.8-27b": {
+   "synthetic_cases": 48,
+   "synthetic_bare_exact": 36,
+   "synthetic_admitted_exact": 36,
+   "ecological_cases": 12,
+   "ecological_bare_exact": 10,
+   "ecological_admitted_exact": 10
+  }
+ },
+ "strict_ir_slot_breakdown": {
+  "admitted_exact": 181,
+  "operational_or_host": 86,
+  "completed_invalid": 29,
+  "truncated": 4
+ },
+ "refuter": {
+  "slots": 300,
+  "class_completed": 220,
+  "completed_invalid": 20,
+  "source_located": 79,
+  "located_and_exact_family": 79,
+  "located_on_faithful_seed": 0,
+  "correct_on_deficient": 75,
+  "seed_deficient": 150,
+  "correct_on_faithful": 115,
+  "seed_faithful": 150,
+  "class_operational": 78,
+  "class_truncated": 2
+ },
+ "qwen_two_stage": {
+  "nl_source_operational:timeout": 15,
+  "nl_projection_not_issued_dependency": 15,
+  "a_correct": 23,
+  "b_correct": 7,
+  "a_missing": 7,
+  "b_missing": 20,
+  "nl_source_completed": 15,
+  "nl_projection_completed": 10,
+  "nl_projection_operational:timeout": 5,
+  "difference_range_if_missing_free": [
+   -23,
+   4
+  ],
+  "cases": 30
+ },
+ "qwen_interval_rows": {
+  "partition": "all",
+  "conditional_subset_resampling": true,
+  "unit": "base_case",
+  "n_base_cases": 30,
+  "replicates": 10000,
+  "seed": 2026111409,
+  "family_counts": {
+   "ECO": 6,
+   "F1": 4,
+   "F2": 4,
+   "F3": 4,
+   "F4": 4,
+   "F5": 4,
+   "F6": 4
+  },
+  "scope": "Within-family case-resampling intervals for this authored benchmark; not population sampling confidence or independent draw-level evidence."
+ },
+ "budget": {
+  "accounted_credits": "224.692061361",
+  "actual_billed_credits": null,
+  "attempt_reservations": 511,
+  "cumulative_cap_credits": "750",
+  "cumulative_inherited_unsettled_attempts": 269,
+  "halted": false,
+  "historical_carry_credits": "219.864787339",
+  "ledger_sha256": "21812850e77acf0260c452437e6400a9a1a3bbf60ee18e57a02a5273e3729e0e",
+  "remaining_credits": "525.307938639",
+  "settled_attempts": 467,
+  "unknown_429_attempts_retained": 0,
+  "unknown_operational_attempts_retained": 44,
+  "unsettled_attempts": 44
+ },
+ "request_accounting": {
+  "actual_issued_attempts": 1703,
+  "provider_response_records": 1701,
+  "orphan_issued_attempts": 2,
+  "frozen_resource_denominator": "Recorded provider response rows only; see actual_issued_attempts for all requests.",
+  "orphan_usage_known": false,
+  "orphan_reservation_retained_in_full": true
+ }
+}

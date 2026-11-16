@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>RETRACE · Four-state source review</title><link rel="stylesheet" href="/style.css"></head>
+<body>
+<header><a class="brand" href="/">RETRACE<span>Three-segment k study · source review</span></a><div class="header-actions"><span class="offline">Local · no model calls</span><button id="demo">Load constructed demo</button><button id="import">Import bundle</button><input id="file" type="file" accept="application/json,.json" hidden></div></header>
+<main>
+  <p class="notice">Scientific execution: v6k, segments i/j/k only. This product update adds no model calls or fourth segment. Shared UI format identifiers do not identify an additional study.</p>
+  <section class="intro"><p class="eyebrow">SOURCE → DECLARED RULES → CONDITIONAL DECISIONS</p><h1>Keep objections in their proper scope.</h1><p>Review positive warrants, opposing warrants and scoped exceptions. Preserve independent alternatives, ask a relevant source question, and test withdrawals without treating unsupported as false.</p></section>
+  <div id="notice" class="notice" role="status">Load the constructed example or import source text and a proposed interpretation. Nothing is sent to a model.</div><div id="error" class="error" role="alert" hidden></div>
+  <details class="panel catalog-panel" id="catalog-panel">
+    <summary>Inspect recorded benchmark extractions <span class="small" id="catalog-total">Catalog available after verified study closure</span></summary>
+    <p class="hint">All primary source-IR slots are retained, including invalid, truncated and failed observations. These are original first attempts, with no repaired answers or reference graphs supplied to the workbench.</p>
+    <p id="catalog-message" role="status">Checking for the completed local export…</p>
+    <p id="catalog-counts" class="catalog-counts"></p>
+    <div class="catalog-filters"><label for="catalog-case">Source case<select id="catalog-case" disabled></select></label><label for="catalog-model">Model and admission status<select id="catalog-model" disabled></select></label></div>
+    <div class="button-row"><button id="catalog-load" class="primary" disabled>Load declared interpretation</button><button id="catalog-download" disabled>Download workbench bundle</button><button id="catalog-raw-download" disabled>Download observation</button><button id="catalog-diagnose" disabled>Explain rejection</button></div>
+    <div id="catalog-entry" hidden></div>
+    <div id="catalog-diagnosis" class="review-result" hidden aria-live="polite"></div>
+  </details>
+  <details class="panel catalog-panel" id="refuter-panel">
+    <summary>Inspect controlled-seed counter-readings <span class="small" id="refuter-total">Available after verified closure</span></summary>
+    <p class="hint"><strong>Authored seeds supplied to a model, not its earlier extraction.</strong> All 300 first attempts remain visible. A cited proposal is not a verified correction. Comparisons add proposed readings to the seed; they never replace it or alter the workbench.</p>
+    <p id="refuter-message" role="status">Checking the separate local export…</p><p id="refuter-counts" class="catalog-counts"></p>
+    <div class="catalog-filters"><label for="refuter-case">Source case<select id="refuter-case" disabled></select></label><label for="refuter-model">Model and gate status<select id="refuter-model" disabled></select></label></div>
+    <button id="refuter-download" disabled>Download unchanged observation and local audit</button>
+    <div id="refuter-entry" hidden aria-live="polite"></div>
+  </details>
+  <section id="recorded-origin" class="notice" hidden aria-live="polite"></section>
+  <div class="workspace">
+    <aside class="editors">
+      <section class="panel"><h2>1. Source bundle</h2><label for="bundle" class="small">JSON: source documents, typed registry, optional document groups</label><textarea id="bundle" spellcheck="false" placeholder="source_documents, registry and optional document groups"></textarea><button id="prepare" class="secondary full">Prepare source spans and prompt</button><p class="hint">Prepared locally for a reader or an external model. No inference request is made.</p></section>
+      <section class="panel"><h2>2. Proposed interpretation</h2><label for="ir" class="small">Citation-backed source IR · v6h</label><textarea id="ir" spellcheck="false" placeholder="Paste the complete proposed source IR"></textarea><button id="analyze" class="primary full">Analyze declared readings</button><p class="hint">Source or IR edits invalidate old statuses. A fresh analysis clears answers and vetoes.</p></section>
+      <section class="panel"><h2>Local exports</h2><div class="button-row"><button id="export-bundle">Export bundle</button><button id="export-analysis" disabled>Export analysis</button></div><p class="hint">No automatic persistence, account or API key. Exports are saved only when you choose them.</p></section>
+    </aside>
+    <div class="results">
+      <section id="empty" class="panel empty"><h2>Start with a source and its declared rules.</h2><p>The constructed example combines an intact backup, an explicit rebuttal, unresolved ancestry, and a latent three-record withdrawal. It is not an empirical model result.</p></section>
+      <div id="analysis" hidden>
+        <section class="panel summary"><div><p class="eyebrow" id="provenance"></p><h2 id="title"></h2><p id="summary"></p></div><span id="count" class="count"></span></section>
+        <section id="inventory-gap" class="panel warning" hidden><h2>Reference-Free Coverage Gap</h2><p id="inventory-text"></p><p>Identifier dispositions are missing. Current decisions are withheld. This does not infer an omitted dependency or certify the source.</p></section>
+        <div id="computed">
+          <section class="panel"><div class="section-head"><h2>Decision states</h2><span class="small">Grounded support under declared readings</span></div><div id="decisions" class="decision-grid"></div><p class="hint">Supported under declared links, unsupported, contested, and insufficient provenance are distinct. Disagreement between readings is separate from a rebuttal within one reading. Counts are not probabilities.</p></section>
+          <section class="panel question-panel"><p class="eyebrow">MINIMAX DECISION-RELEVANT CLARIFICATION</p><div id="question"></div><div id="answers" class="answer-history"></div><button id="reset-answers" class="secondary">Reset clarification answers</button><p class="hint">The plan minimizes worst-case declared question cost for the current status vector. It assumes accurate Yes/No answers. Unknown preserves uncertainty; this is not probabilistic value of information.</p></section>
+          <section class="panel"><div class="section-head"><h2>Evidence and separate vetoes</h2><button id="clear-scenario" class="secondary">Clear scenario only</button></div><div id="documents" class="document-list"></div><div class="table-scroll"><table><thead><tr><th>Evidence</th><th>Original eligible</th><th>Effective eligible</th><th>Usable across ancestry</th><th>Passage veto</th><th>Scenario veto</th><th>Document veto</th><th>Veto status</th></tr></thead><tbody id="records"></tbody></table></div><p class="hint">Clearing a document, passage or scenario veto clears only that veto. Original inactive flags and copy-parent requirements remain. Revoked means a current veto is active; it never asserts falsity.</p></section>
+          <section class="panel"><h2>Exact withdrawal robustness</h2><div id="robustness"></div><p class="hint">A minimum counts evidence-record IDs, not independent causes. A break test applies only to current support in every reading and ancestry completion. Unavailable means the explicit exact-search bound was exceeded.</p></section>
+          <section class="panel"><h2>Dormant-prerequisite diagnostic</h2><div id="hamming2"></div><p class="hint">Hypothetically enable one originally inactive record, then withdraw one active record. These previews never change eligibility or authorize restoration.</p></section>
+          <section class="panel"><h2>Named-veto restoration preview</h2><div id="typed-release"></div><p class="hint">Preview releasing one document or passage veto, then withdrawing one record. Other vetoes and original eligibility stay intact. These are two different actions, and no restoration is applied.</p></section>
+        </div>
+        <section class="panel"><h2>Readable source</h2><div id="source-docs"></div></section>
+        <section class="panel"><h2>Citation-backed declared clauses</h2><p class="hint">Locations are checked. Grouping, scope and interpretation remain supplied and fallible.</p><div id="clauses" class="clauses"></div><div id="citation" class="citation" hidden></div></section>
+        <section class="panel"><h2>Preview a counter-reading</h2><p class="hint">Paste the refuter envelope: status, complete ir or null, objection_spans, and warning_score. Every cited span and branch must pass before any comparison is shown. A source-located objection is not proof of entailment.</p><label for="proposal" class="sr-only">Refuter proposal envelope</label><textarea id="proposal" spellcheck="false" placeholder='{"status":"objection","ir":{...},"objection_spans":["..."],"warning_score":0.5}'></textarea><button id="preview" class="secondary">Preview without applying</button><div id="preview-result" class="review-result" hidden></div></section>
+        <section class="scope"><strong>Finite scope.</strong> Source completeness and real-world truth remain unknown. Modal support ranges over supplied readings and named ancestry-availability gates, not arbitrary hidden graphs or all possible argumentation extensions.</section>
+      </div>
+    </div>
+  </div>
+</main>
+<dialog id="prompt-dialog"><div class="section-head"><h2>Prepared source and IR instructions</h2><button id="close-prompt">Close</button></div><p class="hint">Review source text before sharing it with any external service.</p><textarea id="prompt-text" readonly spellcheck="false"></textarea><button id="copy-prompt" class="primary">Copy text</button></dialog>
+<script src="/app.js" defer></script>
+<script src="/evidence.js" defer></script>
+<script src="/refuters.js" defer></script>
+</body></html>

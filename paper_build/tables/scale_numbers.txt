@@ -1,0 +1,268 @@
+--- Table H2 ---
+Model | Condition | No copies | 40% copies | 80% copies | Unsupported decisions asserted, at 0%, 40%, 80% copies | Of these copy-mediated, at 40% and 80%
+Gemma | Direct, formal ledger | 9 / 12 | 6 / 12 | 4 / 12 | 1 of 55; 13 of 60; 23 of 60 | 11 of 23; 23 of 45
+Gemma | Direct, from prose | 2 / 11 | 1 / 11 | 3 / 11 | 10 of 49; 8 of 56; 2 of 57 | 6 of 20; 2 of 43
+Gemma | From prose, working first | 11 / 11 | 12 / 12 | 12 / 12 | 0 of 51; 0 of 60; 0 of 60 | 0 of 23; 0 of 45
+Gemma | Compiled from prose | 9 / 9 | 12 / 12 | 11 / 11 | 0 of 41; 0 of 60; 0 of 53 | 0 of 23; 0 of 38
+Gemma-26B | Direct, formal ledger | 0 / 12 | 0 / 12 | 1 / 12 | 1 of 55; 3 of 60; 6 of 60 | 2 of 23; 6 of 45
+Gemma-26B | Direct, from prose | 0 / 12 | 0 / 12 | 0 / 12 | 3 of 55; 0 of 60; 1 of 60 | 0 of 23; 1 of 45
+Gemma-26B | From prose, working first | 9 / 12 | 11 / 12 | 9 / 12 | 0 of 55; 0 of 60; 0 of 60 | 0 of 23; 0 of 45
+Gemma-26B | Compiled from prose | 3 / 3 | 3 / 3 | 2 / 2 | 0 of 13; 0 of 19; 0 of 11 | 0 of 8; 0 of 9
+
+Model | Condition | 10 records | 20 records | 40 records | Wrong decisions in usable answers | Median seconds at 10, 20, 40
+Gemma | Direct, formal ledger | 10 / 12 | 8 / 12 | 6 / 12 | 24 of 288 | 0.8, 0.9, 1.1
+Gemma | Direct, from prose | 7 / 12 | 7 / 11 | 1 / 11 | 41 of 270 | 0.8, 0.9, 1.1
+Gemma | From prose, working first | 11 / 11 | 12 / 12 | 12 / 12 | 0 of 282 | 9.2, 12, 16
+Gemma | Compiled from prose | 10 / 10 | 11 / 11 | 12 / 12 | 0 of 268 | 9.6, 17, 21
+Gemma-26B | Direct, formal ledger | 3 / 12 | 2 / 12 | 0 / 12 | 89 of 288 | 0.5, 0.5, 0.6
+Gemma-26B | Direct, from prose | 2 / 12 | 0 / 12 | 0 / 12 | 102 of 288 | 0.7, 0.5, 0.6
+Gemma-26B | From prose, working first | 11 / 12 | 11 / 12 | 11 / 12 | 4 of 288 | 4.2, 5.8, 9.9
+Gemma-26B | Compiled from prose | 10 / 11 | 5 / 5 | 3 / 3 | 1 of 136 | 4.4, 5.8, 11
+Qwen27B | Direct, formal ledger | 11 / 11 | 12 / 12 | 12 / 12 | 0 of 282 | 6.7, 10, 23
+Qwen27B | Direct, from prose | 12 / 12 | 12 / 12 | 11 / 11 | 0 of 278 | 12, 28, 43
+Qwen27B | Compiled from prose | 12 / 12 | 9 / 9 | 1 / 1 | 0 of 154 | 28, 43, 36
+DeepSeek | Direct, formal ledger | 12 / 12 | 12 / 12 | 10 / 10 | 0 of 268 | 6.4, 13, 30
+DeepSeek | Direct, from prose | 12 / 12 | 10 / 10 | 7 / 7 | 0 of 222 | 10, 17, 32
+DeepSeek | Compiled from prose | 5 / 5 | 0 / 0 | 0 / 0 | 0 of 30 | 24, –, –
+DeepSeek | Compiled, streamed | 3 / 3 | 1 / 1 | 1 / 1 | 0 of 36 | 19, 48, 67
+GLM-Flash | Direct, formal ledger | 12 / 12 | 12 / 12 | 12 / 12 | 0 of 288 | 4.6, 7.6, 15
+GLM-Flash | Direct, from prose | 12 / 12 | 12 / 12 | 12 / 12 | 0 of 288 | 6.0, 15, 23
+GLM-Flash | Compiled from prose | 11 / 11 | 11 / 11 | 9 / 9 | 0 of 244 | 9.3, 21, 43
+GLM-Flash | Compiled, streamed | 12 / 12 | 12 / 12 | 12 / 12 | 0 of 288 | 7.4, 22, 45
+
+== Gemma: requests 108, rejected 429 0, slots with a record 108, scorer disagreements 0, errors {'http_error 504': 4}, response models {'gemma-4-31b-it': 104, 'None': 4}, cost 0.0432
+   S Direct, formal ledger      issued 12 usable 12 provider failures  0 other unusable  0 not issued  0 | fully correct 10 | wrong in usable 3 of 72 | unsafe 1 of 42 (withdrawn still asserted 1 of 24, never supported 0 of 18) | dropped 2 of 30 (surviving alternative 2 of 22, untouched 0 of 8) | graph exact  accepted graph with a wrong decision  | tokens 55 seconds 0.8
+   M Direct, formal ledger      issued 12 usable 12 provider failures  0 other unusable  0 not issued  0 | fully correct  8 | wrong in usable 7 of 96 | unsafe 5 of 58 (withdrawn still asserted 5 of 36, never supported 0 of 22) | dropped 2 of 38 (surviving alternative 1 of 23, untouched 1 of 15) | graph exact  accepted graph with a wrong decision  | tokens 69 seconds 0.9
+   L Direct, formal ledger      issued 12 usable 12 provider failures  0 other unusable  0 not issued  0 | fully correct  6 | wrong in usable 14 of 120 | unsafe 13 of 60 (withdrawn still asserted 11 of 33, never supported 2 of 27) | dropped 1 of 60 (surviving alternative 0 of 32, untouched 1 of 28) | graph exact  accepted graph with a wrong decision  | tokens 82 seconds 1.1
+   S Direct, from prose         issued 12 usable 12 provider failures  0 other unusable  0 not issued  0 | fully correct  7 | wrong in usable 10 of 72 | unsafe 6 of 42 (withdrawn still asserted 5 of 24, never supported 1 of 18) | dropped 4 of 30 (surviving alternative 3 of 22, untouched 1 of 8) | graph exact  accepted graph with a wrong decision  | tokens 49 seconds 0.8
+   M Direct, from prose         issued 12 usable 11 provider failures  1 other unusable  0 not issued  0 | fully correct  7 | wrong in usable 9 of 88 | unsafe 3 of 53 (withdrawn still asserted 3 of 32, never supported 0 of 21) | dropped 6 of 35 (surviving alternative 3 of 21, untouched 3 of 14) | graph exact  accepted graph with a wrong decision  | tokens 64 seconds 0.9
+   L Direct, from prose         issued 12 usable 11 provider failures  1 other unusable  0 not issued  0 | fully correct  1 | wrong in usable 22 of 110 | unsafe 8 of 56 (withdrawn still asserted 6 of 30, never supported 2 of 26) | dropped 14 of 54 (surviving alternative 9 of 28, untouched 5 of 26) | graph exact  accepted graph with a wrong decision  | tokens 78 seconds 1.1
+   S Compiled from prose        issued 12 usable 10 provider failures  1 other unusable  1 not issued  0 | fully correct 10 | wrong in usable 0 of 60 | unsafe 0 of 34 (withdrawn still asserted 0 of 20, never supported 0 of 14) | dropped 0 of 26 (surviving alternative 0 of 18, untouched 0 of 8) | graph exact 10 accepted graph with a wrong decision 0 | tokens 1017 seconds 9.6
+   M Compiled from prose        issued 12 usable 11 provider failures  1 other unusable  0 not issued  0 | fully correct 11 | wrong in usable 0 of 88 | unsafe 0 of 52 (withdrawn still asserted 0 of 32, never supported 0 of 20) | dropped 0 of 36 (surviving alternative 0 of 22, untouched 0 of 14) | graph exact 11 accepted graph with a wrong decision 0 | tokens 1857 seconds 17.3
+   L Compiled from prose        issued 12 usable 12 provider failures  0 other unusable  0 not issued  0 | fully correct 12 | wrong in usable 0 of 120 | unsafe 0 of 60 (withdrawn still asserted 0 of 33, never supported 0 of 27) | dropped 0 of 60 (surviving alternative 0 of 32, untouched 0 of 28) | graph exact 12 accepted graph with a wrong decision 0 | tokens 2226 seconds 21.1
+   Direct, formal ledger: wrong decisions per usable decision at S, M, L: 4.2%, 7.3%, 11.7%; over the three sizes 24 of 288; fully correct 24 of 36 usable, 36 scheduled
+   Direct, from prose: wrong decisions per usable decision at S, M, L: 13.9%, 10.2%, 20.0%; over the three sizes 41 of 270; fully correct 15 of 34 usable, 36 scheduled
+   Compiled from prose: wrong decisions per usable decision at S, M, L: 0.0%, 0.0%, 0.0%; over the three sizes 0 of 268; fully correct 33 of 33 usable, 36 scheduled
+   S compiled minus prose: fully correct 10 vs 7; compiled right and prose wrong 4, reverse 1; accuracy difference -2.8 [-25.0, 15.3]; both usable: 10 cases, unsafe prose 3 compiled 0 of 34, fully correct prose 6 compiled 10
+   M compiled minus prose: fully correct 11 vs 7; compiled right and prose wrong 5, reverse 1; accuracy difference +9.4 [-17.7, 33.3]; both usable: 10 cases, unsafe prose 3 compiled 0 of 47, fully correct prose 6 compiled 10
+   L compiled minus prose: fully correct 12 vs 1; compiled right and prose wrong 11, reverse 0; accuracy difference +26.7 [15.8, 42.5]; both usable: 11 cases, unsafe prose 8 compiled 0 of 56, fully correct prose 1 compiled 11
+== Gemma-26B: requests 108, rejected 429 0, slots with a record 108, scorer disagreements 0, errors {}, response models {'gemma-4-26b-a4b-it': 108}, cost 0.0348
+   S Direct, formal ledger      issued 12 usable 12 provider failures  0 other unusable  0 not issued  0 | fully correct  3 | wrong in usable 17 of 72 | unsafe 1 of 42 (withdrawn still asserted 1 of 24, never supported 0 of 18) | dropped 16 of 30 (surviving alternative 15 of 22, untouched 1 of 8) | graph exact  accepted graph with a wrong decision  | tokens 54 seconds 0.5
+   M Direct, formal ledger      issued 12 usable 12 provider failures  0 other unusable  0 not issued  0 | fully correct  2 | wrong in usable 27 of 96 | unsafe 5 of 58 (withdrawn still asserted 5 of 36, never supported 0 of 22) | dropped 22 of 38 (surviving alternative 17 of 23, untouched 5 of 15) | graph exact  accepted graph with a wrong decision  | tokens 69 seconds 0.5
+   L Direct, formal ledger      issued 12 usable 12 provider failures  0 other unusable  0 not issued  0 | fully correct  0 | wrong in usable 45 of 120 | unsafe 3 of 60 (withdrawn still asserted 2 of 33, never supported 1 of 27) | dropped 42 of 60 (surviving alternative 26 of 32, untouched 16 of 28) | graph exact  accepted graph with a wrong decision  | tokens 82 seconds 0.6
+   S Direct, from prose         issued 12 usable 12 provider failures  0 other unusable  0 not issued  0 | fully correct  2 | wrong in usable 23 of 72 | unsafe 0 of 42 (withdrawn still asserted 0 of 24, never supported 0 of 18) | dropped 23 of 30 (surviving alternative 18 of 22, untouched 5 of 8) | graph exact  accepted graph with a wrong decision  | tokens 49 seconds 0.7
+   M Direct, from prose         issued 12 usable 12 provider failures  0 other unusable  0 not issued  0 | fully correct  0 | wrong in usable 33 of 96 | unsafe 1 of 58 (withdrawn still asserted 1 of 36, never supported 0 of 22) | dropped 32 of 38 (surviving alternative 20 of 23, untouched 12 of 15) | graph exact  accepted graph with a wrong decision  | tokens 64 seconds 0.5
+   L Direct, from prose         issued 12 usable 12 provider failures  0 other unusable  0 not issued  0 | fully correct  0 | wrong in usable 46 of 120 | unsafe 0 of 60 (withdrawn still asserted 0 of 33, never supported 0 of 27) | dropped 46 of 60 (surviving alternative 25 of 32, untouched 21 of 28) | graph exact  accepted graph with a wrong decision  | tokens 77 seconds 0.6
+   S Compiled from prose        issued 12 usable 11 provider failures  0 other unusable  1 not issued  0 | fully correct 10 | wrong in usable 1 of 66 | unsafe 1 of 38 (withdrawn still asserted 0 of 23, never supported 1 of 15) | dropped 0 of 28 (surviving alternative 0 of 21, untouched 0 of 7) | graph exact 9 accepted graph with a wrong decision 1 | tokens 1012 seconds 4.4
+   M Compiled from prose        issued 12 usable  5 provider failures  0 other unusable  7 not issued  0 | fully correct  5 | wrong in usable 0 of 40 | unsafe 0 of 25 (withdrawn still asserted 0 of 14, never supported 0 of 11) | dropped 0 of 15 (surviving alternative 0 of 10, untouched 0 of 5) | graph exact 5 accepted graph with a wrong decision 0 | tokens 1283 seconds 5.8
+   L Compiled from prose        issued 12 usable  3 provider failures  0 other unusable  9 not issued  0 | fully correct  3 | wrong in usable 0 of 30 | unsafe 0 of 19 (withdrawn still asserted 0 of 10, never supported 0 of 9) | dropped 0 of 11 (surviving alternative 0 of 5, untouched 0 of 6) | graph exact 3 accepted graph with a wrong decision 0 | tokens 2576 seconds 11.1
+   Direct, formal ledger: wrong decisions per usable decision at S, M, L: 23.6%, 28.1%, 37.5%; over the three sizes 89 of 288; fully correct 5 of 36 usable, 36 scheduled
+   Direct, from prose: wrong decisions per usable decision at S, M, L: 31.9%, 34.4%, 38.3%; over the three sizes 102 of 288; fully correct 2 of 36 usable, 36 scheduled
+   Compiled from prose: wrong decisions per usable decision at S, M, L: 1.5%, 0.0%, 0.0%; over the three sizes 1 of 136; fully correct 18 of 19 usable, 36 scheduled
+   S compiled minus prose: fully correct 10 vs 2; compiled right and prose wrong 8, reverse 0; accuracy difference +22.2 [1.4, 38.9]; both usable: 11 cases, unsafe prose 0 compiled 1 of 38, fully correct prose 2 compiled 10
+   M compiled minus prose: fully correct 5 vs 0; compiled right and prose wrong 5, reverse 0; accuracy difference -24.0 [-52.1, 3.1]; both usable: 5 cases, unsafe prose 0 compiled 0 of 25, fully correct prose 0 compiled 5
+   L compiled minus prose: fully correct 3 vs 0; compiled right and prose wrong 3, reverse 0; accuracy difference -36.7 [-55.8, -15.0]; both usable: 3 cases, unsafe prose 0 compiled 0 of 19, fully correct prose 0 compiled 3
+== Qwen27B: requests 116, rejected 429 8, slots with a record 106, scorer disagreements 0, errors {'response_not_completed 200': 2, 'http_error 504': 11}, response models {'qwen3.8-27b': 95, 'None': 11}, cost 0.4165
+   S Direct, formal ledger      issued 12 usable 11 provider failures  1 other unusable  0 not issued  0 | fully correct 11 | wrong in usable 0 of 66 | unsafe 0 of 38 (withdrawn still asserted 0 of 21, never supported 0 of 17) | dropped 0 of 28 (surviving alternative 0 of 20, untouched 0 of 8) | graph exact  accepted graph with a wrong decision  | tokens 923 seconds 6.7
+   M Direct, formal ledger      issued 12 usable 12 provider failures  0 other unusable  0 not issued  0 | fully correct 12 | wrong in usable 0 of 96 | unsafe 0 of 58 (withdrawn still asserted 0 of 36, never supported 0 of 22) | dropped 0 of 38 (surviving alternative 0 of 23, untouched 0 of 15) | graph exact  accepted graph with a wrong decision  | tokens 1390 seconds 10.4
+   L Direct, formal ledger      issued 12 usable 12 provider failures  0 other unusable  0 not issued  0 | fully correct 12 | wrong in usable 0 of 120 | unsafe 0 of 60 (withdrawn still asserted 0 of 33, never supported 0 of 27) | dropped 0 of 60 (surviving alternative 0 of 32, untouched 0 of 28) | graph exact  accepted graph with a wrong decision  | tokens 3294 seconds 23.1
+   S Direct, from prose         issued 12 usable 12 provider failures  0 other unusable  0 not issued  0 | fully correct 12 | wrong in usable 0 of 72 | unsafe 0 of 42 (withdrawn still asserted 0 of 24, never supported 0 of 18) | dropped 0 of 30 (surviving alternative 0 of 22, untouched 0 of 8) | graph exact  accepted graph with a wrong decision  | tokens 1682 seconds 12.3
+   M Direct, from prose         issued 12 usable 12 provider failures  0 other unusable  0 not issued  0 | fully correct 12 | wrong in usable 0 of 96 | unsafe 0 of 58 (withdrawn still asserted 0 of 36, never supported 0 of 22) | dropped 0 of 38 (surviving alternative 0 of 23, untouched 0 of 15) | graph exact  accepted graph with a wrong decision  | tokens 3949 seconds 27.8
+   L Direct, from prose         issued 12 usable 11 provider failures  1 other unusable  0 not issued  0 | fully correct 11 | wrong in usable 0 of 110 | unsafe 0 of 56 (withdrawn still asserted 0 of 30, never supported 0 of 26) | dropped 0 of 54 (surviving alternative 0 of 28, untouched 0 of 26) | graph exact  accepted graph with a wrong decision  | tokens 5998 seconds 43.3
+   S Compiled from prose        issued 12 usable 12 provider failures  0 other unusable  0 not issued  0 | fully correct 12 | wrong in usable 0 of 72 | unsafe 0 of 42 (withdrawn still asserted 0 of 24, never supported 0 of 18) | dropped 0 of 30 (surviving alternative 0 of 22, untouched 0 of 8) | graph exact 12 accepted graph with a wrong decision 0 | tokens 3938 seconds 27.6
+   M Compiled from prose        issued 12 usable  9 provider failures  2 other unusable  1 not issued  0 | fully correct  9 | wrong in usable 0 of 72 | unsafe 0 of 41 (withdrawn still asserted 0 of 27, never supported 0 of 14) | dropped 0 of 31 (surviving alternative 0 of 16, untouched 0 of 15) | graph exact 9 accepted graph with a wrong decision 0 | tokens 6188 seconds 42.9
+   L Compiled from prose        issued 12 usable  1 provider failures 11 other unusable  0 not issued  0 | fully correct  1 | wrong in usable 0 of 10 | unsafe 0 of 6 (withdrawn still asserted 0 of 5, never supported 0 of 1) | dropped 0 of 4 (surviving alternative 0 of 3, untouched 0 of 1) | graph exact 1 accepted graph with a wrong decision 0 | tokens 5439 seconds 35.6
+   Direct, formal ledger: wrong decisions per usable decision at S, M, L: 0.0%, 0.0%, 0.0%; over the three sizes 0 of 282; fully correct 35 of 35 usable, 36 scheduled
+   Direct, from prose: wrong decisions per usable decision at S, M, L: 0.0%, 0.0%, 0.0%; over the three sizes 0 of 278; fully correct 35 of 35 usable, 36 scheduled
+   Compiled from prose: wrong decisions per usable decision at S, M, L: 0.0%, 0.0%, 0.0%; over the three sizes 0 of 154; fully correct 22 of 22 usable, 36 scheduled
+   S compiled minus prose: fully correct 12 vs 12; compiled right and prose wrong 0, reverse 0; accuracy difference +0.0 [0.0, 0.0]; both usable: 12 cases, unsafe prose 0 compiled 0 of 42, fully correct prose 12 compiled 12
+   M compiled minus prose: fully correct 9 vs 12; compiled right and prose wrong 0, reverse 3; accuracy difference -25.0 [-50.0, 0.0]; both usable: 9 cases, unsafe prose 0 compiled 0 of 41, fully correct prose 9 compiled 9
+   L compiled minus prose: fully correct 1 vs 11; compiled right and prose wrong 0, reverse 10; accuracy difference -83.3 [-100.0, -58.3]; both usable: 1 cases, unsafe prose 0 compiled 0 of 6, fully correct prose 1 compiled 1
+== DeepSeek: requests 113, rejected 429 5, slots with a record 108, scorer disagreements 0, errors {'http_error 504': 39}, response models {'None': 39, 'deepseek-v4-flash': 69}, cost 0.0265
+   S Direct, formal ledger      issued 12 usable 12 provider failures  0 other unusable  0 not issued  0 | fully correct 12 | wrong in usable 0 of 72 | unsafe 0 of 42 (withdrawn still asserted 0 of 24, never supported 0 of 18) | dropped 0 of 30 (surviving alternative 0 of 22, untouched 0 of 8) | graph exact  accepted graph with a wrong decision  | tokens 776 seconds 6.4
+   M Direct, formal ledger      issued 12 usable 12 provider failures  0 other unusable  0 not issued  0 | fully correct 12 | wrong in usable 0 of 96 | unsafe 0 of 58 (withdrawn still asserted 0 of 36, never supported 0 of 22) | dropped 0 of 38 (surviving alternative 0 of 23, untouched 0 of 15) | graph exact  accepted graph with a wrong decision  | tokens 1689 seconds 12.7
+   L Direct, formal ledger      issued 12 usable 10 provider failures  2 other unusable  0 not issued  0 | fully correct 10 | wrong in usable 0 of 100 | unsafe 0 of 48 (withdrawn still asserted 0 of 26, never supported 0 of 22) | dropped 0 of 52 (surviving alternative 0 of 27, untouched 0 of 25) | graph exact  accepted graph with a wrong decision  | tokens 3745 seconds 29.7
+   S Direct, from prose         issued 12 usable 12 provider failures  0 other unusable  0 not issued  0 | fully correct 12 | wrong in usable 0 of 72 | unsafe 0 of 42 (withdrawn still asserted 0 of 24, never supported 0 of 18) | dropped 0 of 30 (surviving alternative 0 of 22, untouched 0 of 8) | graph exact  accepted graph with a wrong decision  | tokens 1445 seconds 10.4
+   M Direct, from prose         issued 12 usable 10 provider failures  2 other unusable  0 not issued  0 | fully correct 10 | wrong in usable 0 of 80 | unsafe 0 of 46 (withdrawn still asserted 0 of 27, never supported 0 of 19) | dropped 0 of 34 (surviving alternative 0 of 20, untouched 0 of 14) | graph exact  accepted graph with a wrong decision  | tokens 2206 seconds 17.0
+   L Direct, from prose         issued 12 usable  7 provider failures  5 other unusable  0 not issued  0 | fully correct  7 | wrong in usable 0 of 70 | unsafe 0 of 35 (withdrawn still asserted 0 of 21, never supported 0 of 14) | dropped 0 of 35 (surviving alternative 0 of 19, untouched 0 of 16) | graph exact  accepted graph with a wrong decision  | tokens 4265 seconds 31.8
+   S Compiled from prose        issued 12 usable  5 provider failures  6 other unusable  1 not issued  0 | fully correct  5 | wrong in usable 0 of 30 | unsafe 0 of 16 (withdrawn still asserted 0 of 10, never supported 0 of 6) | dropped 0 of 14 (surviving alternative 0 of 9, untouched 0 of 5) | graph exact 5 accepted graph with a wrong decision 0 | tokens 2948 seconds 24.0
+   M Compiled from prose        issued 12 usable  0 provider failures 12 other unusable  0 not issued  0 | fully correct  0 | wrong in usable 0 of 0 | unsafe 0 of 0 (withdrawn still asserted 0 of 0, never supported 0 of 0) | dropped 0 of 0 (surviving alternative 0 of 0, untouched 0 of 0) | graph exact  accepted graph with a wrong decision  | tokens None seconds None
+   L Compiled from prose        issued 12 usable  0 provider failures 12 other unusable  0 not issued  0 | fully correct  0 | wrong in usable 0 of 0 | unsafe 0 of 0 (withdrawn still asserted 0 of 0, never supported 0 of 0) | dropped 0 of 0 (surviving alternative 0 of 0, untouched 0 of 0) | graph exact  accepted graph with a wrong decision  | tokens None seconds None
+   Direct, formal ledger: wrong decisions per usable decision at S, M, L: 0.0%, 0.0%, 0.0%; over the three sizes 0 of 268; fully correct 34 of 34 usable, 36 scheduled
+   Direct, from prose: wrong decisions per usable decision at S, M, L: 0.0%, 0.0%, 0.0%; over the three sizes 0 of 222; fully correct 29 of 29 usable, 36 scheduled
+   Compiled from prose: wrong decisions per usable decision at S, M, L: 0.0%, –, –; over the three sizes 0 of 30; fully correct 5 of 5 usable, 36 scheduled
+   S compiled minus prose: fully correct 5 vs 12; compiled right and prose wrong 0, reverse 7; accuracy difference -58.3 [-83.3, -33.3]; both usable: 5 cases, unsafe prose 0 compiled 0 of 16, fully correct prose 5 compiled 5
+   M compiled minus prose: fully correct 0 vs 10; compiled right and prose wrong 0, reverse 10; accuracy difference -83.3 [-100.0, -58.3]; both usable: 0 cases, unsafe prose 0 compiled 0 of 0, fully correct prose 0 compiled 0
+   L compiled minus prose: fully correct 0 vs 7; compiled right and prose wrong 0, reverse 7; accuracy difference -58.3 [-83.3, -33.3]; both usable: 0 cases, unsafe prose 0 compiled 0 of 0, fully correct prose 0 compiled 0
+== GLM-Flash: requests 108, rejected 429 0, slots with a record 108, scorer disagreements 0, errors {'http_error 504': 4}, response models {'glm-53-flash': 104, 'None': 4}, cost 0.1669
+   S Direct, formal ledger      issued 12 usable 12 provider failures  0 other unusable  0 not issued  0 | fully correct 12 | wrong in usable 0 of 72 | unsafe 0 of 42 (withdrawn still asserted 0 of 24, never supported 0 of 18) | dropped 0 of 30 (surviving alternative 0 of 22, untouched 0 of 8) | graph exact  accepted graph with a wrong decision  | tokens 673 seconds 4.6
+   M Direct, formal ledger      issued 12 usable 12 provider failures  0 other unusable  0 not issued  0 | fully correct 12 | wrong in usable 0 of 96 | unsafe 0 of 58 (withdrawn still asserted 0 of 36, never supported 0 of 22) | dropped 0 of 38 (surviving alternative 0 of 23, untouched 0 of 15) | graph exact  accepted graph with a wrong decision  | tokens 1208 seconds 7.6
+   L Direct, formal ledger      issued 12 usable 12 provider failures  0 other unusable  0 not issued  0 | fully correct 12 | wrong in usable 0 of 120 | unsafe 0 of 60 (withdrawn still asserted 0 of 33, never supported 0 of 27) | dropped 0 of 60 (surviving alternative 0 of 32, untouched 0 of 28) | graph exact  accepted graph with a wrong decision  | tokens 2413 seconds 14.8
+   S Direct, from prose         issued 12 usable 12 provider failures  0 other unusable  0 not issued  0 | fully correct 12 | wrong in usable 0 of 72 | unsafe 0 of 42 (withdrawn still asserted 0 of 24, never supported 0 of 18) | dropped 0 of 30 (surviving alternative 0 of 22, untouched 0 of 8) | graph exact  accepted graph with a wrong decision  | tokens 1006 seconds 6.0
+   M Direct, from prose         issued 12 usable 12 provider failures  0 other unusable  0 not issued  0 | fully correct 12 | wrong in usable 0 of 96 | unsafe 0 of 58 (withdrawn still asserted 0 of 36, never supported 0 of 22) | dropped 0 of 38 (surviving alternative 0 of 23, untouched 0 of 15) | graph exact  accepted graph with a wrong decision  | tokens 2397 seconds 15.2
+   L Direct, from prose         issued 12 usable 12 provider failures  0 other unusable  0 not issued  0 | fully correct 12 | wrong in usable 0 of 120 | unsafe 0 of 60 (withdrawn still asserted 0 of 33, never supported 0 of 27) | dropped 0 of 60 (surviving alternative 0 of 32, untouched 0 of 28) | graph exact  accepted graph with a wrong decision  | tokens 3904 seconds 23.2
+   S Compiled from prose        issued 12 usable 11 provider failures  0 other unusable  1 not issued  0 | fully correct 11 | wrong in usable 0 of 66 | unsafe 0 of 40 (withdrawn still asserted 0 of 23, never supported 0 of 17) | dropped 0 of 26 (surviving alternative 0 of 19, untouched 0 of 7) | graph exact 11 accepted graph with a wrong decision 0 | tokens 1589 seconds 9.3
+   M Compiled from prose        issued 12 usable 11 provider failures  1 other unusable  0 not issued  0 | fully correct 11 | wrong in usable 0 of 88 | unsafe 0 of 54 (withdrawn still asserted 0 of 33, never supported 0 of 21) | dropped 0 of 34 (surviving alternative 0 of 19, untouched 0 of 15) | graph exact 11 accepted graph with a wrong decision 0 | tokens 3424 seconds 21.0
+   L Compiled from prose        issued 12 usable  9 provider failures  3 other unusable  0 not issued  0 | fully correct  9 | wrong in usable 0 of 90 | unsafe 0 of 47 (withdrawn still asserted 0 of 27, never supported 0 of 20) | dropped 0 of 43 (surviving alternative 0 of 20, untouched 0 of 23) | graph exact 9 accepted graph with a wrong decision 0 | tokens 7018 seconds 42.9
+   Direct, formal ledger: wrong decisions per usable decision at S, M, L: 0.0%, 0.0%, 0.0%; over the three sizes 0 of 288; fully correct 36 of 36 usable, 36 scheduled
+   Direct, from prose: wrong decisions per usable decision at S, M, L: 0.0%, 0.0%, 0.0%; over the three sizes 0 of 288; fully correct 36 of 36 usable, 36 scheduled
+   Compiled from prose: wrong decisions per usable decision at S, M, L: 0.0%, 0.0%, 0.0%; over the three sizes 0 of 244; fully correct 31 of 31 usable, 36 scheduled
+   S compiled minus prose: fully correct 11 vs 12; compiled right and prose wrong 0, reverse 1; accuracy difference -8.3 [-25.0, 0.0]; both usable: 11 cases, unsafe prose 0 compiled 0 of 40, fully correct prose 11 compiled 11
+   M compiled minus prose: fully correct 11 vs 12; compiled right and prose wrong 0, reverse 1; accuracy difference -8.3 [-25.0, 0.0]; both usable: 11 cases, unsafe prose 0 compiled 0 of 54, fully correct prose 11 compiled 11
+   L compiled minus prose: fully correct 9 vs 12; compiled right and prose wrong 0, reverse 3; accuracy difference -25.0 [-50.0, 0.0]; both usable: 9 cases, unsafe prose 0 compiled 0 of 47, fully correct prose 9 compiled 9
+
+== reasoning models with data: ['qwen3.8-27b', 'deepseek-v4-flash', 'glm-53-flash']
+   Direct, formal ledger:
+      S: usable 35 of 36, fully correct 35, wrong decisions 0 of 210, provider failures 1, not issued 0, median seconds [6.7, 6.4, 4.6]
+      M: usable 36 of 36, fully correct 36, wrong decisions 0 of 288, provider failures 0, not issued 0, median seconds [10.4, 12.7, 7.6]
+      L: usable 34 of 36, fully correct 34, wrong decisions 0 of 340, provider failures 2, not issued 0, median seconds [23.1, 29.7, 14.8]
+   Direct, from prose:
+      S: usable 36 of 36, fully correct 36, wrong decisions 0 of 216, provider failures 0, not issued 0, median seconds [12.3, 10.4, 6.0]
+      M: usable 34 of 36, fully correct 34, wrong decisions 0 of 272, provider failures 2, not issued 0, median seconds [27.8, 17.0, 15.2]
+      L: usable 30 of 36, fully correct 30, wrong decisions 0 of 300, provider failures 6, not issued 0, median seconds [43.3, 31.8, 23.2]
+   Compiled from prose:
+      S: usable 28 of 36, fully correct 28, wrong decisions 0 of 168, provider failures 6, not issued 0, median seconds [27.6, 24.0, 9.3]
+      M: usable 20 of 36, fully correct 20, wrong decisions 0 of 160, provider failures 15, not issued 0, median seconds [42.9, None, 21.0]
+      L: usable 10 of 36, fully correct 10, wrong decisions 0 of 100, provider failures 26, not issued 0, median seconds [35.6, None, 42.9]
+   direct answers, both kinds, all sizes: usable 205 of 216, fully correct 205, wrong decisions 0 of 1626
+   compiled, all sizes: usable 58 of 108, fully correct 58, graph exact 58, wrong decisions 0 of 428
+   all models, compiled: usable 110, graph exact 108, accepted graph with a wrong decision 1, wrong decisions 1 of 832
+
+requests: { "runs_responses": 443, "runs_http_429": 13, "runs_http_504": 58, "runs_other_errors": 2, "runs_observed_cost_credits_x10000": 6524, "runs_requests": 445, "smoke_responses": 4, "smoke_http_429": 0, "smoke_http_504": 0, "smoke_other_errors": 0, "smoke_observed_cost_credits_x10000": 26, "smoke_requests": 4 }
+scorer disagreements in all: 0
+
+reasoning models together (of 36 cases per size):
+   usable compilations at S, M, L: [28, 20, 10]
+   usable direct answers from prose at S, M, L: [36, 34, 30]
+   usable direct answers from the ledger at S, M, L: [35, 36, 34]
+   Qwen27B: usable direct answers, ledger 35 and prose 35 of 36; usable compilations [12, 9, 1]; other unusable (not a provider failure) 1; wrong decisions in usable answers 0
+   DeepSeek: usable direct answers, ledger 34 and prose 29 of 36; usable compilations [5, 0, 0]; other unusable (not a provider failure) 1; wrong decisions in usable answers 0
+   GLM-Flash: usable direct answers, ledger 36 and prose 36 of 36; usable compilations [11, 11, 9]; other unusable (not a provider failure) 1; wrong decisions in usable answers 0
+   wrong decisions in any usable answer of a reasoning model: 0
+all requests, connection tests included: 449; HTTP 429: 13; HTTP 504: 58; observed token cost 0.66 credits
+requests per model: {'Gemma': 108, 'Gemma-26B': 108, 'Qwen27B': 116, 'DeepSeek': 113, 'GLM-Flash': 108} | HTTP 504 per model: {'Gemma': 4, 'Gemma-26B': 0, 'Qwen27B': 11, 'DeepSeek': 39, 'GLM-Flash': 4}
+E5 Gemma | Named by the model, answer only | all sizes: usable 36 of 36; one-record decisions valid 77 smallest 36 of 103; more-record decisions valid 8 smallest 2 of 25; empty sets right 122 of 160; cases with every set smallest 1; tokens 88, seconds 1.2; errors {}; outputs without the object 0; one-record decisions with a valid but larger set 41, of which one named record alone would have sufficed 41
+      S: usable 12/12; one: 24/14 of 27; more: 3/1 of 3; every set smallest in 1 cases
+      M: usable 12/12; one: 23/9 of 34; more: 2/1 of 4; every set smallest in 0 cases
+      L: usable 12/12; one: 30/13 of 42; more: 3/0 of 18; every set smallest in 0 cases
+E5 Gemma | Named by the model, working first | all sizes: usable 35 of 36; one-record decisions valid 97 smallest 72 of 99; more-record decisions valid 16 smallest 16 of 22; empty sets right 157 of 157; cases with every set smallest 20; tokens 1701, seconds 16.8; errors {'http_error 504': 1}; outputs without the object 0; one-record decisions with a valid but larger set 25, of which one named record alone would have sufficed 25
+      S: usable 12/12; one: 27/27 of 27; more: 3/3 of 3; every set smallest in 12 cases
+      M: usable 12/12; one: 33/25 of 34; more: 4/4 of 4; every set smallest in 6 cases
+      L: usable 11/12; one: 37/20 of 38; more: 9/9 of 15; every set smallest in 2 cases
+E5 Gemma | Searched in the model's accepted declaration (no call) | all sizes: usable 33 of 36; one-record decisions valid 98 smallest 98 of 98; more-record decisions valid 24 smallest 24 of 24; empty sets right 146 of 146; cases with every set smallest 33; tokens None, seconds None; errors None; outputs without the object None; one-record decisions with a valid but larger set 0, of which one named record alone would have sufficed 0
+      S: usable 10/12; one: 23/23 of 23; more: 3/3 of 3; every set smallest in 10 cases
+      M: usable 11/12; one: 33/33 of 33; more: 3/3 of 3; every set smallest in 11 cases
+      L: usable 12/12; one: 42/42 of 42; more: 18/18 of 18; every set smallest in 12 cases
+E5 Gemma-26B | Named by the model, answer only | all sizes: usable 36 of 36; one-record decisions valid 37 smallest 15 of 103; more-record decisions valid 7 smallest 1 of 25; empty sets right 30 of 160; cases with every set smallest 0; tokens 127, seconds 0.8; errors {}; outputs without the object 0; one-record decisions with a valid but larger set 22, of which one named record alone would have sufficed 22
+      S: usable 12/12; one: 13/8 of 27; more: 1/1 of 3; every set smallest in 0 cases
+      M: usable 12/12; one: 13/2 of 34; more: 1/0 of 4; every set smallest in 0 cases
+      L: usable 12/12; one: 11/5 of 42; more: 5/0 of 18; every set smallest in 0 cases
+E5 Gemma-26B | Named by the model, working first | all sizes: usable 29 of 36; one-record decisions valid 76 smallest 58 of 84; more-record decisions valid 8 smallest 6 of 13; empty sets right 94 of 129; cases with every set smallest 11; tokens 2038, seconds 8.9; errors {'response_not_completed 200': 7}; outputs without the object 0; one-record decisions with a valid but larger set 18, of which one named record alone would have sufficed 18
+      S: usable 12/12; one: 27/23 of 27; more: 2/2 of 3; every set smallest in 5 cases
+      M: usable 8/12; one: 20/18 of 23; more: 2/2 of 2; every set smallest in 4 cases
+      L: usable 9/12; one: 29/17 of 34; more: 4/2 of 8; every set smallest in 2 cases
+E5 Gemma-26B | Searched in the model's accepted declaration (no call) | all sizes: usable 19 of 36; one-record decisions valid 47 smallest 47 of 47; more-record decisions valid 7 smallest 7 of 7; empty sets right 81 of 82; cases with every set smallest 18; tokens None, seconds None; errors None; outputs without the object None; one-record decisions with a valid but larger set 0, of which one named record alone would have sufficed 0
+      S: usable 11/12; one: 25/25 of 25; more: 3/3 of 3; every set smallest in 10 cases
+      M: usable 5/12; one: 14/14 of 14; more: 1/1 of 1; every set smallest in 5 cases
+      L: usable 3/12; one: 8/8 of 8; more: 3/3 of 3; every set smallest in 3 cases
+E5 GLM-Flash | Named by the model, answer only | all sizes: usable 24 of 36; one-record decisions valid 66 smallest 59 of 66; more-record decisions valid 15 smallest 15 of 15; empty sets right 105 of 105; cases with every set smallest 20; tokens 6182, seconds 32.5; errors {'response_not_completed 200': 12}; outputs without the object 0; one-record decisions with a valid but larger set 7, of which one named record alone would have sufficed 7
+      S: usable 11/12; one: 25/20 of 25; more: 3/3 of 3; every set smallest in 9 cases
+      M: usable 5/12; one: 13/12 of 13; more: 3/3 of 3; every set smallest in 4 cases
+      L: usable 8/12; one: 28/27 of 28; more: 9/9 of 9; every set smallest in 7 cases
+E5 GLM-Flash | Searched in the model's accepted declaration (no call) | all sizes: usable 31 of 36; one-record decisions valid 84 smallest 84 of 84; more-record decisions valid 19 smallest 19 of 19; empty sets right 141 of 141; cases with every set smallest 31; tokens None, seconds None; errors None; outputs without the object None; one-record decisions with a valid but larger set 0, of which one named record alone would have sufficed 0
+      S: usable 11/12; one: 23/23 of 23; more: 3/3 of 3; every set smallest in 11 cases
+      M: usable 11/12; one: 31/31 of 31; more: 3/3 of 3; every set smallest in 11 cases
+      L: usable 9/12; one: 30/30 of 30; more: 13/13 of 13; every set smallest in 9 cases
+--- Table H3 ---
+Model | How the set was found | Usable /36 | One record needed: valid, smallest, of | More needed: valid, smallest, of | More needed at 40 records: valid, smallest, of | Cases with every set smallest /36
+Gemma | Named by the model, answer only | 36 | 77, 36, 103 | 8, 2, 25 | 3, 0, 18 | 1
+Gemma | Named by the model, working first | 35 | 97, 72, 99 | 16, 16, 22 | 9, 9, 15 | 20
+Gemma | Searched in its accepted declarations, no call | 33 | 98, 98, 98 | 24, 24, 24 | 18, 18, 18 | 33
+Gemma-26B | Named by the model, answer only | 36 | 37, 15, 103 | 7, 1, 25 | 5, 0, 18 | 0
+Gemma-26B | Named by the model, working first | 29 | 76, 58, 84 | 8, 6, 13 | 4, 2, 8 | 11
+Gemma-26B | Searched in its accepted declarations, no call | 19 | 47, 47, 47 | 7, 7, 7 | 3, 3, 3 | 18
+GLM-Flash | Named by the model, answer only | 24 | 66, 59, 66 | 15, 15, 15 | 9, 9, 9 | 20
+GLM-Flash | Searched in its accepted declarations, no call | 31 | 84, 84, 84 | 19, 19, 19 | 13, 13, 13 | 31
+E5 requests: {'sent': 180, 'http_429': 0, 'http_504': 1, 'cost_x10000': 3878}
+--- accepted declarations ---
+main design        Gemma      issued  36  accepted  33  identical to the reference  33  fully correct  33
+copy-share cases   Gemma      issued  24  accepted  20  identical to the reference  20  fully correct  20
+second run         Gemma      issued  36  accepted  33  identical to the reference  33  fully correct  33
+80-record cases    Gemma      issued  12  accepted   9  identical to the reference   8  fully correct   9
+main design        Gemma-26B  issued  36  accepted  19  identical to the reference  17  fully correct  18
+copy-share cases   Gemma-26B  issued  24  accepted   5  identical to the reference   5  fully correct   5
+second run         Gemma-26B  issued  36  accepted  17  identical to the reference  15  fully correct  16
+80-record cases    Gemma-26B  issued  12  accepted   0  identical to the reference   0  fully correct   0
+main design        Qwen27B    issued  36  accepted  22  identical to the reference  22  fully correct  22
+main design        DeepSeek   issued  36  accepted   5  identical to the reference   5  fully correct   5
+streamed repeat    DeepSeek   issued  31  accepted   5  identical to the reference   5  fully correct   5
+main design        GLM-Flash  issued  36  accepted  31  identical to the reference  31  fully correct  31
+streamed repeat    GLM-Flash  issued  36  accepted  36  identical to the reference  36  fully correct  36
+   Gemma, main design: accepted 33, identical 33, fully correct 33
+   Gemma, copy-share cases: accepted 20, identical 20, fully correct 20
+   Gemma, second run: accepted 33, identical 33, fully correct 33
+   Gemma, 80-record cases: accepted 9, identical 8, fully correct 9
+   Gemma-26B, main design: accepted 19, identical 17, fully correct 18
+   Gemma-26B, copy-share cases: accepted 5, identical 5, fully correct 5
+   Gemma-26B, second run: accepted 17, identical 15, fully correct 16
+   Gemma-26B, 80-record cases: accepted 0, identical 0, fully correct 0
+   reasoning models, main design: accepted 58, identical 58, fully correct 58
+   reasoning models, streamed repeat: accepted 41, identical 41, fully correct 41
+all accepted declarations: {'accepted': 235, 'identical': 230, 'correct': 233}
+--- E7 second run ---
+Gemma: requests 108, errors {'http_error 504': 5}, scorer disagreements 0
+   Direct, formal ledger    fully correct run 1 [10, 8, 6] run 2 [10, 8, 6]; usable run 1 36 run 2 36; wrong decisions in usable answers run 1 24 of 288, run 2 24 of 288; usable in both 36, first only 0, second only 0, neither 0; decisions that differ 0 of 288 in 0 slots; fully correct in both 24, first only 0, second only 0
+   Direct, from prose       fully correct run 1 [7, 7, 1] run 2 [7, 6, 1]; usable run 1 34 run 2 33; wrong decisions in usable answers run 1 41 of 270, run 2 38 of 264; usable in both 31, first only 3, second only 2, neither 0; decisions that differ 3 of 246 in 1 slots; fully correct in both 14, first only 0, second only 0
+   Compiled from prose      fully correct run 1 [10, 11, 12] run 2 [10, 12, 11]; usable run 1 33 run 2 33; wrong decisions in usable answers run 1 0 of 268, run 2 0 of 266; usable in both 31, first only 2, second only 2, neither 1; decisions that differ 0 of 252 in 0 slots; fully correct in both 31, first only 0, second only 0
+Gemma-26B: requests 108, errors {}, scorer disagreements 0
+   Direct, formal ledger    fully correct run 1 [3, 2, 0] run 2 [3, 2, 0]; usable run 1 36 run 2 36; wrong decisions in usable answers run 1 89 of 288, run 2 86 of 288; usable in both 36, first only 0, second only 0, neither 0; decisions that differ 5 of 288 in 3 slots; fully correct in both 5, first only 0, second only 0
+   Direct, from prose       fully correct run 1 [2, 0, 0] run 2 [1, 0, 0]; usable run 1 36 run 2 36; wrong decisions in usable answers run 1 102 of 288, run 2 103 of 288; usable in both 36, first only 0, second only 0, neither 0; decisions that differ 5 of 288 in 5 slots; fully correct in both 1, first only 1, second only 0
+   Compiled from prose      fully correct run 1 [10, 5, 3] run 2 [10, 5, 1]; usable run 1 19 run 2 17; wrong decisions in usable answers run 1 1 of 136, run 2 2 of 118; usable in both 14, first only 5, second only 3, neither 14; decisions that differ 1 of 94 in 1 slots; fully correct in both 13, first only 0, second only 1
+--- E8 80 records ---
+Gemma | Direct, formal ledger: issued 12, usable 11, fully correct 3, wrong 17 of 132 (unsafe 7 of 48, dropped 10 of 84), asserted copy-mediated 6 of 19, direct 1 of 29, provider failures 1, graph exact -, tokens 99, seconds 1.3
+Gemma | Direct, from prose: issued 12, usable 12, fully correct 0, wrong 54 of 144 (unsafe 6 of 51, dropped 48 of 93), asserted copy-mediated 4 of 22, direct 2 of 29, provider failures 0, graph exact -, tokens 93, seconds 1.4
+Gemma | From prose, working first: issued 12, usable 10, fully correct 9, wrong 1 of 120 (unsafe 0 of 37, dropped 1 of 83), asserted copy-mediated 0 of 16, direct 0 of 21, provider failures 2, graph exact -, tokens 2596, seconds 25.8
+Gemma | Compiled from prose: issued 12, usable 9, fully correct 9, wrong 0 of 108 (unsafe 0 of 41, dropped 0 of 67), asserted copy-mediated 0 of 16, direct 0 of 25, provider failures 1, graph exact 8, tokens 4157, seconds 40.8
+   xl: requests 36, errors {'response_not_completed 200': 2}, no final answer object 0, scorer disagreements 0
+   xl_working: requests 12, errors {'response_not_completed 200': 2}, no final answer object 0, scorer disagreements 0
+Gemma-26B | Direct, formal ledger: issued 12, usable 12, fully correct 0, wrong 76 of 144 (unsafe 2 of 51, dropped 74 of 93), asserted copy-mediated 2 of 22, direct 0 of 29, provider failures 0, graph exact -, tokens 98, seconds 0.7
+Gemma-26B | Direct, from prose: issued 12, usable 11, fully correct 0, wrong 78 of 132 (unsafe 3 of 47, dropped 75 of 85), asserted copy-mediated 2 of 21, direct 1 of 26, provider failures 1, graph exact -, tokens 93, seconds 0.7
+Gemma-26B | From prose, working first: issued 12, usable 11, fully correct 5, wrong 20 of 132 (unsafe 0 of 48, dropped 20 of 84), asserted copy-mediated 0 of 20, direct 0 of 28, provider failures 1, graph exact -, tokens 3372, seconds 14.8
+Gemma-26B | Compiled from prose: issued 12, usable 0, fully correct 0, wrong 0 of 0 (unsafe 0 of 0, dropped 0 of 0), asserted copy-mediated 0 of 0, direct 0 of 0, provider failures 5, graph exact -, tokens None, seconds None
+   xl: requests 36, errors {'http_error 502': 1, 'response_not_completed 200': 5}, no final answer object 0, scorer disagreements 0
+   xl_working: requests 12, errors {'response_not_completed 200': 1}, no final answer object 0, scorer disagreements 0
+--- Table H4 ---
+Model | Condition | Fully correct / usable, of 12 | Wrong decisions in usable answers | Unsupported decisions asserted | Median output tokens | Median seconds
+Gemma | Direct, formal ledger | 3 / 11 | 17 of 132 | 7 of 48 | 99 | 1.3
+Gemma | Direct, from prose | 0 / 12 | 54 of 144 | 6 of 51 | 93 | 1.4
+Gemma | From prose, working first | 9 / 10 | 1 of 120 | 0 of 37 | 2596 | 26
+Gemma | Compiled from prose | 9 / 9 | 0 of 108 | 0 of 41 | 4157 | 41
+Gemma-26B | Direct, formal ledger | 0 / 12 | 76 of 144 | 2 of 51 | 98 | 0.7
+Gemma-26B | Direct, from prose | 0 / 11 | 78 of 132 | 3 of 47 | 93 | 0.7
+Gemma-26B | From prose, working first | 5 / 11 | 20 of 132 | 0 of 48 | 3372 | 15
+Gemma-26B | Compiled from prose | 0 / 0 | 0 of 0 | 0 of 0 | – | –
+E8 search Gemma | Named by the model, answer only: usable 12 of 12; one-record valid 23 smallest 4 of 71; more-record valid 2 smallest 2 of 22; empty sets right 32 of 51; cases with every set smallest 0; tokens 136, seconds 1.9; errors {}; outputs without the object 0; oversized one-record sets 19, padded 19
+E8 search Gemma | Named by the model, working first: usable 8 of 12; one-record valid 42 smallest 19 of 46; more-record valid 3 smallest 2 of 16; empty sets right 34 of 34; cases with every set smallest 0; tokens 3714, seconds 36.3; errors {'response_not_completed 200': 4}; outputs without the object 0; oversized one-record sets 23, padded 21
+E8 search Gemma | Searched in the model's accepted declaration (no call): usable 9 of 12; one-record valid 52 smallest 52 of 52; more-record valid 15 smallest 15 of 15; empty sets right 41 of 41; cases with every set smallest 9; tokens None, seconds None; errors None; outputs without the object None; oversized one-record sets 0, padded 0
+E8 search Gemma-26B | Named by the model, answer only: usable 12 of 12; one-record valid 12 smallest 6 of 71; more-record valid 2 smallest 0 of 22; empty sets right 5 of 51; cases with every set smallest 0; tokens 185, seconds 1.1; errors {}; outputs without the object 0; oversized one-record sets 6, padded 6
+E8 search Gemma-26B | Named by the model, working first: usable 8 of 12; one-record valid 21 smallest 6 of 51; more-record valid 3 smallest 2 of 13; empty sets right 32 of 32; cases with every set smallest 0; tokens 3523, seconds 15.5; errors {'response_not_completed 200': 4}; outputs without the object 0; oversized one-record sets 15, padded 14
+E8 search Gemma-26B | Searched in the model's accepted declaration (no call): usable 0 of 12; one-record valid 0 smallest 0 of 0; more-record valid 0 smallest 0 of 0; empty sets right 0 of 0; cases with every set smallest 0; tokens None, seconds None; errors None; outputs without the object None; oversized one-record sets 0, padded 0
+--- Table H5 ---
+Model | How the set was found | Usable /12 | One record needed: valid, smallest, of | More needed: valid, smallest, of | No support: empty set given, of | Cases with every set smallest /12
+Gemma | Named by the model, answer only | 12 | 23, 4, 71 | 2, 2, 22 | 32, 51 | 0
+Gemma | Named by the model, working first | 8 | 42, 19, 46 | 3, 2, 16 | 34, 34 | 0
+Gemma | Searched in its accepted declarations, no call | 9 | 52, 52, 52 | 15, 15, 15 | 41, 41 | 9
+Gemma-26B | Named by the model, answer only | 12 | 12, 6, 71 | 2, 0, 22 | 5, 51 | 0
+Gemma-26B | Named by the model, working first | 8 | 21, 6, 51 | 3, 2, 13 | 32, 32 | 0
+Gemma-26B | Searched in its accepted declarations, no call | 0 | 0, 0, 0 | 0, 0, 0 | 0, 0 | 0
+--- smallest sets by size ---
+Gemma | Named by the model, answer only | S: 15 of 30 (50%), usable 12 of 12, every set smallest in 1 cases; M: 10 of 38 (26%), usable 12 of 12, every set smallest in 0 cases; L: 13 of 60 (22%), usable 12 of 12, every set smallest in 0 cases; XL: 6 of 93 (6%), usable 12 of 12, every set smallest in 0 cases
+Gemma | Named by the model, working first | S: 30 of 30 (100%), usable 12 of 12, every set smallest in 12 cases; M: 29 of 38 (76%), usable 12 of 12, every set smallest in 6 cases; L: 29 of 53 (55%), usable 11 of 12, every set smallest in 2 cases; XL: 21 of 62 (34%), usable 8 of 12, every set smallest in 0 cases
+Gemma | Searched in the model's accepted declaration (no call) | S: 26 of 26 (100%), usable 10 of 12, every set smallest in 10 cases; M: 36 of 36 (100%), usable 11 of 12, every set smallest in 11 cases; L: 60 of 60 (100%), usable 12 of 12, every set smallest in 12 cases; XL: 67 of 67 (100%), usable 9 of 12, every set smallest in 9 cases
+Gemma-26B | Named by the model, answer only | S: 9 of 30 (30%), usable 12 of 12, every set smallest in 0 cases; M: 2 of 38 (5%), usable 12 of 12, every set smallest in 0 cases; L: 5 of 60 (8%), usable 12 of 12, every set smallest in 0 cases; XL: 6 of 93 (6%), usable 12 of 12, every set smallest in 0 cases
+Gemma-26B | Named by the model, working first | S: 25 of 30 (83%), usable 12 of 12, every set smallest in 5 cases; M: 20 of 25 (80%), usable 8 of 12, every set smallest in 4 cases; L: 19 of 42 (45%), usable 9 of 12, every set smallest in 2 cases; XL: 8 of 64 (12%), usable 8 of 12, every set smallest in 0 cases
+Gemma-26B | Searched in the model's accepted declaration (no call) | S: 28 of 28 (100%), usable 11 of 12, every set smallest in 10 cases; M: 15 of 15 (100%), usable 5 of 12, every set smallest in 5 cases; L: 11 of 11 (100%), usable 3 of 12, every set smallest in 3 cases; XL: 0 of 0 (-%), usable 0 of 12, every set smallest in 0 cases
+Qwen27B | Searched in the model's accepted declaration (no call) | S: 30 of 30 (100%), usable 12 of 12, every set smallest in 12 cases; M: 31 of 31 (100%), usable 9 of 12, every set smallest in 9 cases; L: 4 of 4 (100%), usable 1 of 12, every set smallest in 1 cases
+DeepSeek | Searched in the model's accepted declaration (no call) | S: 14 of 14 (100%), usable 5 of 12, every set smallest in 5 cases; M: 0 of 0 (-%), usable 0 of 12, every set smallest in 0 cases; L: 0 of 0 (-%), usable 0 of 12, every set smallest in 0 cases
+GLM-Flash | Named by the model, answer only | S: 23 of 28 (82%), usable 11 of 12, every set smallest in 9 cases; M: 15 of 16 (94%), usable 5 of 12, every set smallest in 4 cases; L: 36 of 37 (97%), usable 8 of 12, every set smallest in 7 cases
+GLM-Flash | Searched in the model's accepted declaration (no call) | S: 26 of 26 (100%), usable 11 of 12, every set smallest in 11 cases; M: 34 of 34 (100%), usable 11 of 12, every set smallest in 11 cases; L: 43 of 43 (100%), usable 9 of 12, every set smallest in 9 cases

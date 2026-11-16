@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>RETRACE · Source review</title><link rel="stylesheet" href="/style.css"></head>
+<body>
+<header><a class="brand" href="/">RETRACE<span>Source review · v6</span></a><div class="header-actions"><span class="offline">Local · no model calls</span><button id="demo">Load constructed demo</button><button id="import">Import bundle</button><input id="file" type="file" accept="application/json,.json" hidden></div></header>
+<main>
+  <section class="intro"><p class="eyebrow">SOURCE → INTERPRETATIONS → DECISIONS</p><h1>Review what supports a decision.</h1><p>Keep source locations, declared rules, and remaining uncertainty visible. Test withdrawals without treating loss of support as falsity.</p></section>
+  <div id="notice" class="notice" role="status">Load the constructed example or import a source bundle and an explicit proposed interpretation.</div>
+  <div id="error" class="error" role="alert" hidden></div>
+  <details class="panel catalog-panel"><summary>Recorded study outcomes <span id="catalog-badge" class="small">Catalog not loaded</span></summary>
+    <p class="hint">Every scheduled source-IR, counter-reading and long-source IR slot stays in the denominator. Failures and unissued slots are listed alongside formally admitted output. No hidden reference graph or accuracy label is included.</p>
+    <div class="section-head"><p id="catalog-status" class="hint">The default demonstration is constructed. Recorded outputs load separately.</p><button id="refresh-catalog">Refresh index</button></div>
+    <div class="catalog-filters"><label>Model<select id="catalog-model"></select></label><label>Case<select id="catalog-case"></select></label><label>Arm<select id="catalog-arm"></select></label></div>
+    <label class="catalog-outcome">Scheduled outcome<select id="catalog-outcome"></select></label>
+    <div class="button-row"><button id="view-recorded" disabled>View recorded output</button><button id="load-recorded" disabled>Load IR for review</button><button id="preview-recorded" disabled>Preview counter-reading</button></div>
+    <p id="catalog-filter-count" class="hint"></p><div id="catalog-entry" hidden></div>
+  </details>
+  <div class="workspace">
+    <aside class="editors">
+      <section class="panel"><div class="section-head"><h2>1. Source bundle</h2><span class="small">Prose + IDs + document groups</span></div><label for="bundle" class="sr-only">Source bundle JSON</label><textarea id="bundle" spellcheck="false" placeholder="Paste source_documents, registry and optional document groups here."></textarea><button id="segments" class="secondary full">Prepare source spans &amp; prompt</button><p class="hint">This prepares text for an external model or a human reader. It does not make a model request.</p></section>
+      <section class="panel"><div class="section-head"><h2>2. Proposed interpretation</h2><span class="small">Citation-reference IR</span></div><label for="ir" class="sr-only">Proposed source IR JSON</label><textarea id="ir" spellcheck="false" placeholder="Paste the explicit source IR here."></textarea><button id="analyze" class="primary full">Analyze declared interpretations</button><p class="hint">Editing the source or IR invalidates previous results. A new analysis clears old answers and exclusions.</p></section>
+      <section class="panel compact"><h2>Keep a local copy</h2><div class="button-row"><button id="export-bundle">Export bundle</button><button id="export-audit" disabled>Export analysis</button></div><p class="hint">Nothing is saved automatically. No account, API key, or external service is used.</p></section>
+    </aside>
+    <div class="results">
+      <section id="empty" class="panel empty"><div class="empty-mark">↳</div><h2>Start with a source and its proposed rules.</h2><p>The constructed example has eight interpretations. One source clarification settles the current decisions while leaving other graph details unresolved.</p><p>Its release decision needs three record withdrawals before the interpretations disagree.</p></section>
+      <div id="analysis" hidden>
+        <section class="panel summary"><div><p class="eyebrow" id="provenance"></p><h2 id="analysis-title"></h2><p id="summary-text"></p></div><span id="world-count" class="count"></span></section>
+        <section id="unresolved" class="panel warning" hidden><h2>Structure remains unresolved</h2><p>The declared unknown ancestry prevents a complete executable interpretation family. No decision status is asserted. Review the source clauses below.</p></section>
+        <section id="inventory-gap" class="panel warning" hidden><h2>Reference-Free Coverage Gap</h2><p id="inventory-gap-text"></p><p>Interpretation incomplete—identifier dispositions are missing. Mark each known ID operational or nonoperational from the source before reviewing current decision claims. This warning does not infer a missing dependency.</p></section>
+        <div id="computed">
+          <section class="panel"><div class="section-head"><h2>Decisions</h2><span class="small">Conditional on the declared links</span></div><div id="decisions" class="decision-grid"></div><p class="hint">Minimum witnesses count record IDs, not independent observations. “None” means no witness within the declared finite search, or an inapplicable break test.</p></section>
+          <section class="panel question-panel"><p class="eyebrow">DECISION-RELEVANT CLARIFICATION</p><div id="question"></div><div id="answers" class="answer-history"></div></section>
+          <section class="panel"><div class="section-head"><h2>Exclusions and eligibility</h2><button id="clear-scenario" class="secondary">Clear scenario withdrawals</button></div><p id="scenario" class="hint"></p><div id="documents" class="document-list"></div><div class="table-scroll"><table><thead><tr><th>Evidence</th><th>Original eligible</th><th>Effective eligible</th><th>Usable with parents</th><th>Passage veto</th><th>Other vetoes</th></tr></thead><tbody id="records"></tbody></table></div><p class="hint">Document, passage, and scenario exclusions are separate. Clearing one does not override another, or change original ineligibility.</p></section>
+          <section class="panel"><div class="section-head"><h2>Hypothetical eligibility exposure</h2><span class="small">Preview only</span></div><div id="exposure"></div><pre id="exposure-result" class="output" hidden></pre></section>
+        </div>
+        <section class="panel"><div class="section-head"><h2>Source-linked clauses</h2><span class="small">Location checked · meaning supplied</span></div><p class="hint">AND/OR grouping, scope and antecedents come from the proposed interpretation. Exact spans do not prove that a rule follows from the prose.</p><details><summary>Known identifier dispositions</summary><div id="registry-dispositions"></div></details><div id="clauses" class="clauses"></div><div id="citation" class="citation" hidden></div></section>
+        <section class="panel"><h2>Review a proposed counter-reading</h2><p class="hint">Paste a second IR against the same source. This compares declarations and flags missing or unlicensed interpretations. It cannot certify which reading is correct, and never replaces the current source or state.</p><label for="proposal" class="sr-only">Proposed counter-reading IR</label><textarea id="proposal" spellcheck="false" placeholder="Paste a separate proposed IR for preview."></textarea><button id="preview-refuter" class="secondary">Preview comparison</button><div id="refuter-result" class="review-result" hidden></div></section>
+        <section class="scope"><strong>Scope stays visible.</strong> Source completeness and real-world truth remain unknown. Candidate counts are not probabilities. A shared omitted dependency can remain absent from every declared interpretation.</section>
+      </div>
+    </div>
+  </div>
+</main>
+<dialog id="prompt-dialog"><div class="section-head"><h2>Source spans and extraction instructions</h2><button id="close-prompt" aria-label="Close prompt">Close</button></div><p class="hint">Prepared locally. Review before sending this source text to any external service.</p><textarea id="prompt-text" readonly spellcheck="false"></textarea><button id="copy-prompt" class="primary">Copy text</button></dialog>
+<script src="/app.js" defer></script>
+</body></html>

@@ -1,0 +1,47 @@
+{
+ "seed": 2026111603,
+ "cases": 12,
+ "generation_attempts": {
+  "scale-XL-01": 5,
+  "scale-XL-02": 2,
+  "scale-XL-03": 2,
+  "scale-XL-04": 1,
+  "scale-XL-05": 3,
+  "scale-XL-06": 2,
+  "scale-XL-07": 1,
+  "scale-XL-08": 2,
+  "scale-XL-09": 1,
+  "scale-XL-10": 4,
+  "scale-XL-11": 4,
+  "scale-XL-12": 3
+ },
+ "evaluator_disagreements": 0,
+ "prose_structure_problems": [],
+ "copies": 384,
+ "decisions": 144,
+ "supported_after": 93,
+ "lost": 30,
+ "protected": 41,
+ "never_supported": 21,
+ "unsupported_copy_mediated": 22,
+ "unsupported_direct": 29,
+ "words_min_max": [
+  3869,
+  3976
+ ],
+ "search_reference_by_smallest_size": {
+  "0": 51,
+  "1": 71,
+  "2": 20,
+  "3": 2
+ },
+ "corpus_xl.json_sha256": "f5e02544e0b52953ce9ecaf96adac904b6d27aa81ffa6ee9991ef0b7f40d87e7",
+ "sessions_xl.json_sha256": "2127ac77337f2078486d3fa0caa0aa4ac189d47cc52c0a34b09e71c2e34bd817",
+ "sessions_xl_working.json_sha256": "5cb5ab8e47c8022c9228a4b476e26234d07e2792c7b61b1d901aa8dd6e1771ce",
+ "withdrawal_reference_xl.json_sha256": "099965e30f10e7e6577022975a1ee9b05c93e52815152dd452a71a116bd82318",
+ "sessions_xl_withdrawal_answer.json_sha256": "23b6b49f15d0443da329b0af98841920b4b21360c2b178aa635cb8ef6d32817f",
+ "sessions_xl_withdrawal_working.json_sha256": "d9112c2c718cccbd8d8bb6c87c93c33bcefa324623098357cb33a69af622ce64",
+ "sessions": 36,
+ "working_sessions": 12,
+ "longest_prompt_chars": 26255
+}

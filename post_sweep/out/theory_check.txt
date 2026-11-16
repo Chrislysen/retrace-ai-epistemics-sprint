@@ -1,0 +1,28 @@
+﻿[PASS] P1 rebuttal fragment collapses to conflict-freeness
+       20000 random argument sets, 129084 arguments (107741 attacked): 0 labelled OUT, 0 sets where IN differs from the conflict-free set
+[PASS] P2 minimum consequential withdrawal equals minimum vertex cover
+       400 random graphs (3-9 vertices, cover sizes 1-5): 0 mismatches for compare_families, 0 for withdrawal_robustness
+[PASS] P3 withdrawal blindness below the support frontier (monotone families)
+       1500 random monotone families: 292 had no supporting reading at the baseline, and in 0 of those a withdrawal witness was reported; 822 other cases did have a witness
+
+3 of 3 checks passed (seed 20261116, Python 3.12.10)
+{
+ "seed": 20261116,
+ "results": [
+  {
+   "name": "P1 rebuttal fragment collapses to conflict-freeness",
+   "pass": true,
+   "detail": "20000 random argument sets, 129084 arguments (107741 attacked): 0 labelled OUT, 0 sets where IN differs from the conflict-free set"
+  },
+  {
+   "name": "P2 minimum consequential withdrawal equals minimum vertex cover",
+   "pass": true,
+   "detail": "400 random graphs (3-9 vertices, cover sizes 1-5): 0 mismatches for compare_families, 0 for withdrawal_robustness"
+  },
+  {
+   "name": "P3 withdrawal blindness below the support frontier (monotone families)",
+   "pass": true,
+   "detail": "1500 random monotone families: 292 had no supporting reading at the baseline, and in 0 of those a withdrawal witness was reported; 822 other cases did have a witness"
+  }
+ ]
+}

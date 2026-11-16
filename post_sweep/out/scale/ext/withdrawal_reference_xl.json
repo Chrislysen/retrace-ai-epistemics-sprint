@@ -1,0 +1,821 @@
+{
+ "limit": 3,
+ "by_smallest_size": {
+  "0": 51,
+  "1": 71,
+  "2": 20,
+  "3": 2
+ },
+ "cases": {
+  "scale-XL-01": {
+   "GRS32T": {
+    "k": 0,
+    "example": []
+   },
+   "JHRS68": {
+    "k": 0,
+    "example": []
+   },
+   "9TY6MX": {
+    "k": 0,
+    "example": []
+   },
+   "MU9Z5S": {
+    "k": 1,
+    "example": [
+     "9BCJRY"
+    ]
+   },
+   "EXNZ48": {
+    "k": 1,
+    "example": [
+     "9BCJRY"
+    ]
+   },
+   "YEV4PN": {
+    "k": 1,
+    "example": [
+     "957MMZ"
+    ]
+   },
+   "ES9YDC": {
+    "k": 1,
+    "example": [
+     "PH8333"
+    ]
+   },
+   "N7D8MT": {
+    "k": 2,
+    "example": [
+     "RRE9QT",
+     "D8V28W"
+    ]
+   },
+   "MH6KTM": {
+    "k": 2,
+    "example": [
+     "957MMZ",
+     "4V5RHN"
+    ]
+   },
+   "AHBEFC": {
+    "k": 2,
+    "example": [
+     "957MMZ",
+     "4V5RHN"
+    ]
+   },
+   "L677JB": {
+    "k": 2,
+    "example": [
+     "BK84HX",
+     "Q7K5BW"
+    ]
+   },
+   "7QVU9Q": {
+    "k": 3,
+    "example": [
+     "TX3KVM",
+     "ESR5MN",
+     "LXHKE6"
+    ]
+   }
+  },
+  "scale-XL-02": {
+   "HKFMGY": {
+    "k": 0,
+    "example": []
+   },
+   "B9EA67": {
+    "k": 0,
+    "example": []
+   },
+   "7D366Z": {
+    "k": 0,
+    "example": []
+   },
+   "K368GJ": {
+    "k": 0,
+    "example": []
+   },
+   "FR48DJ": {
+    "k": 1,
+    "example": [
+     "NY35RT"
+    ]
+   },
+   "XLY8F8": {
+    "k": 1,
+    "example": [
+     "NY35RT"
+    ]
+   },
+   "JYPGDZ": {
+    "k": 1,
+    "example": [
+     "AZQRMU"
+    ]
+   },
+   "NQ64L3": {
+    "k": 1,
+    "example": [
+     "AZQRMU"
+    ]
+   },
+   "UF5XNZ": {
+    "k": 2,
+    "example": [
+     "NY35RT",
+     "BJRVVD"
+    ]
+   },
+   "TMYME9": {
+    "k": 2,
+    "example": [
+     "GXKYPJ",
+     "RM9CLC"
+    ]
+   },
+   "UQCP2U": {
+    "k": 2,
+    "example": [
+     "JFPZPM",
+     "LLPPW9"
+    ]
+   },
+   "P4RZL4": {
+    "k": 2,
+    "example": [
+     "YNSW4L",
+     "LDTMS4"
+    ]
+   }
+  },
+  "scale-XL-03": {
+   "Z546FH": {
+    "k": 0,
+    "example": []
+   },
+   "75ZRZU": {
+    "k": 0,
+    "example": []
+   },
+   "Q65729": {
+    "k": 0,
+    "example": []
+   },
+   "WZBS8W": {
+    "k": 0,
+    "example": []
+   },
+   "TRVTFD": {
+    "k": 0,
+    "example": []
+   },
+   "PXUDSZ": {
+    "k": 0,
+    "example": []
+   },
+   "2AS64W": {
+    "k": 1,
+    "example": [
+     "KBG2NV"
+    ]
+   },
+   "CHSKXQ": {
+    "k": 1,
+    "example": [
+     "KBG2NV"
+    ]
+   },
+   "4SNT7L": {
+    "k": 1,
+    "example": [
+     "7F4TKC"
+    ]
+   },
+   "67M9HH": {
+    "k": 1,
+    "example": [
+     "7F4TKC"
+    ]
+   },
+   "S9K2YG": {
+    "k": 1,
+    "example": [
+     "W4QSMV"
+    ]
+   },
+   "TRMZ9K": {
+    "k": 2,
+    "example": [
+     "XCKALM",
+     "AQUVVP"
+    ]
+   }
+  },
+  "scale-XL-04": {
+   "CT9L25": {
+    "k": 0,
+    "example": []
+   },
+   "PZDEQR": {
+    "k": 0,
+    "example": []
+   },
+   "X83Y4W": {
+    "k": 0,
+    "example": []
+   },
+   "THEAAP": {
+    "k": 1,
+    "example": [
+     "S89AGC"
+    ]
+   },
+   "GYAR5F": {
+    "k": 1,
+    "example": [
+     "S89AGC"
+    ]
+   },
+   "8FDJLN": {
+    "k": 1,
+    "example": [
+     "S89AGC"
+    ]
+   },
+   "PS7WVH": {
+    "k": 1,
+    "example": [
+     "S89AGC"
+    ]
+   },
+   "FG4FEN": {
+    "k": 1,
+    "example": [
+     "UGVG25"
+    ]
+   },
+   "D78CPB": {
+    "k": 1,
+    "example": [
+     "D33NFR"
+    ]
+   },
+   "CJCESB": {
+    "k": 1,
+    "example": [
+     "4K9RGQ"
+    ]
+   },
+   "J7Q4VH": {
+    "k": 1,
+    "example": [
+     "FTR583"
+    ]
+   },
+   "FSFEUV": {
+    "k": 2,
+    "example": [
+     "MFKLAK",
+     "S89AGC"
+    ]
+   }
+  },
+  "scale-XL-05": {
+   "TQYMPF": {
+    "k": 0,
+    "example": []
+   },
+   "4FE8RB": {
+    "k": 0,
+    "example": []
+   },
+   "MNKUDG": {
+    "k": 0,
+    "example": []
+   },
+   "9BAK3T": {
+    "k": 0,
+    "example": []
+   },
+   "6YJ6U4": {
+    "k": 1,
+    "example": [
+     "G7K6J7"
+    ]
+   },
+   "JGCR7M": {
+    "k": 1,
+    "example": [
+     "D5M8NJ"
+    ]
+   },
+   "H5N2VT": {
+    "k": 1,
+    "example": [
+     "D5M8NJ"
+    ]
+   },
+   "SNWHZT": {
+    "k": 1,
+    "example": [
+     "D5M8NJ"
+    ]
+   },
+   "JVDT34": {
+    "k": 1,
+    "example": [
+     "9MM2QP"
+    ]
+   },
+   "V9NSQ5": {
+    "k": 1,
+    "example": [
+     "9MM2QP"
+    ]
+   },
+   "T67WHM": {
+    "k": 2,
+    "example": [
+     "X3UQAW",
+     "D5M8NJ"
+    ]
+   },
+   "N98G2D": {
+    "k": 2,
+    "example": [
+     "5YHC8J",
+     "GN9W33"
+    ]
+   }
+  },
+  "scale-XL-06": {
+   "GV6MGQ": {
+    "k": 0,
+    "example": []
+   },
+   "F7B87C": {
+    "k": 0,
+    "example": []
+   },
+   "ZTFQCP": {
+    "k": 0,
+    "example": []
+   },
+   "8SYKUD": {
+    "k": 0,
+    "example": []
+   },
+   "UNXR6C": {
+    "k": 1,
+    "example": [
+     "KNMDNZ"
+    ]
+   },
+   "QVS565": {
+    "k": 1,
+    "example": [
+     "KNMDNZ"
+    ]
+   },
+   "79DHNQ": {
+    "k": 1,
+    "example": [
+     "BGPMAE"
+    ]
+   },
+   "W8NPSZ": {
+    "k": 1,
+    "example": [
+     "KLGC9U"
+    ]
+   },
+   "SWFF7F": {
+    "k": 1,
+    "example": [
+     "VYFBSF"
+    ]
+   },
+   "UL293P": {
+    "k": 1,
+    "example": [
+     "VYFBSF"
+    ]
+   },
+   "RUE9D4": {
+    "k": 1,
+    "example": [
+     "8P745W"
+    ]
+   },
+   "S5QKA6": {
+    "k": 1,
+    "example": [
+     "43LHAY"
+    ]
+   }
+  },
+  "scale-XL-07": {
+   "3EMSJE": {
+    "k": 0,
+    "example": []
+   },
+   "RWGNGH": {
+    "k": 0,
+    "example": []
+   },
+   "VDPNVH": {
+    "k": 0,
+    "example": []
+   },
+   "WAXMG3": {
+    "k": 0,
+    "example": []
+   },
+   "6VSTU7": {
+    "k": 0,
+    "example": []
+   },
+   "UCRK2Q": {
+    "k": 1,
+    "example": [
+     "P9LHKD"
+    ]
+   },
+   "D7QRDA": {
+    "k": 1,
+    "example": [
+     "YVZJCZ"
+    ]
+   },
+   "YD8JHA": {
+    "k": 1,
+    "example": [
+     "89J7Q5"
+    ]
+   },
+   "F7KXNB": {
+    "k": 1,
+    "example": [
+     "Y92BNM"
+    ]
+   },
+   "QDMNC6": {
+    "k": 1,
+    "example": [
+     "D3KA8H"
+    ]
+   },
+   "4VPFAH": {
+    "k": 1,
+    "example": [
+     "97NKSJ"
+    ]
+   },
+   "K36KHL": {
+    "k": 2,
+    "example": [
+     "3R7W29",
+     "62BE8N"
+    ]
+   }
+  },
+  "scale-XL-08": {
+   "9369MJ": {
+    "k": 0,
+    "example": []
+   },
+   "GNQY7Y": {
+    "k": 0,
+    "example": []
+   },
+   "TGDUG9": {
+    "k": 0,
+    "example": []
+   },
+   "5952P7": {
+    "k": 0,
+    "example": []
+   },
+   "69XNAC": {
+    "k": 1,
+    "example": [
+     "HDXJ5S"
+    ]
+   },
+   "EFEQSB": {
+    "k": 1,
+    "example": [
+     "HDXJ5S"
+    ]
+   },
+   "EEKMGX": {
+    "k": 1,
+    "example": [
+     "WYZHEF"
+    ]
+   },
+   "RYHT2J": {
+    "k": 1,
+    "example": [
+     "WYZHEF"
+    ]
+   },
+   "WG838V": {
+    "k": 1,
+    "example": [
+     "WYZHEF"
+    ]
+   },
+   "XSYGMM": {
+    "k": 1,
+    "example": [
+     "FMPHY6"
+    ]
+   },
+   "738G7Q": {
+    "k": 1,
+    "example": [
+     "PL3S4D"
+    ]
+   },
+   "RDXBFR": {
+    "k": 1,
+    "example": [
+     "DJQCC3"
+    ]
+   }
+  },
+  "scale-XL-09": {
+   "UWUDDB": {
+    "k": 0,
+    "example": []
+   },
+   "LMX3RS": {
+    "k": 0,
+    "example": []
+   },
+   "D3TNXK": {
+    "k": 0,
+    "example": []
+   },
+   "XQF4JH": {
+    "k": 1,
+    "example": [
+     "AJSJNN"
+    ]
+   },
+   "CW834D": {
+    "k": 1,
+    "example": [
+     "AJSJNN"
+    ]
+   },
+   "U3CFYX": {
+    "k": 1,
+    "example": [
+     "9NDV8Q"
+    ]
+   },
+   "YJ3DFP": {
+    "k": 1,
+    "example": [
+     "9NDV8Q"
+    ]
+   },
+   "X4WM39": {
+    "k": 1,
+    "example": [
+     "9NDV8Q"
+    ]
+   },
+   "NL2RRM": {
+    "k": 1,
+    "example": [
+     "WPXB8B"
+    ]
+   },
+   "X7WAVJ": {
+    "k": 2,
+    "example": [
+     "AJSJNN",
+     "9NDV8Q"
+    ]
+   },
+   "9E5VDL": {
+    "k": 2,
+    "example": [
+     "AJSJNN",
+     "X9RBV9"
+    ]
+   },
+   "JDWZAR": {
+    "k": 3,
+    "example": [
+     "TYTWSZ",
+     "M8DGL6",
+     "PDJWQN"
+    ]
+   }
+  },
+  "scale-XL-10": {
+   "VA2TVA": {
+    "k": 0,
+    "example": []
+   },
+   "WAKDSP": {
+    "k": 0,
+    "example": []
+   },
+   "AHW4SN": {
+    "k": 0,
+    "example": []
+   },
+   "NRFSSL": {
+    "k": 0,
+    "example": []
+   },
+   "YTP34U": {
+    "k": 1,
+    "example": [
+     "96YQ7B"
+    ]
+   },
+   "UY458K": {
+    "k": 1,
+    "example": [
+     "96YQ7B"
+    ]
+   },
+   "C3TR98": {
+    "k": 1,
+    "example": [
+     "3L7RUL"
+    ]
+   },
+   "576EGU": {
+    "k": 1,
+    "example": [
+     "C9QKKY"
+    ]
+   },
+   "3VTFRR": {
+    "k": 1,
+    "example": [
+     "C9QKKY"
+    ]
+   },
+   "FV3JM5": {
+    "k": 1,
+    "example": [
+     "L398HW"
+    ]
+   },
+   "7RYRQJ": {
+    "k": 1,
+    "example": [
+     "VKPQU6"
+    ]
+   },
+   "EPQTEH": {
+    "k": 2,
+    "example": [
+     "DZTL2Y",
+     "96RPMZ"
+    ]
+   }
+  },
+  "scale-XL-11": {
+   "KW2XM4": {
+    "k": 0,
+    "example": []
+   },
+   "42GLFN": {
+    "k": 0,
+    "example": []
+   },
+   "DDFPC3": {
+    "k": 0,
+    "example": []
+   },
+   "YABB63": {
+    "k": 1,
+    "example": [
+     "J8UJUJ"
+    ]
+   },
+   "D64VAM": {
+    "k": 1,
+    "example": [
+     "J8UJUJ"
+    ]
+   },
+   "LY4TZ8": {
+    "k": 1,
+    "example": [
+     "J8UJUJ"
+    ]
+   },
+   "W54BYG": {
+    "k": 1,
+    "example": [
+     "Z4KAB3"
+    ]
+   },
+   "88AJKP": {
+    "k": 1,
+    "example": [
+     "CHJD4V"
+    ]
+   },
+   "LXHAWQ": {
+    "k": 1,
+    "example": [
+     "CHJD4V"
+    ]
+   },
+   "YKEVK5": {
+    "k": 1,
+    "example": [
+     "CHJD4V"
+    ]
+   },
+   "TT8277": {
+    "k": 2,
+    "example": [
+     "J8UJUJ",
+     "759P5W"
+    ]
+   },
+   "2856KY": {
+    "k": 2,
+    "example": [
+     "P4G5FQ",
+     "Q6WFBS"
+    ]
+   }
+  },
+  "scale-XL-12": {
+   "DM5YCS": {
+    "k": 0,
+    "example": []
+   },
+   "2W93NH": {
+    "k": 0,
+    "example": []
+   },
+   "VJP2XA": {
+    "k": 0,
+    "example": []
+   },
+   "4FK74J": {
+    "k": 0,
+    "example": []
+   },
+   "F3RA8T": {
+    "k": 0,
+    "example": []
+   },
+   "EW7WNX": {
+    "k": 0,
+    "example": []
+   },
+   "23AWPP": {
+    "k": 0,
+    "example": []
+   },
+   "PKC58T": {
+    "k": 0,
+    "example": []
+   },
+   "8V65JC": {
+    "k": 1,
+    "example": [
+     "9EJVM2"
+    ]
+   },
+   "CD43SD": {
+    "k": 1,
+    "example": [
+     "KF4PWT"
+    ]
+   },
+   "CJKJ2U": {
+    "k": 2,
+    "example": [
+     "DHB4G4",
+     "6PNW73"
+    ]
+   },
+   "B5ZHM2": {
+    "k": 2,
+    "example": [
+     "VDZMFZ",
+     "NK4SRQ"
+    ]
+   }
+  }
+ }
+}

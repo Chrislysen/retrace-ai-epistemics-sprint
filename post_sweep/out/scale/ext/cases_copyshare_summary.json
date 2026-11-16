@@ -1,0 +1,71 @@
+{
+ "seed": 2026111602,
+ "cases": 24,
+ "by_set": {
+  "C0": {
+   "cases": 12,
+   "copy_share": 0.0,
+   "copies": 0,
+   "decisions": 120,
+   "supported_after": 65,
+   "lost": 34,
+   "protected": 31,
+   "never_supported": 21,
+   "unsupported_copy_mediated": 0,
+   "unsupported_direct": 55,
+   "words_min_max": [
+    1848,
+    1955
+   ]
+  },
+  "C8": {
+   "cases": 12,
+   "copy_share": 0.8,
+   "copies": 384,
+   "decisions": 120,
+   "supported_after": 60,
+   "lost": 35,
+   "protected": 45,
+   "never_supported": 25,
+   "unsupported_copy_mediated": 45,
+   "unsupported_direct": 15,
+   "words_min_max": [
+    2228,
+    2319
+   ]
+  }
+ },
+ "generation_attempts": {
+  "scale-C0-01": 14,
+  "scale-C0-02": 7,
+  "scale-C0-03": 6,
+  "scale-C0-04": 9,
+  "scale-C0-05": 5,
+  "scale-C0-06": 10,
+  "scale-C0-07": 14,
+  "scale-C0-08": 16,
+  "scale-C0-09": 2,
+  "scale-C0-10": 8,
+  "scale-C0-11": 1,
+  "scale-C0-12": 5,
+  "scale-C8-01": 1,
+  "scale-C8-02": 3,
+  "scale-C8-03": 1,
+  "scale-C8-04": 3,
+  "scale-C8-05": 7,
+  "scale-C8-06": 7,
+  "scale-C8-07": 4,
+  "scale-C8-08": 19,
+  "scale-C8-09": 5,
+  "scale-C8-10": 1,
+  "scale-C8-11": 29,
+  "scale-C8-12": 2
+ },
+ "evaluator_disagreements": 0,
+ "prose_structure_problems": [],
+ "corpus_copyshare.json_sha256": "5bb3231273ac181da27bdf4ae4f4e447c6ded5a2954de0f428fd7f0ab161e813",
+ "sessions_copyshare.json_sha256": "6de9c6203afd4dafc824194d353f28bcc2d1482080596fcb8c7aa61da2ce73e7",
+ "sessions_copyshare_working.json_sha256": "f941a4c4cce8d7f08bc14cb06bb8ea8badab17b6862081d7d533a11579a5d68e",
+ "sessions": 72,
+ "working_sessions": 24
+}
